@@ -1,26 +1,64 @@
-# Cidadão.AI - Documentation Hub
+# 📚 Cidadão.AI - Documentation
 
-<div align="center">
+> **Central documentation hub for Brazilian government transparency analysis project**  
+> **Hub central de documentação para projeto de análise de transparência governamental brasileira**
 
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://anderson-ufrj.github.io/cidadao.ai-docs/)
+[![SDG16](https://img.shields.io/badge/SDG-16-orange.svg)](https://sdgs.un.org/goals/goal16)
+[![Open Gov](https://img.shields.io/badge/Open-Government-blue.svg)](https://www.opengovpartnership.org/)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://anderson-ufrj.github.io/cidadao.ai-docs/)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-**Central documentation hub for Cidadão.AI project**
+🌐 **[Live Documentation Hub](https://anderson-ufrj.github.io/cidadao.ai-docs/)**
 
-[🌐 Live Documentation](https://anderson-ufrj.github.io/cidadao.ai-docs/) • [📱 Frontend](https://github.com/anderson-ufrj/cidadao.ai-frontend) • [🔧 Backend](https://github.com/anderson-ufrj/cidadao.ai-backend) • [🤖 API Demo](https://huggingface.co/spaces/neural-thinker/cidadao.ai-backend)
+## [English](#english) | [Português](#português)
 
-</div>
+---
 
-## 📋 Overview
+## 🇺🇸 English
 
-This repository hosts the official documentation hub for **Cidadão.AI** - a multi-agent AI system designed for Brazilian government transparency analysis. The documentation hub serves as a centralized gateway to all project resources, repositories, and API documentation.
+### Quick Start
+```bash
+# Clone and serve documentation locally
+git clone https://github.com/anderson-ufrj/cidadao.ai-docs
+cd cidadao.ai-docs
+python -m http.server 8000
+# Open: http://localhost:8000
+```
 
-### 🎯 Project Mission
+### Features
+- Central documentation hub for all Cidadão.AI repositories
+- Bilingual support (PT-BR/EN-US) with theme switching
+- Live API documentation integration
+- Responsive design with Tailwind CSS
+- Auto-deployed to GitHub Pages
 
-Democratize access to Brazilian public data through ethical AI technology, combining advanced language models, vector databases, and government APIs to enhance civic engagement and transparency.
+### Links
+- 🌐 **Documentation Hub**: https://anderson-ufrj.github.io/cidadao.ai-docs/
+
+---
+
+## 🇧🇷 Português
+
+### Início Rápido
+```bash
+# Clone e sirva documentação localmente
+git clone https://github.com/anderson-ufrj/cidadao.ai-docs
+cd cidadao.ai-docs
+python -m http.server 8000
+# Abra: http://localhost:8000
+```
+
+### Funcionalidades
+- Hub central de documentação para todos os repositórios Cidadão.AI
+- Suporte bilíngue (PT-BR/EN-US) com alternância de tema
+- Integração de documentação de API ao vivo
+- Design responsivo com Tailwind CSS
+- Auto-deploy para GitHub Pages
+
+### Links
+- 🌐 **Hub de Documentação**: https://anderson-ufrj.github.io/cidadao.ai-docs/
 
 ## 🏗️ Architecture
 
@@ -170,42 +208,9 @@ When reporting issues, please include:
 
 This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
 
-## 👨‍💻 Author
-
-**Anderson Henrique da Silva**
-- GitHub: [@anderson-ufrj](https://github.com/anderson-ufrj)
-- LinkedIn: [anderson-henrique](https://linkedin.com/in/anderson-henrique)
-- Email: andersonhs27@gmail.com
-- Hugging Face: [@neural-thinker](https://huggingface.co/neural-thinker)
-
-### Academic Supervision
-
-**Prof. Dr. Aracele Garcia de Oliveira Fassbinder**
-- Institution: Instituto Federal do Sul de Minas Gerais – Campus Muzambinho
-- Course: Bachelor's in Computer Science
-
-## 🏛️ Institutional Support
-
-- **Instituto Federal de Educação, Ciência e Tecnologia do Sul de Minas Gerais**
-- **Bachelor's Program in Computer Science**
-- **UN Sustainable Development Goals (SDG 16): Peace, Justice and Strong Institutions**
-- **Open Government Partnership (OGP) Guidelines**
-
-## 🔄 Changelog
-
-### Version 1.0.0 (2024-07-22)
-- Initial release of documentation hub
-- Multi-language support (PT-BR/EN-US)
-- Light/dark theme system
-- API documentation integration
-- Responsive design implementation
-
 ---
 
-<div align="center">
+## 👨‍💻 Author
 
-**[🌐 Visit Live Documentation](https://anderson-ufrj.github.io/cidadao.ai-docs/)**
-
-Made with ❤️ for transparency and civic engagement in Brazil
-
-</div>
+**Anderson Henrique da Silva**  
+📧 andersonhs27@gmail.com | 💻 [GitHub](https://github.com/anderson-ufrj)

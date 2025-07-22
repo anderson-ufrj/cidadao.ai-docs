@@ -2,7 +2,7 @@
 <html lang="pt-BR" id="html-root">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>Cidadão.AI — Hub de Documentação</title>
     <meta name="description" content="Hub central de documentação do projeto Cidadão.AI - Sistema multi-agente de IA para transparência pública">
     <meta name="keywords" content="Cidadão.AI, transparência pública, IA ética, open government, ODS 16">
@@ -129,6 +129,42 @@
             background: rgba(var(--bg-primary), 0.8);
         }
         
+        /* Mobile navigation improvements */
+        @media (max-width: 768px) {
+            .nav-sticky {
+                padding: 0.5rem 0;
+            }
+            
+            .mobile-nav-content {
+                padding: 0 1rem;
+            }
+            
+            .mobile-menu-button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 44px;
+                height: 44px;
+                touch-action: manipulation;
+            }
+            
+            .mobile-menu {
+                border-top: 1px solid var(--border);
+                background: var(--bg-primary);
+            }
+            
+            .mobile-menu a {
+                display: block;
+                padding: 0.75rem 0;
+                border-bottom: 1px solid var(--border-light);
+                touch-action: manipulation;
+            }
+            
+            .mobile-menu a:last-child {
+                border-bottom: none;
+            }
+        }
+        
         /* Control buttons */
         .control-button {
             background: var(--bg-secondary);
@@ -197,12 +233,24 @@
             box-shadow: 0 4px 20px rgba(16, 185, 129, 0.4);
             transition: all 0.3s ease;
             z-index: 1000;
+            touch-action: manipulation;
         }
         
         .floating-button:hover {
             background: var(--gradient-end);
             transform: scale(1.1);
             box-shadow: 0 6px 30px rgba(16, 185, 129, 0.6);
+        }
+        
+        /* Mobile floating button adjustments */
+        @media (max-width: 768px) {
+            .floating-button {
+                bottom: 1.5rem;
+                right: 1.5rem;
+                width: 3rem;
+                height: 3rem;
+                font-size: 1.25rem;
+            }
         }
         
         /* Language flags */
@@ -262,6 +310,36 @@
             animation: modalFadeIn 0.3s ease-out;
         }
         
+        /* Mobile modal adjustments */
+        @media (max-width: 768px) {
+            .modal-content {
+                margin: 0.5rem;
+                padding: 1.5rem;
+                max-height: 95vh;
+                border-radius: 0.75rem;
+            }
+            
+            .modal h2 {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+            
+            .modal h3 {
+                font-size: 1.125rem;
+            }
+            
+            .modal p {
+                font-size: 0.875rem;
+                line-height: 1.5;
+            }
+            
+            .modal .close {
+                font-size: 1.75rem;
+                top: 0.5rem;
+                right: 0.5rem;
+            }
+        }
+        
         @keyframes modalFadeIn {
             from {
                 opacity: 0;
@@ -285,12 +363,143 @@
         .close:hover {
             color: var(--text-primary);
         }
+        
+        /* Mobile typography and spacing optimizations */
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+                line-height: 1.5;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+                line-height: 1.2;
+            }
+            
+            h2 {
+                font-size: 1.75rem;
+                margin-bottom: 1rem;
+            }
+            
+            h3 {
+                font-size: 1.25rem;
+                margin-bottom: 0.5rem;
+            }
+            
+            .text-5xl {
+                font-size: 2.5rem !important;
+            }
+            
+            .text-lg {
+                font-size: 1rem !important;
+            }
+            
+            .text-xl {
+                font-size: 1.125rem !important;
+            }
+            
+            /* Mobile container adjustments */
+            .max-w-5xl {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            
+            /* Mobile hero section */
+            .min-h-\[40vh\] {
+                min-height: 35vh;
+                padding-top: 5rem;
+            }
+            
+            /* Mobile grid adjustments */
+            .grid.md\:grid-cols-2 {
+                grid-template-columns: 1fr;
+                gap: 0.75rem;
+            }
+            
+            /* Mobile card padding */
+            .tech-card {
+                padding: 1rem;
+                margin-bottom: 0.75rem;
+            }
+            
+            .tech-card h3 {
+                font-size: 1.125rem;
+                margin-bottom: 0.5rem;
+            }
+            
+            .tech-card p {
+                font-size: 0.875rem;
+                line-height: 1.4;
+            }
+            
+            /* Mobile sections */
+            section {
+                margin-bottom: 2.5rem;
+            }
+            
+            /* Mobile form elements and buttons */
+            .control-button,
+            .flag-button {
+                min-height: 44px;
+                touch-action: manipulation;
+            }
+            
+            .flag-button {
+                width: 52px;
+                height: 40px;
+                font-size: 1.25rem;
+            }
+            
+            /* Mobile Swagger UI container */
+            #swagger-ui {
+                font-size: 14px;
+            }
+            
+            /* Mobile footer */
+            footer {
+                padding: 1.5rem 1rem;
+            }
+            
+            footer p {
+                font-size: 0.75rem;
+                line-height: 1.4;
+            }
+        }
+        
+        /* Small mobile devices (max-width: 480px) */
+        @media (max-width: 480px) {
+            .text-5xl {
+                font-size: 2rem !important;
+            }
+            
+            .min-h-\[40vh\] {
+                min-height: 30vh;
+            }
+            
+            .tech-card {
+                padding: 0.875rem;
+            }
+            
+            .modal-content {
+                margin: 0.25rem;
+                padding: 1rem;
+                border-radius: 0.5rem;
+            }
+            
+            .floating-button {
+                bottom: 1rem;
+                right: 1rem;
+                width: 2.75rem;
+                height: 2.75rem;
+                font-size: 1.125rem;
+            }
+        }
     </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 nav-sticky" style="border-bottom: 1px solid var(--border);">
-        <div class="max-w-5xl mx-auto px-4 py-3">
+        <div class="max-w-5xl mx-auto mobile-nav-content px-4 py-3">
             <div class="flex justify-between items-center">
                 <h1 class="text-xl font-bold brazil-gradient-text">Cidadão.AI</h1>
                 
@@ -320,13 +529,13 @@
                 </div>
                 
                 <!-- Mobile Menu Button -->
-                <button class="md:hidden control-button theme-button" onclick="toggleMobileMenu()">
+                <button class="md:hidden mobile-menu-button control-button theme-button" onclick="toggleMobileMenu()">
                     ☰
                 </button>
             </div>
             
             <!-- Mobile Menu -->
-            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
+            <div id="mobileMenu" class="hidden md:hidden mobile-menu mt-4 pb-4">
                 <div class="flex flex-col space-y-2 text-sm">
                     <a href="#repositorios" class="hover:text-emerald-500 transition" data-lang-key="nav.repositories">Repositórios</a>
                     <a href="#links" class="hover:text-emerald-500 transition" data-lang-key="nav.links">Links</a>
@@ -698,6 +907,30 @@
             }
         }
         
+        // Improved mobile touch handling
+        function handleTouchStart(e) {
+            const target = e.target;
+            if (target.classList.contains('tech-card') || target.closest('.tech-card')) {
+                target.style.transform = 'translateY(-1px)';
+            }
+        }
+        
+        function handleTouchEnd(e) {
+            const target = e.target;
+            if (target.classList.contains('tech-card') || target.closest('.tech-card')) {
+                setTimeout(() => {
+                    target.style.transform = '';
+                }, 150);
+            }
+        }
+        
+        // Prevent zoom on double tap for buttons
+        function preventZoom(e) {
+            if (e.target.closest('.control-button, .flag-button, .floating-button')) {
+                e.preventDefault();
+            }
+        }
+        
         
         
         // Initialize on load
@@ -738,6 +971,42 @@
                     }
                 });
             });
+            
+            // Add mobile touch handlers
+            if ('ontouchstart' in window) {
+                document.addEventListener('touchstart', handleTouchStart, { passive: true });
+                document.addEventListener('touchend', handleTouchEnd, { passive: true });
+                document.addEventListener('touchstart', preventZoom, { passive: false });
+            }
+            
+            // Improve mobile viewport handling
+            const viewport = document.querySelector('meta[name="viewport"]');
+            if (viewport) {
+                viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover');
+            }
+            
+            // Add swipe-to-close for mobile menu
+            let startY = 0;
+            let startX = 0;
+            
+            document.addEventListener('touchstart', function(e) {
+                startY = e.touches[0].clientY;
+                startX = e.touches[0].clientX;
+            }, { passive: true });
+            
+            document.addEventListener('touchmove', function(e) {
+                if (!document.getElementById('mobileMenu').classList.contains('hidden')) {
+                    const currentY = e.touches[0].clientY;
+                    const currentX = e.touches[0].clientX;
+                    const diffY = startY - currentY;
+                    const diffX = startX - currentX;
+                    
+                    // Close menu on upward swipe
+                    if (diffY > 50 && Math.abs(diffX) < 100) {
+                        document.getElementById('mobileMenu').classList.add('hidden');
+                    }
+                }
+            }, { passive: true });
         });
     </script>
 </body>
