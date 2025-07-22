@@ -494,6 +494,40 @@
                 font-size: 1.125rem;
             }
         }
+        
+        /* Agent cards styles */
+        .agent-card {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .agent-card:hover {
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .agent-logo {
+            backdrop-filter: blur(10px);
+        }
+        
+        /* Agent cards responsive */
+        @media (max-width: 768px) {
+            .agent-card {
+                margin-bottom: 1rem;
+            }
+            
+            .agent-logo {
+                width: 80px;
+                height: 80px;
+                font-size: 2.5rem;
+            }
+            
+            .agent-card h3 {
+                font-size: 1.125rem;
+            }
+            
+            .agent-card p {
+                font-size: 0.875rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -746,86 +780,113 @@
 
     <!-- System Modal -->
     <div id="systemModal" class="modal">
-        <div class="modal-content" style="max-width: 800px;">
+        <div class="modal-content" style="max-width: 1000px;">
             <span class="close" onclick="closeSystemModal()">&times;</span>
-            <h2 class="text-2xl font-bold mb-4 gradient-text" data-lang-key="system.modal.title">🤖 Entenda o Sistema</h2>
-            <div class="space-y-4" style="color: var(--text-secondary);">
-                <p class="mb-4" data-lang-key="system.modal.intro">
+            <h2 class="text-3xl font-bold mb-6 text-center brazil-gradient-text" data-lang-key="system.modal.title">🤖 Entenda o Sistema</h2>
+            
+            <div class="space-y-6" style="color: var(--text-secondary);">
+                <p class="text-center text-lg mb-8" data-lang-key="system.modal.intro">
                     O Cidadão.AI é um sistema multi-agente que utiliza inteligência artificial distribuída para analisar dados públicos brasileiros. Cada agente possui uma especialização única, inspirada em figuras e entidades culturais brasileiras.
                 </p>
                 
-                <div class="overflow-x-auto">
-                    <table class="w-full text-sm" style="border-collapse: collapse;">
-                        <thead>
-                            <tr style="border-bottom: 2px solid var(--border);">
-                                <th class="text-left p-2" style="color: var(--text-primary);">Agente</th>
-                                <th class="text-left p-2" style="color: var(--text-primary);">Nome</th>
-                                <th class="text-left p-2" style="color: var(--text-primary);">Função</th>
-                                <th class="text-left p-2 hidden md:table-cell" style="color: var(--text-primary);">Inspiração</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr style="border-bottom: 1px solid var(--border-light);">
-                                <td class="p-2">🧠</td>
-                                <td class="p-2 font-medium" style="color: var(--text-accent);">Abaporu</td>
-                                <td class="p-2">Orquestrador e interpretador semântico</td>
-                                <td class="p-2 hidden md:table-cell text-xs" style="color: var(--text-tertiary);">Aquele que devora dados e recria significado</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid var(--border-light);">
-                                <td class="p-2">🔀</td>
-                                <td class="p-2 font-medium" style="color: var(--text-accent);">Exu</td>
-                                <td class="p-2">Interpreta linguagem, conecta agentes</td>
-                                <td class="p-2 hidden md:table-cell text-xs" style="color: var(--text-tertiary);">Orixá dos caminhos, linguagem e rede</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid var(--border-light);">
-                                <td class="p-2">🕵️</td>
-                                <td class="p-2 font-medium" style="color: var(--text-accent);">Zumbi</td>
-                                <td class="p-2">Caçador de estruturas invisíveis</td>
-                                <td class="p-2 hidden md:table-cell text-xs" style="color: var(--text-tertiary);">Líder do Quilombo, resistência e visão estratégica</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid var(--border-light);">
-                                <td class="p-2">⚖️</td>
-                                <td class="p-2 font-medium" style="color: var(--text-accent);">Tiradentes</td>
-                                <td class="p-2">Classifica riscos e violações</td>
-                                <td class="p-2 hidden md:table-cell text-xs" style="color: var(--text-tertiary);">Justiça, coragem e lucidez revolucionária</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid var(--border-light);">
-                                <td class="p-2">🩺</td>
-                                <td class="p-2 font-medium" style="color: var(--text-accent);">Obaluaiê</td>
-                                <td class="p-2">Detector de corrupção sistêmica</td>
-                                <td class="p-2 hidden md:table-cell text-xs" style="color: var(--text-tertiary);">Orixá da cura, revelação e regeneração</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid var(--border-light);">
-                                <td class="p-2">📊</td>
-                                <td class="p-2 font-medium" style="color: var(--text-accent);">Niemeier</td>
-                                <td class="p-2">Visualização e narrativa gráfica</td>
-                                <td class="p-2 hidden md:table-cell text-xs" style="color: var(--text-tertiary);">Oscar Niemeyer: forma, clareza e função</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid var(--border-light);">
-                                <td class="p-2">📚</td>
-                                <td class="p-2 font-medium" style="color: var(--text-accent);">Nanã</td>
-                                <td class="p-2">Análise temporal e histórica</td>
-                                <td class="p-2 hidden md:table-cell text-xs" style="color: var(--text-tertiary);">Orixá do tempo profundo e sabedoria</td>
-                            </tr>
-                            <tr>
-                                <td class="p-2">⚙️</td>
-                                <td class="p-2 font-medium" style="color: var(--text-accent);">Ogum</td>
-                                <td class="p-2">Scripts, ETLs e automação</td>
-                                <td class="p-2 hidden md:table-cell text-xs" style="color: var(--text-tertiary);">Orixá da tecnologia, ação e força</td>
-                            </tr>
-                            <tr>
-                                <td class="p-2">📈</td>
-                                <td class="p-2 font-medium" style="color: var(--text-accent);">Iansã</td>
-                                <td class="p-2">Análise preditiva e previsões</td>
-                                <td class="p-2 hidden md:table-cell text-xs" style="color: var(--text-tertiary);">Orixá dos ventos e mudanças</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <!-- Agents Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Abaporu -->
+                    <div class="agent-card rounded-xl p-6 text-center transition-all duration-300 hover:transform hover:scale-105" style="background: linear-gradient(135deg, #f59e0b, #d97706); color: white;">
+                        <div class="agent-logo mb-4 mx-auto w-24 h-24 rounded-full flex items-center justify-center text-5xl" style="background: rgba(255,255,255,0.2);">
+                            🧠
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Núcleo Central da IA</h3>
+                        <p class="text-sm opacity-90 mb-3">Orquestrador e interpretador semântico. Aquele que devora dados e recria significado.</p>
+                        <p class="text-xs opacity-75">(Abaporu)</p>
+                    </div>
+                    
+                    <!-- Exu -->
+                    <div class="agent-card rounded-xl p-6 text-center transition-all duration-300 hover:transform hover:scale-105" style="background: linear-gradient(135deg, #dc2626, #991b1b); color: white;">
+                        <div class="agent-logo mb-4 mx-auto w-24 h-24 rounded-full flex items-center justify-center text-5xl" style="background: rgba(255,255,255,0.2);">
+                            🔀
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Roteador Semântico</h3>
+                        <p class="text-sm opacity-90 mb-3">Interpreta linguagem e conecta agentes. Orixá dos caminhos, linguagem e rede.</p>
+                        <p class="text-xs opacity-75">(Exu)</p>
+                    </div>
+                    
+                    <!-- Zumbi -->
+                    <div class="agent-card rounded-xl p-6 text-center transition-all duration-300 hover:transform hover:scale-105" style="background: linear-gradient(135deg, #b91c1c, #7f1d1d); color: white;">
+                        <div class="agent-logo mb-4 mx-auto w-24 h-24 rounded-full flex items-center justify-center text-5xl" style="background: rgba(255,255,255,0.2);">
+                            🕵️
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Investigador de Padrões</h3>
+                        <p class="text-sm opacity-90 mb-3">Caçador de estruturas invisíveis. Líder do Quilombo, resistência e visão estratégica.</p>
+                        <p class="text-xs opacity-75">(Zumbi)</p>
+                    </div>
+                    
+                    <!-- Tiradentes -->
+                    <div class="agent-card rounded-xl p-6 text-center transition-all duration-300 hover:transform hover:scale-105" style="background: linear-gradient(135deg, #1e293b, #0f172a); color: white;">
+                        <div class="agent-logo mb-4 mx-auto w-24 h-24 rounded-full flex items-center justify-center text-5xl" style="background: rgba(255,255,255,0.2);">
+                            ⚖️
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Avaliador de Risco</h3>
+                        <p class="text-sm opacity-90 mb-3">Classifica riscos e violações à integridade. Justiça, coragem e lucidez revolucionária.</p>
+                        <p class="text-xs opacity-75">(Tiradentes)</p>
+                    </div>
+                    
+                    <!-- Obaluaiê -->
+                    <div class="agent-card rounded-xl p-6 text-center transition-all duration-300 hover:transform hover:scale-105" style="background: linear-gradient(135deg, #7c3aed, #5b21b6); color: white;">
+                        <div class="agent-logo mb-4 mx-auto w-24 h-24 rounded-full flex items-center justify-center text-5xl" style="background: rgba(255,255,255,0.2);">
+                            🩺
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Detector de Corrupção</h3>
+                        <p class="text-sm opacity-90 mb-3">Aponta "doenças" nos dados públicos. Orixá da cura, revelação e regeneração.</p>
+                        <p class="text-xs opacity-75">(Obaluaiê)</p>
+                    </div>
+                    
+                    <!-- Niemeier -->
+                    <div class="agent-card rounded-xl p-6 text-center transition-all duration-300 hover:transform hover:scale-105" style="background: linear-gradient(135deg, #0891b2, #0e7490); color: white;">
+                        <div class="agent-logo mb-4 mx-auto w-24 h-24 rounded-full flex items-center justify-center text-5xl" style="background: rgba(255,255,255,0.2);">
+                            📊
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Visualização Gráfica</h3>
+                        <p class="text-sm opacity-90 mb-3">Gera dashboards e narrativas visuais. Oscar Niemeyer: forma, clareza e função.</p>
+                        <p class="text-xs opacity-75">(Niemeier)</p>
+                    </div>
+                    
+                    <!-- Nanã -->
+                    <div class="agent-card rounded-xl p-6 text-center transition-all duration-300 hover:transform hover:scale-105" style="background: linear-gradient(135deg, #4338ca, #3730a3); color: white;">
+                        <div class="agent-logo mb-4 mx-auto w-24 h-24 rounded-full flex items-center justify-center text-5xl" style="background: rgba(255,255,255,0.2);">
+                            📚
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Agente Temporal</h3>
+                        <p class="text-sm opacity-90 mb-3">Analisa tendências e repetições históricas. Orixá do tempo profundo e sabedoria.</p>
+                        <p class="text-xs opacity-75">(Nanã)</p>
+                    </div>
+                    
+                    <!-- Ogum -->
+                    <div class="agent-card rounded-xl p-6 text-center transition-all duration-300 hover:transform hover:scale-105" style="background: linear-gradient(135deg, #059669, #047857); color: white;">
+                        <div class="agent-logo mb-4 mx-auto w-24 h-24 rounded-full flex items-center justify-center text-5xl" style="background: rgba(255,255,255,0.2);">
+                            ⚙️
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Executor Técnico</h3>
+                        <p class="text-sm opacity-90 mb-3">Scripts, ETLs, scraping e automação. Orixá da tecnologia, ação e força.</p>
+                        <p class="text-xs opacity-75">(Ogum)</p>
+                    </div>
+                    
+                    <!-- Iansã -->
+                    <div class="agent-card rounded-xl p-6 text-center transition-all duration-300 hover:transform hover:scale-105" style="background: linear-gradient(135deg, #ec4899, #db2777); color: white;">
+                        <div class="agent-logo mb-4 mx-auto w-24 h-24 rounded-full flex items-center justify-center text-5xl" style="background: rgba(255,255,255,0.2);">
+                            📈
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Agente Preditivo</h3>
+                        <p class="text-sm opacity-90 mb-3">Análise de séries temporais e previsões. Orixá dos ventos, mudanças e previsibilidade.</p>
+                        <p class="text-xs opacity-75">(Iansã)</p>
+                    </div>
                 </div>
                 
-                <p class="text-sm mt-4" style="color: var(--text-tertiary);" data-lang-key="system.modal.description">
-                    Juntos, esses agentes formam uma rede colaborativa capaz de processar grandes volumes de dados públicos, identificar padrões, detectar anomalias e gerar insights valiosos para a transparência e o controle social.
-                </p>
+                <div class="mt-8 p-6 rounded-lg" style="background: var(--bg-tertiary);">
+                    <p class="text-center" style="color: var(--text-primary);" data-lang-key="system.modal.description">
+                        Juntos, esses agentes formam uma rede colaborativa capaz de processar grandes volumes de dados públicos, identificar padrões, detectar anomalias e gerar insights valiosos para a transparência e o controle social.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
