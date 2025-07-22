@@ -746,11 +746,86 @@
 
     <!-- System Modal -->
     <div id="systemModal" class="modal">
-        <div class="modal-content">
+        <div class="modal-content" style="max-width: 800px;">
             <span class="close" onclick="closeSystemModal()">&times;</span>
             <h2 class="text-2xl font-bold mb-4 gradient-text" data-lang-key="system.modal.title">🤖 Entenda o Sistema</h2>
             <div class="space-y-4" style="color: var(--text-secondary);">
-                <p data-lang-key="system.modal.intro">Em breve...</p>
+                <p class="mb-4" data-lang-key="system.modal.intro">
+                    O Cidadão.AI é um sistema multi-agente que utiliza inteligência artificial distribuída para analisar dados públicos brasileiros. Cada agente possui uma especialização única, inspirada em figuras e entidades culturais brasileiras.
+                </p>
+                
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm" style="border-collapse: collapse;">
+                        <thead>
+                            <tr style="border-bottom: 2px solid var(--border);">
+                                <th class="text-left p-2" style="color: var(--text-primary);">Agente</th>
+                                <th class="text-left p-2" style="color: var(--text-primary);">Nome</th>
+                                <th class="text-left p-2" style="color: var(--text-primary);">Função</th>
+                                <th class="text-left p-2 hidden md:table-cell" style="color: var(--text-primary);">Inspiração</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid var(--border-light);">
+                                <td class="p-2">🧠</td>
+                                <td class="p-2 font-medium" style="color: var(--text-accent);">Abaporu</td>
+                                <td class="p-2">Orquestrador e interpretador semântico</td>
+                                <td class="p-2 hidden md:table-cell text-xs" style="color: var(--text-tertiary);">Aquele que devora dados e recria significado</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--border-light);">
+                                <td class="p-2">🔀</td>
+                                <td class="p-2 font-medium" style="color: var(--text-accent);">Exu</td>
+                                <td class="p-2">Interpreta linguagem, conecta agentes</td>
+                                <td class="p-2 hidden md:table-cell text-xs" style="color: var(--text-tertiary);">Orixá dos caminhos, linguagem e rede</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--border-light);">
+                                <td class="p-2">🕵️</td>
+                                <td class="p-2 font-medium" style="color: var(--text-accent);">Zumbi</td>
+                                <td class="p-2">Caçador de estruturas invisíveis</td>
+                                <td class="p-2 hidden md:table-cell text-xs" style="color: var(--text-tertiary);">Líder do Quilombo, resistência e visão estratégica</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--border-light);">
+                                <td class="p-2">⚖️</td>
+                                <td class="p-2 font-medium" style="color: var(--text-accent);">Tiradentes</td>
+                                <td class="p-2">Classifica riscos e violações</td>
+                                <td class="p-2 hidden md:table-cell text-xs" style="color: var(--text-tertiary);">Justiça, coragem e lucidez revolucionária</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--border-light);">
+                                <td class="p-2">🩺</td>
+                                <td class="p-2 font-medium" style="color: var(--text-accent);">Obaluaiê</td>
+                                <td class="p-2">Detector de corrupção sistêmica</td>
+                                <td class="p-2 hidden md:table-cell text-xs" style="color: var(--text-tertiary);">Orixá da cura, revelação e regeneração</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--border-light);">
+                                <td class="p-2">📊</td>
+                                <td class="p-2 font-medium" style="color: var(--text-accent);">Niemeier</td>
+                                <td class="p-2">Visualização e narrativa gráfica</td>
+                                <td class="p-2 hidden md:table-cell text-xs" style="color: var(--text-tertiary);">Oscar Niemeyer: forma, clareza e função</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--border-light);">
+                                <td class="p-2">📚</td>
+                                <td class="p-2 font-medium" style="color: var(--text-accent);">Nanã</td>
+                                <td class="p-2">Análise temporal e histórica</td>
+                                <td class="p-2 hidden md:table-cell text-xs" style="color: var(--text-tertiary);">Orixá do tempo profundo e sabedoria</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2">⚙️</td>
+                                <td class="p-2 font-medium" style="color: var(--text-accent);">Ogum</td>
+                                <td class="p-2">Scripts, ETLs e automação</td>
+                                <td class="p-2 hidden md:table-cell text-xs" style="color: var(--text-tertiary);">Orixá da tecnologia, ação e força</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2">📈</td>
+                                <td class="p-2 font-medium" style="color: var(--text-accent);">Iansã</td>
+                                <td class="p-2">Análise preditiva e previsões</td>
+                                <td class="p-2 hidden md:table-cell text-xs" style="color: var(--text-tertiary);">Orixá dos ventos e mudanças</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <p class="text-sm mt-4" style="color: var(--text-tertiary);" data-lang-key="system.modal.description">
+                    Juntos, esses agentes formam uma rede colaborativa capaz de processar grandes volumes de dados públicos, identificar padrões, detectar anomalias e gerar insights valiosos para a transparência e o controle social.
+                </p>
             </div>
         </div>
     </div>
@@ -799,7 +874,8 @@
                 'manifesto.modal.title': '📜 Manifesto Cidadão.AI',
                 'manifesto.modal.intro': 'Em breve...',
                 'system.modal.title': '🤖 Entenda o Sistema',
-                'system.modal.intro': 'Em breve...',
+                'system.modal.intro': 'O Cidadão.AI é um sistema multi-agente que utiliza inteligência artificial distribuída para analisar dados públicos brasileiros. Cada agente possui uma especialização única, inspirada em figuras e entidades culturais brasileiras.',
+                'system.modal.description': 'Juntos, esses agentes formam uma rede colaborativa capaz de processar grandes volumes de dados públicos, identificar padrões, detectar anomalias e gerar insights valiosos para a transparência e o controle social.',
                 'modal.intro': 'Cidadão.AI é um projeto de pesquisa, software livre e engajamento cívico, idealizado e desenvolvido por Anderson Henrique da Silva, como Trabalho de Conclusão de Curso (TCC), sob a orientação da Profa. Dra. Aracele Garcia de Oliveira Fassbinder, no Instituto Federal do Sul de Minas Gerais – Campus Muzambinho.',
                 'modal.purpose': 'Este sistema multi-agente foi concebido com o propósito de democratizar o acesso aos dados públicos brasileiros, unindo ética, tecnologia e cidadania.',
                 'modal.author.title': '👨‍💻 Autor',
@@ -841,7 +917,8 @@
                 'manifesto.modal.title': '📜 Cidadão.AI Manifesto',
                 'manifesto.modal.intro': 'Coming soon...',
                 'system.modal.title': '🤖 Understand the System',
-                'system.modal.intro': 'Coming soon...',
+                'system.modal.intro': 'Cidadão.AI is a multi-agent system that uses distributed artificial intelligence to analyze Brazilian public data. Each agent has a unique specialization, inspired by Brazilian cultural figures and entities.',
+                'system.modal.description': 'Together, these agents form a collaborative network capable of processing large volumes of public data, identifying patterns, detecting anomalies, and generating valuable insights for transparency and social control.',
                 'modal.intro': 'Cidadão.AI is a research, free software and civic engagement project, conceived and developed by Anderson Henrique da Silva as an undergraduate thesis, supervised by Prof. Dr. Aracele Garcia de Oliveira Fassbinder at the Federal Institute of Southern Minas Gerais – Campus Muzambinho.',
                 'modal.purpose': 'This multi-agent system was designed to democratize access to Brazilian public data, combining ethics, technology and citizenship.',
                 'modal.author.title': '👨‍💻 Author',
