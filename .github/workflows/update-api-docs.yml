@@ -1,0 +1,110 @@
+name: Update API Documentation
+
+on:
+  # Run daily at 6 AM UTC (3 AM BRT)
+  schedule:
+    - cron: '0 6 * * *'
+  
+  # Allow manual trigger
+  workflow_dispatch:
+  
+  # Run when backend repository is updated (if webhook is configured)
+  repository_dispatch:
+    types: [update-api-docs]
+
+jobs:
+  update-docs:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Update OpenAPI specification
+      run: |
+        echo "🔄 Updating API documentation..."
+        
+        # Download latest OpenAPI spec
+        curl -o openapi.json.new \
+          --connect-timeout 30 \
+          --max-time 60 \
+          --retry 3 \
+          --retry-delay 5 \
+          "https://neural-thinker-cidadao-ai-backend.hf.space/openapi.json"
+        
+        # Validate downloaded file
+        if [ -f openapi.json.new ] && [ -s openapi.json.new ]; then
+          # Check if it's valid JSON
+          if python3 -m json.tool openapi.json.new >/dev/null 2>&1; then
+            echo "✅ Downloaded valid OpenAPI spec"
+            
+            # Compare with existing file
+            if [ -f openapi.json ]; then
+              if cmp -s openapi.json openapi.json.new; then
+                echo "📋 No changes detected in API spec"
+                rm openapi.json.new
+                exit 0
+              else
+                echo "🔄 API spec has changes, updating..."
+              fi
+            fi
+            
+            # Replace the file
+            mv openapi.json.new openapi.json
+            
+            # Show API info
+            echo "📊 Updated API spec:"
+            python3 -c "
+            import json
+            with open('openapi.json', 'r') as f:
+                spec = json.load(f)
+                info = spec.get('info', {})
+                print(f\"  Title: {info.get('title', 'N/A')}\")
+                print(f\"  Version: {info.get('version', 'N/A')}\")
+                print(f\"  Description: {info.get('description', 'N/A')}\")
+                paths = spec.get('paths', {})
+                print(f\"  Endpoints: {len(paths)}\")
+            "
+            
+          else
+            echo "❌ Downloaded file is not valid JSON"
+            rm -f openapi.json.new
+            exit 1
+          fi
+        else
+          echo "❌ Failed to download API spec"
+          rm -f openapi.json.new
+          exit 1
+        fi
+    
+    - name: Commit changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        
+        if [ -n "$(git status --porcelain)" ]; then
+          git add openapi.json
+          git commit -m "docs: update API specification from backend
+          
+          - Updated OpenAPI spec from Hugging Face backend
+          - Automated update via GitHub Actions
+          - $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+          
+          echo "✅ Changes committed"
+        else
+          echo "📋 No changes to commit"
+        fi
+    
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: main
+    
+    - name: Summary
+      run: |
+        echo "🎉 API documentation update completed successfully!"
+        echo "📅 Timestamp: $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+        echo "🔗 Documentation Hub: https://anderson-ufrj.github.io/cidadao.ai-docs/"
