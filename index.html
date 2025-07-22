@@ -606,6 +606,27 @@
         <section id="links" class="mb-12 fade-in">
             <h2 class="text-2xl font-bold mb-4 gradient-text" data-lang-key="sections.links.title">Links Importantes</h2>
             <div class="space-y-3">
+                <!-- Feature buttons with emphasis -->
+                <div class="grid md:grid-cols-2 gap-3 mb-6">
+                    <button onclick="openManifestoModal()"
+                            class="tech-card rounded-lg p-6 block group transition-all duration-300 hover:scale-105 cursor-pointer"
+                            style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: white;">
+                        <h3 class="font-bold text-xl mb-2 flex items-center gap-2" data-lang-key="sections.links.manifesto">
+                            📜 Manifesto Cidadão.AI
+                        </h3>
+                        <p class="text-sm opacity-90" data-lang-key="sections.links.manifesto.desc">Nossos princípios e valores fundamentais</p>
+                    </button>
+                    
+                    <button onclick="openSystemModal()"
+                            class="tech-card rounded-lg p-6 block group transition-all duration-300 hover:scale-105 cursor-pointer"
+                            style="background: linear-gradient(135deg, #3b82f6, #1e40af); color: white;">
+                        <h3 class="font-bold text-xl mb-2 flex items-center gap-2" data-lang-key="sections.links.system">
+                            🤖 Entenda o Sistema
+                        </h3>
+                        <p class="text-sm opacity-90" data-lang-key="sections.links.system.desc">Conheça nossos oito agentes especializados</p>
+                    </button>
+                </div>
+                
                 <a href="https://cidadao-ai-frontend.vercel.app/" target="_blank"
                    class="tech-card rounded-lg p-4 block group">
                     <h3 class="font-semibold" style="color: var(--text-accent);" data-lang-key="sections.links.webapp">🌐 Aplicação Web</h3>
@@ -712,6 +733,28 @@
         </div>
     </div>
 
+    <!-- Manifesto Modal -->
+    <div id="manifestoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeManifestoModal()">&times;</span>
+            <h2 class="text-2xl font-bold mb-4 gradient-text" data-lang-key="manifesto.modal.title">📜 Manifesto Cidadão.AI</h2>
+            <div class="space-y-4" style="color: var(--text-secondary);">
+                <p data-lang-key="manifesto.modal.intro">Em breve...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- System Modal -->
+    <div id="systemModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSystemModal()">&times;</span>
+            <h2 class="text-2xl font-bold mb-4 gradient-text" data-lang-key="system.modal.title">🤖 Entenda o Sistema</h2>
+            <div class="space-y-4" style="color: var(--text-secondary);">
+                <p data-lang-key="system.modal.intro">Em breve...</p>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="py-6 px-4 text-center" style="background: var(--bg-secondary); color: var(--text-tertiary);">
         <p class="text-xs" data-lang-key="footer.text">© 2024 Cidadão.AI • Democratizando o acesso aos dados públicos brasileiros</p>
@@ -747,8 +790,16 @@
                 'sections.links.techdocs.desc': 'Documentação completa do backend',
                 'sections.links.research': '📄 Notas de Pesquisa',
                 'sections.links.research.desc': 'PDF com insights do projeto',
+                'sections.links.manifesto': '📜 Manifesto Cidadão.AI',
+                'sections.links.manifesto.desc': 'Nossos princípios e valores fundamentais',
+                'sections.links.system': '🤖 Entenda o Sistema',
+                'sections.links.system.desc': 'Conheça nossos oito agentes especializados',
                 'sections.api.title': 'Documentação da API',
                 'modal.title': '📜 Sobre',
+                'manifesto.modal.title': '📜 Manifesto Cidadão.AI',
+                'manifesto.modal.intro': 'Em breve...',
+                'system.modal.title': '🤖 Entenda o Sistema',
+                'system.modal.intro': 'Em breve...',
                 'modal.intro': 'Cidadão.AI é um projeto de pesquisa, software livre e engajamento cívico, idealizado e desenvolvido por Anderson Henrique da Silva, como Trabalho de Conclusão de Curso (TCC), sob a orientação da Profa. Dra. Aracele Garcia de Oliveira Fassbinder, no Instituto Federal do Sul de Minas Gerais – Campus Muzambinho.',
                 'modal.purpose': 'Este sistema multi-agente foi concebido com o propósito de democratizar o acesso aos dados públicos brasileiros, unindo ética, tecnologia e cidadania.',
                 'modal.author.title': '👨‍💻 Autor',
@@ -781,8 +832,16 @@
                 'sections.links.techdocs.desc': 'Complete backend documentation',
                 'sections.links.research': '📄 Research Notes',
                 'sections.links.research.desc': 'PDF with project insights',
+                'sections.links.manifesto': '📜 Cidadão.AI Manifesto',
+                'sections.links.manifesto.desc': 'Our fundamental principles and values',
+                'sections.links.system': '🤖 Understand the System',
+                'sections.links.system.desc': 'Meet our eight specialized agents',
                 'sections.api.title': 'API Documentation',
                 'modal.title': '📜 About',
+                'manifesto.modal.title': '📜 Cidadão.AI Manifesto',
+                'manifesto.modal.intro': 'Coming soon...',
+                'system.modal.title': '🤖 Understand the System',
+                'system.modal.intro': 'Coming soon...',
                 'modal.intro': 'Cidadão.AI is a research, free software and civic engagement project, conceived and developed by Anderson Henrique da Silva as an undergraduate thesis, supervised by Prof. Dr. Aracele Garcia de Oliveira Fassbinder at the Federal Institute of Southern Minas Gerais – Campus Muzambinho.',
                 'modal.purpose': 'This multi-agent system was designed to democratize access to Brazilian public data, combining ethics, technology and citizenship.',
                 'modal.author.title': '👨‍💻 Author',
@@ -899,11 +958,34 @@
             document.getElementById('infoModal').classList.remove('active');
         }
         
+        function openManifestoModal() {
+            document.getElementById('manifestoModal').classList.add('active');
+        }
+        
+        function closeManifestoModal() {
+            document.getElementById('manifestoModal').classList.remove('active');
+        }
+        
+        function openSystemModal() {
+            document.getElementById('systemModal').classList.add('active');
+        }
+        
+        function closeSystemModal() {
+            document.getElementById('systemModal').classList.remove('active');
+        }
+        
         // Close modal when clicking outside
         window.onclick = function(event) {
-            const modal = document.getElementById('infoModal');
-            if (event.target == modal) {
+            const infoModal = document.getElementById('infoModal');
+            const manifestoModal = document.getElementById('manifestoModal');
+            const systemModal = document.getElementById('systemModal');
+            
+            if (event.target == infoModal) {
                 closeModal();
+            } else if (event.target == manifestoModal) {
+                closeManifestoModal();
+            } else if (event.target == systemModal) {
+                closeSystemModal();
             }
         }
         
