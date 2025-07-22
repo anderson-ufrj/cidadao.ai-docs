@@ -504,41 +504,39 @@
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
         }
         
-        .agent-logo {
-            backdrop-filter: blur(10px);
-        }
-        
-        /* Agent cards styles */
+        /* Clean Agent Cards */
         .agent-card {
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
         }
         
         .agent-card:hover {
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            transform: translateY(-4px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
         }
         
-        /* Agent cards responsive */
+        .agent-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid rgba(255,255,255,0.3);
+            margin: 0 auto;
+            display: block;
+        }
+        
         @media (max-width: 768px) {
-            .agent-card {
-                margin-bottom: 1rem;
-            }
-            
-            .agent-logo {
-                width: 100px !important;
-                height: 100px !important;
-            }
-            
-            .agent-logo img {
-                width: 100px !important;
-                height: 100px !important;
+            .agent-avatar {
+                width: 80px;
+                height: 80px;
             }
             
             .agent-card h3 {
-                font-size: 1.125rem;
+                font-size: 1.25rem !important;
             }
             
             .agent-card p {
-                font-size: 0.875rem;
+                font-size: 0.9rem !important;
             }
         }
     </style>
@@ -805,90 +803,72 @@
                 <!-- Agents Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Abaporu -->
-                    <div class="agent-card rounded-xl p-6 text-center transition-all duration-300 hover:transform hover:scale-105" style="background: linear-gradient(135deg, #f59e0b, #d97706); color: white;">
-                        <div class="agent-logo mb-4 mx-auto" style="width: 120px; height: 120px; display: flex; align-items: center; justify-content: center;">
-                            <img src="assets/agents/abaporu.png" alt="Abaporu" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover;">
-                        </div>
+                    <div class="agent-card rounded-xl p-6 text-center" style="background: linear-gradient(135deg, #f59e0b, #d97706); color: white;">
+                        <img src="assets/agents/abaporu.png" alt="Abaporu" class="agent-avatar mb-4">
                         <h3 class="text-2xl font-bold mb-1">Abaporu</h3>
                         <p class="text-sm opacity-80 mb-3">Núcleo Central da IA</p>
                         <p class="text-xs opacity-90">Orquestrador e interpretador semântico. Aquele que devora dados e recria significado.</p>
                     </div>
                     
                     <!-- Exu -->
-                    <div class="agent-card rounded-xl p-6 text-center transition-all duration-300 hover:transform hover:scale-105" style="background: linear-gradient(135deg, #dc2626, #991b1b); color: white;">
-                        <div class="agent-logo mb-4 mx-auto" style="width: 120px; height: 120px; display: flex; align-items: center; justify-content: center;">
-                            <img src="assets/agents/anita.png" alt="Anita Garibaldi" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover;">
-                        </div>
+                    <div class="agent-card rounded-xl p-6 text-center " style="background: linear-gradient(135deg, #dc2626, #991b1b); color: white;">
+                        <img src="assets/agents/anita.png" alt="Anita Garibaldi" class="agent-avatar mb-4">
                         <h3 class="text-2xl font-bold mb-1">Anita Garibaldi</h3>
                         <p class="text-sm opacity-80 mb-3">Roteadora Semântica</p>
                         <p class="text-xs opacity-90">Interpreta linguagem e conecta agentes. Heroína da independência, coragem e liderança.</p>
                     </div>
                     
                     <!-- Zumbi -->
-                    <div class="agent-card rounded-xl p-6 text-center transition-all duration-300 hover:transform hover:scale-105" style="background: linear-gradient(135deg, #b91c1c, #7f1d1d); color: white;">
-                        <div class="agent-logo mb-4 mx-auto" style="width: 120px; height: 120px; display: flex; align-items: center; justify-content: center;">
-                            <img src="assets/agents/zumbi.jpeg" alt="Zumbi" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover;">
-                        </div>
+                    <div class="agent-card rounded-xl p-6 text-center " style="background: linear-gradient(135deg, #b91c1c, #7f1d1d); color: white;">
+                        <img src="assets/agents/zumbi.jpeg" alt="Zumbi" class="agent-avatar mb-4">
                         <h3 class="text-2xl font-bold mb-1">Zumbi</h3>
                         <p class="text-sm opacity-80 mb-3">Investigador de Padrões</p>
                         <p class="text-xs opacity-90">Caçador de estruturas invisíveis. Líder do Quilombo, resistência e visão estratégica.</p>
                     </div>
                     
                     <!-- Tiradentes -->
-                    <div class="agent-card rounded-xl p-6 text-center transition-all duration-300 hover:transform hover:scale-105" style="background: linear-gradient(135deg, #1e293b, #0f172a); color: white;">
-                        <div class="agent-logo mb-4 mx-auto" style="width: 120px; height: 120px; display: flex; align-items: center; justify-content: center;">
-                            <img src="assets/agents/tiradentes.png" alt="Tiradentes" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover;">
-                        </div>
+                    <div class="agent-card rounded-xl p-6 text-center " style="background: linear-gradient(135deg, #1e293b, #0f172a); color: white;">
+                        <img src="assets/agents/tiradentes.png" alt="Tiradentes" class="agent-avatar mb-4">
                         <h3 class="text-2xl font-bold mb-1">Tiradentes</h3>
                         <p class="text-sm opacity-80 mb-3">Avaliador de Risco</p>
                         <p class="text-xs opacity-90">Classifica riscos e violações à integridade. Justiça, coragem e lucidez revolucionária.</p>
                     </div>
                     
                     <!-- Obaluaiê -->
-                    <div class="agent-card rounded-xl p-6 text-center transition-all duration-300 hover:transform hover:scale-105" style="background: linear-gradient(135deg, #7c3aed, #5b21b6); color: white;")
-                        <div class="agent-logo mb-4 mx-auto" style="width: 120px; height: 120px; display: flex; align-items: center; justify-content: center;">
-                            <img src="assets/agents/obaluaie.jpg" alt="Obaluaiê" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover;">
-                        </div>
+                    <div class="agent-card rounded-xl p-6 text-center " style="background: linear-gradient(135deg, #7c3aed, #5b21b6); color: white;")
+                        <img src="assets/agents/obaluaie.jpg" alt="Obaluaiê" class="agent-avatar mb-4">
                         <h3 class="text-2xl font-bold mb-1">Obaluaiê</h3>
                         <p class="text-sm opacity-80 mb-3">Detector de Corrupção</p>
                         <p class="text-xs opacity-90">Aponta "doenças" nos dados públicos. Orixá da cura, revelação e regeneração.</p>
                     </div>
                     
                     <!-- Niemeier -->
-                    <div class="agent-card rounded-xl p-6 text-center transition-all duration-300 hover:transform hover:scale-105" style="background: linear-gradient(135deg, #0891b2, #0e7490); color: white;")
-                        <div class="agent-logo mb-4 mx-auto" style="width: 120px; height: 120px; display: flex; align-items: center; justify-content: center;">
-                            <img src="assets/agents/niemeyer.jpg" alt="Niemeyer" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover;">
-                        </div>
+                    <div class="agent-card rounded-xl p-6 text-center " style="background: linear-gradient(135deg, #0891b2, #0e7490); color: white;")
+                        <img src="assets/agents/niemeyer.jpg" alt="Niemeyer" class="agent-avatar mb-4">
                         <h3 class="text-2xl font-bold mb-1">Niemeyer</h3>
                         <p class="text-sm opacity-80 mb-3">Visualização Gráfica</p>
                         <p class="text-xs opacity-90">Gera dashboards e narrativas visuais. Oscar Niemeyer: forma, clareza e função.</p>
                     </div>
                     
                     <!-- Nanã -->
-                    <div class="agent-card rounded-xl p-6 text-center transition-all duration-300 hover:transform hover:scale-105" style="background: linear-gradient(135deg, #4338ca, #3730a3); color: white;")
-                        <div class="agent-logo mb-4 mx-auto" style="width: 120px; height: 120px; display: flex; align-items: center; justify-content: center;">
-                            <img src="assets/agents/nana.jpeg" alt="Nanã" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover;">
-                        </div>
+                    <div class="agent-card rounded-xl p-6 text-center " style="background: linear-gradient(135deg, #4338ca, #3730a3); color: white;")
+                        <img src="assets/agents/nana.jpeg" alt="Nanã" class="agent-avatar mb-4">
                         <h3 class="text-2xl font-bold mb-1">Nanã</h3>
                         <p class="text-sm opacity-80 mb-3">Agente Temporal</p>
                         <p class="text-xs opacity-90">Analisa tendências e repetições históricas. Orixá do tempo profundo e sabedoria.</p>
                     </div>
                     
                     <!-- Ogum -->
-                    <div class="agent-card rounded-xl p-6 text-center transition-all duration-300 hover:transform hover:scale-105" style="background: linear-gradient(135deg, #059669, #047857); color: white;")
-                        <div class="agent-logo mb-4 mx-auto" style="width: 120px; height: 120px; display: flex; align-items: center; justify-content: center;">
-                            <img src="assets/agents/lampiao.jpeg" alt="Lampião" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover;">
-                        </div>
+                    <div class="agent-card rounded-xl p-6 text-center " style="background: linear-gradient(135deg, #059669, #047857); color: white;")
+                        <img src="assets/agents/lampiao.jpeg" alt="Lampião" class="agent-avatar mb-4">
                         <h3 class="text-2xl font-bold mb-1">Lampião</h3>
                         <p class="text-sm opacity-80 mb-3">Executor Técnico</p>
                         <p class="text-xs opacity-90">Scripts, ETLs, scraping e automação. Rei do Cangaço, astúcia e determinação.</p>
                     </div>
                     
                     <!-- Ceuci -->
-                    <div class="agent-card rounded-xl p-6 text-center transition-all duration-300 hover:transform hover:scale-105" style="background: linear-gradient(135deg, #C1A34F, #5D793A); color: white;">
-                        <div class="agent-logo mb-4 mx-auto" style="width: 120px; height: 120px; display: flex; align-items: center; justify-content: center;">
-                            <img src="assets/agents/ceuci.png" alt="Ceuci" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover;">
-                        </div>
+                    <div class="agent-card rounded-xl p-6 text-center " style="background: linear-gradient(135deg, #C1A34F, #5D793A); color: white;">
+                        <img src="assets/agents/ceuci.png" alt="Ceuci" class="agent-avatar mb-4">
                         <h3 class="text-2xl font-bold mb-1">Ceuci</h3>
                         <p class="text-sm opacity-80 mb-3">Agente Preditivo</p>
                         <p class="text-xs opacity-90">Previsão de ciclos temporais e transformações políticas. Mãe da Terra Tupi-Guarani, sabedoria dos ciclos naturais.</p>
