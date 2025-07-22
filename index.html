@@ -508,6 +508,14 @@
             backdrop-filter: blur(10px);
         }
         
+        /* Agent logo images */
+        .agent-logo img {
+            width: 96px;
+            height: 96px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        
         /* Agent cards responsive */
         @media (max-width: 768px) {
             .agent-card {
@@ -518,6 +526,11 @@
                 width: 80px;
                 height: 80px;
                 font-size: 2.5rem;
+            }
+            
+            .agent-logo img {
+                width: 80px;
+                height: 80px;
             }
             
             .agent-card h3 {
@@ -794,7 +807,7 @@
                     <!-- Abaporu -->
                     <div class="agent-card rounded-xl p-6 text-center transition-all duration-300 hover:transform hover:scale-105" style="background: linear-gradient(135deg, #e0f2fe, #b3e5fc); color: #1565c0;">
                         <div class="agent-logo mb-4 mx-auto w-24 h-24 rounded-full flex items-center justify-center overflow-hidden" style="background: rgba(255,255,255,0.2);">
-                            <img src="assets/agents/abaporu.png" alt="Abaporu" class="w-full h-full object-cover">
+                            <img src="assets/agents/abaporu.png" alt="Abaporu">
                         </div>
                         <h3 class="text-2xl font-bold mb-1">Abaporu</h3>
                         <p class="text-sm opacity-80 mb-3">Núcleo Central da IA</p>
@@ -804,7 +817,7 @@
                     <!-- Exu -->
                     <div class="agent-card rounded-xl p-6 text-center transition-all duration-300 hover:transform hover:scale-105" style="background: linear-gradient(135deg, #fce4ec, #f8bbd9); color: #ad1457;">
                         <div class="agent-logo mb-4 mx-auto w-24 h-24 rounded-full flex items-center justify-center overflow-hidden" style="background: rgba(255,255,255,0.2);">
-                            <img src="assets/agents/anita.png" alt="Anita Garibaldi" class="w-full h-full object-cover">
+                            <img src="assets/agents/anita.png" alt="Anita Garibaldi">
                         </div>
                         <h3 class="text-2xl font-bold mb-1">Anita Garibaldi</h3>
                         <p class="text-sm opacity-80 mb-3">Roteadora Semântica</p>
@@ -814,7 +827,7 @@
                     <!-- Zumbi -->
                     <div class="agent-card rounded-xl p-6 text-center transition-all duration-300 hover:transform hover:scale-105" style="background: linear-gradient(135deg, #fff3e0, #ffcc02); color: #e65100;">
                         <div class="agent-logo mb-4 mx-auto w-24 h-24 rounded-full flex items-center justify-center overflow-hidden" style="background: rgba(255,255,255,0.2);">
-                            <img src="assets/agents/zumbi.jpeg" alt="Zumbi" class="w-full h-full object-cover">
+                            <img src="assets/agents/zumbi.jpeg" alt="Zumbi">
                         </div>
                         <h3 class="text-2xl font-bold mb-1">Zumbi</h3>
                         <p class="text-sm opacity-80 mb-3">Investigador de Padrões</p>
@@ -824,7 +837,7 @@
                     <!-- Tiradentes -->
                     <div class="agent-card rounded-xl p-6 text-center transition-all duration-300 hover:transform hover:scale-105" style="background: linear-gradient(135deg, #e8f5e8, #c8e6c9); color: #2e7d32;">
                         <div class="agent-logo mb-4 mx-auto w-24 h-24 rounded-full flex items-center justify-center overflow-hidden" style="background: rgba(255,255,255,0.2);">
-                            <img src="assets/agents/tiradentes.png" alt="Tiradentes" class="w-full h-full object-cover">
+                            <img src="assets/agents/tiradentes.png" alt="Tiradentes">
                         </div>
                         <h3 class="text-2xl font-bold mb-1">Tiradentes</h3>
                         <p class="text-sm opacity-80 mb-3">Avaliador de Risco</p>
@@ -834,7 +847,7 @@
                     <!-- Obaluaiê -->
                     <div class="agent-card rounded-xl p-6 text-center transition-all duration-300 hover:transform hover:scale-105" style="background: linear-gradient(135deg, #f3e5f5, #e1bee7); color: #7b1fa2;")
                         <div class="agent-logo mb-4 mx-auto w-24 h-24 rounded-full flex items-center justify-center overflow-hidden" style="background: rgba(255,255,255,0.2);">
-                            <img src="assets/agents/obaluaie.jpg" alt="Obaluaiê" class="w-full h-full object-cover">
+                            <img src="assets/agents/obaluaie.jpg" alt="Obaluaiê">
                         </div>
                         <h3 class="text-2xl font-bold mb-1">Obaluaiê</h3>
                         <p class="text-sm opacity-80 mb-3">Detector de Corrupção</p>
@@ -844,7 +857,7 @@
                     <!-- Niemeier -->
                     <div class="agent-card rounded-xl p-6 text-center transition-all duration-300 hover:transform hover:scale-105" style="background: linear-gradient(135deg, #e0f7fa, #b2ebf2); color: #00838f;")
                         <div class="agent-logo mb-4 mx-auto w-24 h-24 rounded-full flex items-center justify-center overflow-hidden" style="background: rgba(255,255,255,0.2);">
-                            <img src="assets/agents/niemeyer.jpg" alt="Niemeyer" class="w-full h-full object-cover">
+                            <img src="assets/agents/niemeyer.jpg" alt="Niemeyer">
                         </div>
                         <h3 class="text-2xl font-bold mb-1">Niemeyer</h3>
                         <p class="text-sm opacity-80 mb-3">Visualização Gráfica</p>
@@ -854,7 +867,7 @@
                     <!-- Nanã -->
                     <div class="agent-card rounded-xl p-6 text-center transition-all duration-300 hover:transform hover:scale-105" style="background: linear-gradient(135deg, #ede7f6, #d1c4e9); color: #5e35b1;")
                         <div class="agent-logo mb-4 mx-auto w-24 h-24 rounded-full flex items-center justify-center overflow-hidden" style="background: rgba(255,255,255,0.2);">
-                            <img src="assets/agents/nana.jpeg" alt="Nanã" class="w-full h-full object-cover">
+                            <img src="assets/agents/nana.jpeg" alt="Nanã">
                         </div>
                         <h3 class="text-2xl font-bold mb-1">Nanã</h3>
                         <p class="text-sm opacity-80 mb-3">Agente Temporal</p>
@@ -864,7 +877,7 @@
                     <!-- Ogum -->
                     <div class="agent-card rounded-xl p-6 text-center transition-all duration-300 hover:transform hover:scale-105" style="background: linear-gradient(135deg, #f5f5f5, #e0e0e0); color: #424242;")
                         <div class="agent-logo mb-4 mx-auto w-24 h-24 rounded-full flex items-center justify-center overflow-hidden" style="background: rgba(255,255,255,0.2);">
-                            <img src="assets/agents/lampiao.jpeg" alt="Lampião" class="w-full h-full object-cover">
+                            <img src="assets/agents/lampiao.jpeg" alt="Lampião">
                         </div>
                         <h3 class="text-2xl font-bold mb-1">Lampião</h3>
                         <p class="text-sm opacity-80 mb-3">Executor Técnico</p>
@@ -874,7 +887,7 @@
                     <!-- Ceuci -->
                     <div class="agent-card rounded-xl p-6 text-center transition-all duration-300 hover:transform hover:scale-105" style="background: linear-gradient(135deg, #f1f8e9, #dcedc8); color: #689f38;">
                         <div class="agent-logo mb-4 mx-auto w-24 h-24 rounded-full flex items-center justify-center overflow-hidden" style="background: rgba(255,255,255,0.2);">
-                            <img src="assets/agents/ceuci.png" alt="Ceuci" class="w-full h-full object-cover">
+                            <img src="assets/agents/ceuci.png" alt="Ceuci">
                         </div>
                         <h3 class="text-2xl font-bold mb-1">Ceuci</h3>
                         <p class="text-sm opacity-80 mb-3">Agente Preditivo</p>
