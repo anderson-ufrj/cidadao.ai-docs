@@ -146,23 +146,43 @@
                 width: 44px;
                 height: 44px;
                 touch-action: manipulation;
+                font-size: 1.2rem;
+                border: 1px solid var(--border);
+                border-radius: 0.5rem;
             }
             
             .mobile-menu {
-                border-top: 1px solid var(--border);
                 background: var(--bg-primary);
+                border-top: 1px solid var(--border);
+                border-radius: 0 0 0.75rem 0.75rem;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
             }
             
             .mobile-menu a {
-                display: block;
                 padding: 0.75rem 0;
-                border-bottom: 1px solid var(--border-light);
-                touch-action: manipulation;
+                border-bottom: 1px solid var(--border);
             }
             
             .mobile-menu a:last-child {
                 border-bottom: none;
             }
+            
+            .mobile-menu .flag-button {
+                width: 44px;
+                height: 36px;
+                font-size: 1.25rem;
+                margin: 0 0.25rem;
+        }
+        
+        .mobile-menu a {
+            display: block;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border);
+            touch-action: manipulation;
+        }
+        
+        .mobile-menu a:last-child {
+            border-bottom: none;
         }
         
         /* Control buttons */
@@ -275,8 +295,11 @@
         }
         
         .flag-button.active {
+            background: var(--text-accent);
+            color: var(--bg-primary);
             border-color: var(--text-accent);
-            box-shadow: 0 0 0 1px var(--text-accent);
+            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+            transform: scale(1.02);
         }
         
         /* Modal styles */
@@ -290,6 +313,7 @@
             height: 100%;
             background-color: rgba(0, 0, 0, 0.5);
             backdrop-filter: blur(4px);
+            padding: 1rem;
         }
         
         .modal.active {
@@ -300,7 +324,9 @@
         
         .modal-content {
             background-color: var(--bg-primary);
-            margin: 1rem;
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+            margin: 0;
             padding: 2rem;
             border-radius: 1rem;
             max-width: 600px;
@@ -308,6 +334,7 @@
             overflow-y: auto;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             animation: modalFadeIn 0.3s ease-out;
+            width: 100%;
         }
         
         /* Mobile modal adjustments */
@@ -357,11 +384,27 @@
             font-size: 1.5rem;
             font-weight: bold;
             cursor: pointer;
-            transition: color 0.2s ease;
+            transition: all 0.3s ease;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--bg-secondary);
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border);
+            z-index: 10;
+            line-height: 1;
         }
         
         .close:hover {
-            color: var(--text-primary);
+            color: var(--text-accent);
+            background: var(--bg-tertiary);
+            transform: scale(1.1);
+            border-color: var(--text-accent);
         }
         
         /* Mobile typography and spacing optimizations */
@@ -601,9 +644,9 @@
             <!-- Mobile Menu -->
             <div id="mobileMenu" class="hidden md:hidden mobile-menu mt-4 pb-4">
                 <div class="flex flex-col space-y-2 text-sm">
-                    <a href="#repositorios" class="hover:text-emerald-500 transition" data-lang-key="nav.repositories">Repositórios</a>
-                    <a href="#links" class="hover:text-emerald-500 transition" data-lang-key="nav.links">Links</a>
-                    <a href="#api" class="hover:text-emerald-500 transition" data-lang-key="nav.api">API</a>
+                    <a href="#repositorios" class="hover:text-emerald-500 transition" data-lang-key="nav.repositories" onclick="closeMobileMenu()">Repositórios</a>
+                    <a href="#links" class="hover:text-emerald-500 transition" data-lang-key="nav.links" onclick="closeMobileMenu()">Links</a>
+                    <a href="#api" class="hover:text-emerald-500 transition" data-lang-key="nav.api" onclick="closeMobileMenu()">API</a>
                 </div>
                 <div class="flex items-center gap-3 mt-4">
                     <!-- Mobile Language Flags -->
@@ -1121,10 +1164,11 @@
             document.getElementById('html-root').setAttribute('data-theme', theme);
             localStorage.setItem('cidadao-ai-theme', theme);
             
-            const themeButton = document.getElementById('themeToggle');
-            if (themeButton) {
-                themeButton.textContent = theme === 'dark' ? '☀️' : '🌙';
-            }
+            // Update all theme buttons (desktop and mobile)
+            const themeButtons = document.querySelectorAll('.theme-button');
+            themeButtons.forEach(button => {
+                button.textContent = theme === 'dark' ? '☀️' : '🌙';
+            });
         }
         
         // Toggle theme
@@ -1144,7 +1188,7 @@
             localStorage.setItem('cidadao-ai-lang', lang);
             document.documentElement.lang = lang === 'pt-BR' ? 'pt-BR' : 'en';
             
-            // Update flag buttons
+            // Update all flag buttons (desktop and mobile)
             const flagBR = document.getElementById('flagBR');
             const flagUS = document.getElementById('flagUS');
             const flagBRMobile = document.getElementById('flagBR-mobile');
@@ -1192,6 +1236,12 @@
         function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
             menu.classList.toggle('hidden');
+        }
+        
+        // Close mobile menu when clicking links
+        function closeMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.add('hidden');
         }
         
         // Modal functions
@@ -1334,6 +1384,11 @@
                     }
                 }
             }, { passive: true });
+            
+            // Auto-close mobile menu when clicking navigation links
+            document.querySelectorAll('#mobileMenu a').forEach(link => {
+                link.addEventListener('click', closeMobileMenu);
+            });
         });
     </script>
 </body>
