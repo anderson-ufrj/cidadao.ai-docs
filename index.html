@@ -516,8 +516,8 @@
         }
         
         .agent-avatar {
-            width: 100px;
-            height: 100px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             object-fit: cover;
             object-position: center;
@@ -533,10 +533,21 @@
             transform: scale(1.05);
         }
         
+        .agent-link {
+            display: inline-block;
+            transition: all 0.3s ease;
+            border-radius: 50%;
+        }
+        
+        .agent-link:hover .agent-avatar {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        
         @media (max-width: 768px) {
             .agent-avatar {
-                width: 80px;
-                height: 80px;
+                width: 120px;
+                height: 120px;
             }
             
             .agent-card h3 {
@@ -811,7 +822,9 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Abaporu -->
                     <div class="agent-card rounded-xl p-6 text-center" style="background: linear-gradient(135deg, #f59e0b, #d97706); color: white;">
-                        <img src="assets/agents/abaporu.png" alt="Abaporu" class="agent-avatar mb-4" loading="lazy">
+                        <a href="https://en.wikipedia.org/wiki/Abaporu" target="_blank" class="agent-link" title="Learn more about Abaporu">
+                            <img src="assets/agents/abaporu.png" alt="Abaporu" class="agent-avatar mb-4" loading="lazy">
+                        </a>
                         <h3 class="text-2xl font-bold mb-1">Abaporu</h3>
                         <p class="text-sm opacity-80 mb-3" data-lang-key="agents.abaporu.role">Núcleo Central da IA</p>
                         <p class="text-xs opacity-90" data-lang-key="agents.abaporu.desc">Coordena operações entre agentes e processa linguagem natural para análise semântica de dados.</p>
@@ -819,7 +832,9 @@
                     
                     <!-- Exu -->
                     <div class="agent-card rounded-xl p-6 text-center " style="background: linear-gradient(135deg, #dc2626, #991b1b); color: white;">
-                        <img src="assets/agents/anita.png" alt="Anita Garibaldi" class="agent-avatar mb-4" loading="lazy">
+                        <a href="https://en.wikipedia.org/wiki/Anita_Garibaldi" target="_blank" class="agent-link" title="Learn more about Anita Garibaldi">
+                            <img src="assets/agents/anita.png" alt="Anita Garibaldi" class="agent-avatar mb-4" loading="lazy">
+                        </a>
                         <h3 class="text-2xl font-bold mb-1">Anita Garibaldi</h3>
                         <p class="text-sm opacity-80 mb-3" data-lang-key="agents.anita.role">Roteadora Semântica</p>
                         <p class="text-xs opacity-90" data-lang-key="agents.anita.desc">Gerencia roteamento inteligente de consultas e comunicação inter-agentes do sistema.</p>
@@ -827,7 +842,9 @@
                     
                     <!-- Zumbi -->
                     <div class="agent-card rounded-xl p-6 text-center " style="background: linear-gradient(135deg, #b91c1c, #7f1d1d); color: white;">
-                        <img src="assets/agents/zumbi.jpeg" alt="Zumbi" class="agent-avatar mb-4" loading="lazy">
+                        <a href="https://en.wikipedia.org/wiki/Zumbi" target="_blank" class="agent-link" title="Learn more about Zumbi">
+                            <img src="assets/agents/zumbi.jpeg" alt="Zumbi" class="agent-avatar mb-4" loading="lazy">
+                        </a>
                         <h3 class="text-2xl font-bold mb-1">Zumbi</h3>
                         <p class="text-sm opacity-80 mb-3" data-lang-key="agents.zumbi.role">Investigador de Padrões</p>
                         <p class="text-xs opacity-90" data-lang-key="agents.zumbi.desc">Especialista em detecção de padrões ocultos e análise de estruturas complexas de dados.</p>
@@ -835,7 +852,9 @@
                     
                     <!-- Tiradentes -->
                     <div class="agent-card rounded-xl p-6 text-center " style="background: linear-gradient(135deg, #1e293b, #0f172a); color: white;">
-                        <img src="assets/agents/tiradentes.png" alt="Tiradentes" class="agent-avatar mb-4" loading="lazy">
+                        <a href="https://en.wikipedia.org/wiki/Tiradentes" target="_blank" class="agent-link" title="Learn more about Tiradentes">
+                            <img src="assets/agents/tiradentes.png" alt="Tiradentes" class="agent-avatar mb-4" loading="lazy">
+                        </a>
                         <h3 class="text-2xl font-bold mb-1">Tiradentes</h3>
                         <p class="text-sm opacity-80 mb-3" data-lang-key="agents.tiradentes.role">Avaliador de Risco</p>
                         <p class="text-xs opacity-90" data-lang-key="agents.tiradentes.desc">Avalia riscos operacionais e identifica violações de conformidade em dados públicos.</p>
@@ -843,7 +862,9 @@
                     
                     <!-- Obaluaiê -->
                     <div class="agent-card rounded-xl p-6 text-center" style="background: linear-gradient(135deg, #7c3aed, #5b21b6); color: white;">
-                        <img src="assets/agents/obaluaie.png" alt="Obaluaiê" class="agent-avatar mb-4" loading="lazy">
+                        <a href="https://en.wikipedia.org/wiki/Babalu-Aye" target="_blank" class="agent-link" title="Learn more about Obaluaiê (Babalu-Aye)">
+                            <img src="assets/agents/obaluaie.png" alt="Obaluaiê" class="agent-avatar mb-4" loading="lazy">
+                        </a>
                         <h3 class="text-2xl font-bold mb-1">Obaluaiê</h3>
                         <p class="text-sm opacity-80 mb-3" data-lang-key="agents.obaluaie.role">Detector de Corrupção</p>
                         <p class="text-xs opacity-90" data-lang-key="agents.obaluaie.desc">Detecta anomalias sistêmicas e inconsistências indicativas de corrupção nos dados.</p>
@@ -851,7 +872,9 @@
                     
                     <!-- Niemeier -->
                     <div class="agent-card rounded-xl p-6 text-center" style="background: linear-gradient(135deg, #0891b2, #0e7490); color: white;">
-                        <img src="assets/agents/niemeyer.png" alt="Niemeyer" class="agent-avatar mb-4" loading="lazy">
+                        <a href="https://en.wikipedia.org/wiki/Oscar_Niemeyer" target="_blank" class="agent-link" title="Learn more about Oscar Niemeyer">
+                            <img src="assets/agents/niemeyer.png" alt="Niemeyer" class="agent-avatar mb-4" loading="lazy">
+                        </a>
                         <h3 class="text-2xl font-bold mb-1">Niemeyer</h3>
                         <p class="text-sm opacity-80 mb-3" data-lang-key="agents.niemeyer.role">Visualização Gráfica</p>
                         <p class="text-xs opacity-90" data-lang-key="agents.niemeyer.desc">Cria visualizações interativas e relatórios gráficos para apresentação de resultados.</p>
@@ -859,7 +882,9 @@
                     
                     <!-- Nanã -->
                     <div class="agent-card rounded-xl p-6 text-center" style="background: linear-gradient(135deg, #4338ca, #3730a3); color: white;">
-                        <img src="assets/agents/nana.png" alt="Nanã" class="agent-avatar mb-4" loading="lazy">
+                        <a href="https://pt.wikipedia.org/wiki/Nan%C3%A3" target="_blank" class="agent-link" title="Learn more about Nanã">
+                            <img src="assets/agents/nana.png" alt="Nanã" class="agent-avatar mb-4" loading="lazy">
+                        </a>
                         <h3 class="text-2xl font-bold mb-1">Nanã</h3>
                         <p class="text-sm opacity-80 mb-3" data-lang-key="agents.nana.role">Agente Temporal</p>
                         <p class="text-xs opacity-90" data-lang-key="agents.nana.desc">Processa séries temporais e identifica padrões históricos em bases de dados.</p>
@@ -867,7 +892,9 @@
                     
                     <!-- Ogum -->
                     <div class="agent-card rounded-xl p-6 text-center" style="background: linear-gradient(135deg, #059669, #047857); color: white;">
-                        <img src="assets/agents/lampiao.png" alt="Lampião" class="agent-avatar mb-4" loading="lazy">
+                        <a href="https://en.wikipedia.org/wiki/Lampi%C3%A3o" target="_blank" class="agent-link" title="Learn more about Lampião">
+                            <img src="assets/agents/lampiao.png" alt="Lampião" class="agent-avatar mb-4" loading="lazy">
+                        </a>
                         <h3 class="text-2xl font-bold mb-1">Lampião</h3>
                         <p class="text-sm opacity-80 mb-3" data-lang-key="agents.lampiao.role">Executor Técnico</p>
                         <p class="text-xs opacity-90" data-lang-key="agents.lampiao.desc">Executa processos de ETL, web scraping e automação de coleta de dados.</p>
@@ -875,10 +902,42 @@
                     
                     <!-- Ceuci -->
                     <div class="agent-card rounded-xl p-6 text-center " style="background: linear-gradient(135deg, #C1A34F, #5D793A); color: white;">
-                        <img src="assets/agents/ceuci.png" alt="Ceuci" class="agent-avatar mb-4" loading="lazy">
+                        <a href="https://mythus.fandom.com/wiki/Ceuci" target="_blank" class="agent-link" title="Learn more about Ceuci (Tupi mythology)">
+                            <img src="assets/agents/ceuci.png" alt="Ceuci" class="agent-avatar mb-4" loading="lazy">
+                        </a>
                         <h3 class="text-2xl font-bold mb-1">Ceuci</h3>
                         <p class="text-sm opacity-80 mb-3" data-lang-key="agents.ceuci.role">Agente Preditivo</p>
                         <p class="text-xs opacity-90" data-lang-key="agents.ceuci.desc">Realiza análise preditiva e modelagem de tendências temporais em dados governamentais.</p>
+                    </div>
+                    
+                    <!-- Dandara -->
+                    <div class="agent-card rounded-xl p-6 text-center" style="background: linear-gradient(135deg, #ec4899, #be185d); color: white;">
+                        <a href="https://en.wikipedia.org/wiki/Dandara" target="_blank" class="agent-link" title="Learn more about Dandara">
+                            <img src="assets/agents/dandara.png" alt="Dandara" class="agent-avatar mb-4" loading="lazy">
+                        </a>
+                        <h3 class="text-2xl font-bold mb-1">Dandara</h3>
+                        <p class="text-sm opacity-80 mb-3" data-lang-key="agents.dandara.role">Agente de Justiça Social</p>
+                        <p class="text-xs opacity-90" data-lang-key="agents.dandara.desc">Monitora políticas de inclusão, equidade social e indicadores de justiça distributiva.</p>
+                    </div>
+                    
+                    <!-- Machado de Assis -->
+                    <div class="agent-card rounded-xl p-6 text-center" style="background: linear-gradient(135deg, #6b7280, #374151); color: white;">
+                        <a href="https://en.wikipedia.org/wiki/Machado_de_Assis" target="_blank" class="agent-link" title="Learn more about Machado de Assis">
+                            <img src="assets/agents/machado.png" alt="Machado de Assis" class="agent-avatar mb-4" loading="lazy">
+                        </a>
+                        <h3 class="text-2xl font-bold mb-1">Machado de Assis</h3>
+                        <p class="text-sm opacity-80 mb-3" data-lang-key="agents.machado.role">Agente de Análise Textual</p>
+                        <p class="text-xs opacity-90" data-lang-key="agents.machado.desc">Processa editais, leis, contratos e documentos governamentais com análise semântica avançada.</p>
+                    </div>
+                    
+                    <!-- José Bonifácio -->
+                    <div class="agent-card rounded-xl p-6 text-center" style="background: linear-gradient(135deg, #0d9488, #0f766e); color: white;">
+                        <a href="https://en.wikipedia.org/wiki/José_Bonifácio_de_Andrada_e_Silva" target="_blank" class="agent-link" title="Learn more about José Bonifácio">
+                            <img src="assets/agents/bonifacio.png" alt="José Bonifácio" class="agent-avatar mb-4" loading="lazy">
+                        </a>
+                        <h3 class="text-2xl font-bold mb-1">José Bonifácio</h3>
+                        <p class="text-sm opacity-80 mb-3" data-lang-key="agents.bonifacio.role">Agente de Políticas Públicas</p>
+                        <p class="text-xs opacity-90" data-lang-key="agents.bonifacio.desc">Analisa eficácia de políticas públicas, reformas institucionais e impacto social das decisões.</p>
                     </div>
                 </div>
                 
@@ -929,7 +988,7 @@
                 'sections.links.manifesto': '📜 Manifesto Cidadão.AI',
                 'sections.links.manifesto.desc': 'Nossos princípios e valores fundamentais',
                 'sections.links.system': '🤖 Entenda o Sistema',
-                'sections.links.system.desc': 'Conheça nossos nove agentes especializados',
+                'sections.links.system.desc': 'Conheça nossos doze agentes especializados',
                 'sections.api.title': 'Documentação da API',
                 'modal.title': '📜 Sobre',
                 'manifesto.modal.title': '📜 Manifesto Cidadão.AI',
@@ -955,6 +1014,12 @@
                 'agents.lampiao.desc': 'Executa processos de ETL, web scraping e automação de coleta de dados.',
                 'agents.ceuci.role': 'Agente Preditivo',
                 'agents.ceuci.desc': 'Realiza análise preditiva e modelagem de tendências temporais em dados governamentais.',
+                'agents.dandara.role': 'Agente de Justiça Social',
+                'agents.dandara.desc': 'Monitora políticas de inclusão, equidade social e indicadores de justiça distributiva.',
+                'agents.machado.role': 'Agente de Análise Textual',
+                'agents.machado.desc': 'Processa editais, leis, contratos e documentos governamentais com análise semântica avançada.',
+                'agents.bonifacio.role': 'Agente de Políticas Públicas',
+                'agents.bonifacio.desc': 'Analisa eficácia de políticas públicas, reformas institucionais e impacto social das decisões.',
                 'modal.intro': 'Cidadão.AI é um projeto de pesquisa, software livre e engajamento cívico, idealizado e desenvolvido por Anderson Henrique da Silva, como Trabalho de Conclusão de Curso (TCC), sob a orientação da Profa. Dra. Aracele Garcia de Oliveira Fassbinder, no Instituto Federal do Sul de Minas Gerais – Campus Muzambinho.',
                 'modal.purpose': 'Este sistema multi-agente foi concebido com o propósito de democratizar o acesso aos dados públicos brasileiros, unindo ética, tecnologia e cidadania.',
                 'modal.author.title': '👨‍💻 Autor',
@@ -990,7 +1055,7 @@
                 'sections.links.manifesto': '📜 Cidadão.AI Manifesto',
                 'sections.links.manifesto.desc': 'Our fundamental principles and values',
                 'sections.links.system': '🤖 Understand the System',
-                'sections.links.system.desc': 'Meet our nine specialized agents',
+                'sections.links.system.desc': 'Meet our twelve specialized agents',
                 'sections.api.title': 'API Documentation',
                 'modal.title': '📜 About',
                 'manifesto.modal.title': '📜 Cidadão.AI Manifesto',
@@ -1016,6 +1081,12 @@
                 'agents.lampiao.desc': 'Executes ETL processes, web scraping, and data collection automation.',
                 'agents.ceuci.role': 'Predictive Agent',
                 'agents.ceuci.desc': 'Performs predictive analysis and temporal trend modeling on government data.',
+                'agents.dandara.role': 'Social Justice Agent',
+                'agents.dandara.desc': 'Monitors inclusion policies, social equity and distributive justice indicators.',
+                'agents.machado.role': 'Textual Analysis Agent',
+                'agents.machado.desc': 'Processes public tenders, laws, contracts and government documents with advanced semantic analysis.',
+                'agents.bonifacio.role': 'Public Policy Agent',
+                'agents.bonifacio.desc': 'Analyzes public policy effectiveness, institutional reforms and social impact of decisions.',
                 'modal.intro': 'Cidadão.AI is a research, free software and civic engagement project, conceived and developed by Anderson Henrique da Silva as an undergraduate thesis, supervised by Prof. Dr. Aracele Garcia de Oliveira Fassbinder at the Federal Institute of Southern Minas Gerais – Campus Muzambinho.',
                 'modal.purpose': 'This multi-agent system was designed to democratize access to Brazilian public data, combining ethics, technology and citizenship.',
                 'modal.author.title': '👨‍💻 Author',
