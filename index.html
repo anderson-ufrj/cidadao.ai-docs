@@ -17,6 +17,7 @@
     
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/carousel.css">
 </head>
 <body>
     <!-- Navegação Principal -->
@@ -30,6 +31,11 @@
             
             <!-- Controles -->
             <div class="nav-controls">
+                <!-- Manifesto -->
+                <button class="nav-manifesto-btn" data-modal-open="manifestoModal" data-i18n="nav.manifesto" aria-label="Manifesto Cidadão.AI">
+                    📜 Manifesto
+                </button>
+                
                 <!-- Tema -->
                 <div class="control-group" role="group" aria-label="Seletor de tema">
                     <button class="control-button" data-theme-btn="light" data-i18n="nav.theme.light" aria-label="Tema claro">
@@ -66,25 +72,39 @@
                     Cidadão.AI
                 </h1>
                 
-                <p class="hero-subtitle" data-i18n="hero.subtitle">
+                <p class="hero-subtitle-large" data-i18n="hero.subtitle">
                     Hub Oficial de Documentação
                 </p>
                 
-                <p class="hero-description" data-i18n="hero.description">
-                    Democratizando o acesso aos dados públicos brasileiros através da inteligência artificial, fortalecendo a transparência e empoderando cada cidadão.
+                <p class="hero-mission" data-i18n="hero.mission">
+                    Este é o ponto de encontro entre tecnologia, cidadania e responsabilidade pública.
                 </p>
                 
-                <div class="hero-buttons">
-                    <button class="btn btn-primary" data-modal-open="manifestoModal" data-i18n="hero.btn.manifesto">
-                        📜 Manifesto
-                    </button>
-                    <button class="btn btn-secondary" data-modal-open="systemModal" data-i18n="hero.btn.system">
-                        🤖 Entenda o Sistema
-                    </button>
+                <p class="hero-description" data-i18n="hero.description">
+                    O Cidadão.AI reúne múltiplas inteligências artificiais brasileiras trabalhando em rede para democratizar o acesso aos dados públicos, fortalecer a transparência e empoderar cada cidadão com informação clara, acessível e auditável.
+                </p>
+                
+                <div class="agents-intro">
                 </div>
             </div>
         </section>
 
+        <!-- Carrossel com botão flutuante integrado -->
+        <div class="agents-carousel-wrapper">
+            <div class="carousel-context">
+                <h2 class="carousel-title" data-i18n="carousel.title">Conheça Nossas IAs Brasileiras</h2>
+                <p class="carousel-subtitle" data-i18n="carousel.subtitle">Cada agente é uma inteligência artificial especializada, trabalhando 24/7 pela transparência pública</p>
+            </div>
+            <div class="agents-carousel-container">
+                <div class="agents-carousel-track" id="carousel-track">
+                    <!-- Gerado dinamicamente via JavaScript -->
+                </div>
+            </div>
+            <button class="carousel-floating-btn" data-modal-open="systemModal">
+                <span class="btn-icon">🤖</span>
+                <span data-i18n="carousel.button">Entenda nossos agentes de IA</span>
+            </button>
+        </div>
 
         <!-- Repositórios -->
         <section id="repositories" class="section" aria-labelledby="repositories-title">
@@ -387,7 +407,7 @@
 
     <!-- Modal: Sistema -->
     <div id="systemModal" class="modal" role="dialog" aria-labelledby="system-modal-title" aria-hidden="true">
-        <div class="modal-content" style="max-width: 1400px; width: 95vw;">
+        <div class="modal-content" style="max-width: 1600px; width: 98vw;">
             <div class="modal-header">
                 <h2 id="system-modal-title" class="modal-title" data-i18n="modal.system.title">
                     Sistema Multi-Agente
@@ -522,28 +542,60 @@
                         <p class="agent-role">Políticas Públicas</p>
                         <p class="agent-description">Analisa eficácia de políticas públicas e reformas.</p>
                     </div>
+                    
+                    <!-- Deodoro da Fonseca -->
+                    <div class="agent-card" data-agent="deodoro">
+                        <a href="https://en.wikipedia.org/wiki/Deodoro_da_Fonseca" target="_blank" rel="noopener" class="agent-avatar-link">
+                            <img src="assets/agents/deodoro-fonseca.png" alt="Deodoro da Fonseca" class="agent-avatar">
+                        </a>
+                        <h3 class="agent-name">Deodoro da Fonseca</h3>
+                        <p class="agent-role">Agente Base</p>
+                        <p class="agent-description">Define contratos e interfaces base para todos os agentes do sistema.</p>
+                    </div>
+                    
+                    <!-- Carlos Drummond de Andrade -->
+                    <div class="agent-card" data-agent="drummond">
+                        <a href="https://en.wikipedia.org/wiki/Carlos_Drummond_de_Andrade" target="_blank" rel="noopener" class="agent-avatar-link">
+                            <img src="assets/agents/carlos-drummond.png" alt="Carlos Drummond de Andrade" class="agent-avatar">
+                        </a>
+                        <h3 class="agent-name">Drummond</h3>
+                        <p class="agent-role">Agente de Comunicação</p>
+                        <p class="agent-description">Gera comunicações automáticas e alertas multi-canal para cidadãos.</p>
+                    </div>
+                    
+                    <!-- Maria Quitéria -->
+                    <div class="agent-card" data-agent="quiteria">
+                        <a href="https://en.wikipedia.org/wiki/Maria_Quit%C3%A9ria" target="_blank" rel="noopener" class="agent-avatar-link">
+                            <img src="assets/agents/maria-quiteria.png" alt="Maria Quitéria" class="agent-avatar">
+                        </a>
+                        <h3 class="agent-name">Maria Quitéria</h3>
+                        <p class="agent-role">Agente de Segurança</p>
+                        <p class="agent-description">Realiza auditoria de segurança e proteção da integridade do sistema.</p>
+                    </div>
                 </div>
                 
-                <div class="agents-footer mt-8">
+                <!-- Seção de Poder dos Agentes -->
+                <div class="agents-footer">
                     <div class="agents-power-section">
                         <h3 class="agents-power-title" data-i18n="agents.power.title">🚀 Arquitetura de Alta Performance</h3>
                         <p class="agents-power-description" data-i18n="agents.power.description">
-                            Cada agente opera com inteligência artificial avançada, processamento paralelo e capacidade de análise em tempo real. 
-                            Juntos, formam um ecossistema robusto capaz de processar terabytes de dados públicos, detectar padrões complexos 
-                            e gerar insights actionáveis para fortalecer a transparência governamental e empoderar a cidadania brasileira.
+                            Cada agente opera com inteligência artificial avançada, processamento paralelo e capacidade de análise em tempo real. Juntos, formam um ecossistema robusto capaz de processar terabytes de dados públicos, detectar padrões complexos e gerar insights actionáveis para fortalecer a transparência governamental e empoderar a cidadania brasileira.
                         </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    </main>
 
-    <!-- Botão Flutuante de Informações -->
-    <button class="floating-button" aria-label="Informações sobre o projeto" title="Sobre o Cidadão.AI">
-        ℹ️
-    </button>
+    <!-- Tooltip Global -->
+    <div class="global-tooltip" id="global-tooltip"></div>
+
+    <!-- Botão Flutuante removido - agora é criado dinamicamente via JavaScript -->
 
     <!-- Scripts -->
+    <script src="assets/js/floating-button.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/carousel.js"></script>
 </body>
 </html>

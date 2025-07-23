@@ -203,7 +203,7 @@ body::before {
 /* ===== HERO SECTION ===== */
 .hero {
     text-align: center;
-    padding: 3rem 1.5rem;
+    padding: 2rem 1.5rem;
     background: linear-gradient(135deg, 
         rgba(16, 185, 129, 0.03) 0%,
         rgba(59, 130, 246, 0.02) 25%,
@@ -282,22 +282,42 @@ body::before {
 }
 
 .hero-title {
-    font-size: 3.5rem;
+    font-size: 2.8rem;
     font-weight: 800;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.8rem;
     background: var(--brazil-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
+.hero-subtitle-large {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-accent);
+    margin: 0.5rem 0;
+    text-align: center;
+}
+
+.hero-mission {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin: 0.5rem 0;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-style: italic;
+}
+
 .hero-description {
     font-size: 1.25rem;
     color: var(--text-secondary);
-    margin-bottom: 2rem;
-    max-width: 600px;
+    margin: 0.8rem 0;
+    max-width: 650px;
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.6;
 }
 
 .hero-buttons {
@@ -345,7 +365,7 @@ body::before {
 
 /* ===== SEÇÕES DE CONTEÚDO ===== */
 .section {
-    padding: 2.5rem 1.5rem;
+    padding: 1.5rem 1.5rem;
 }
 
 .section-container {
@@ -519,6 +539,7 @@ body::before {
 /* ===== MODAIS ===== */
 .modal {
     display: none;
+    z-index: 1000;
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -603,18 +624,19 @@ body::before {
 /* ===== AGENTES GRID ===== */
 .agents-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
     margin-top: 2rem;
 }
 
 .agent-card {
     border-radius: 16px;
-    padding: 1.25rem;
+    padding: 2rem;
     text-align: center;
     transition: all 0.3s ease;
     border: 2px solid transparent;
-    min-height: 240px;
+    height: 350px !important;
+    min-width: 224px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -640,6 +662,9 @@ body::before {
 .agent-card[data-agent="dandara"] { background: linear-gradient(135deg, #be123c, #9f1239); color: white; }
 .agent-card[data-agent="machado"] { background: linear-gradient(135deg, #1f2937, #111827); color: white; }
 .agent-card[data-agent="bonifacio"] { background: linear-gradient(135deg, #365314, #1a2e05); color: white; }
+.agent-card[data-agent="deodoro"] { background: linear-gradient(135deg, #1e40af, #1e3a8a); color: white; }
+.agent-card[data-agent="drummond"] { background: linear-gradient(135deg, #a21caf, #86198f); color: white; }
+.agent-card[data-agent="quiteria"] { background: linear-gradient(135deg, #0d9488, #0f766e); color: white; }
 
 .agent-avatar-link {
     display: inline-block;
@@ -647,7 +672,7 @@ body::before {
 }
 
 .agent-avatar-link:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .agent-avatar {
@@ -656,6 +681,7 @@ body::before {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 0.75rem;
+    flex-shrink: 0;
     border: 4px solid rgba(255, 255, 255, 0.3);
     transition: all 0.3s ease;
 }
@@ -726,30 +752,20 @@ body::before {
     margin: 0;
 }
 
-/* ===== BOTÃO FLUTUANTE ===== */
+/* ===== BOTÃO FLUTUANTE - REMOVIDO (agora é modular) ===== */
+/* Força remoção de qualquer floating-button órfão */
 .floating-button {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-    color: white;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    box-shadow: 0 8px 32px rgba(16, 185, 129, 0.4);
-    transition: all 0.3s ease;
-    z-index: 100;
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
 }
 
-.floating-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 12px 40px rgba(16, 185, 129, 0.6);
+/* ===== TOOLTIP DINÂMICO - REMOVIDO ===== */
+/* Força remoção de qualquer tooltip dinâmico órfão */
+.dynamic-tooltip {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
 }
 
 /* ===== RESPONSIVIDADE ===== */
@@ -850,6 +866,293 @@ body::before {
         width: 120px;
         height: 120px;
     }
+}
+
+/* ===== CARROSSEL DE AGENTES ===== */
+.agents-carousel-section {
+    padding: 3rem 0;
+    background: var(--bg-color);
+    overflow: hidden;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.agents-carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 100vw;
+    height: 120px;
+    overflow-x: hidden;
+    overflow-y: visible;
+    margin: 0 auto;
+    left: 0;
+}
+
+.agents-carousel-container::before,
+.agents-carousel-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.agents-carousel-container::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-color), transparent);
+}
+
+.agents-carousel-container::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-color), transparent);
+}
+
+.carousel-agent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.carousel-agent:hover .carousel-avatar {
+    transform: scale(1.4);
+    z-index: 100;
+    position: relative;
+}
+
+/* Tooltip global - DESABILITADO */
+.global-tooltip {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    position: fixed;
+    z-index: -9999 !important;
+}
+
+/* Tooltip específico do carrossel - FUNCIONAL */
+.carousel-tooltip {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: fixed !important;
+    background: linear-gradient(135deg, #10b981, #059669) !important;
+    color: white !important;
+    padding: 8px 12px !important;
+    border-radius: 8px !important;
+    font-size: 0.75rem !important;
+    font-weight: 500 !important;
+    text-align: center !important;
+    z-index: 1000 !important;
+    transform: translateX(-50%) !important;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3) !important;
+    white-space: nowrap !important;
+    pointer-events: none !important;
+}
+
+.global-tooltip.show {
+    opacity: 1;
+}
+
+.global-tooltip::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid var(--gradient-start);
+}
+
+/* Carrossel horizontal infinito */
+.agents-carousel-track {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    animation: scroll-infinite 60s linear infinite;
+    width: calc(15 * 60px * 6);
+    transform: translateX(0);
+    height: 60px;
+    margin-top: 0;
+}
+
+@keyframes scroll-infinite {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-15 * 60px));
+    }
+}
+
+.carousel-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 0;
+    object-fit: cover;
+    filter: none;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+
+.carousel-name {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-align: center;
+    line-height: 1.2;
+    max-width: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Pause on hover */
+.agents-carousel-container:hover .agents-carousel-track {
+    animation-play-state: paused;
+}
+
+/* Wrapper do carrossel com botão */
+.agents-carousel-wrapper {
+    position: relative;
+    margin-bottom: 40px;
+    padding-top: 1.5rem;
+}
+
+/* Contexto do carrossel */
+.carousel-context {
+    text-align: center;
+    margin-bottom: 0.8rem;
+}
+
+.carousel-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    background: var(--brazil-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.carousel-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Botão flutuante integrado ao carrossel */
+.carousel-floating-btn {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    color: white;
+    border: none;
+    padding: 0.9rem 2.5rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { 
+        transform: translateX(-50%) scale(1);
+        box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+    }
+    50% { 
+        transform: translateX(-50%) scale(1.05);
+        box-shadow: 0 15px 40px rgba(16, 185, 129, 0.4);
+    }
+}
+
+.carousel-floating-btn:hover {
+    animation-play-state: paused;
+    transform: translateX(-50%) scale(1.08);
+    box-shadow: 0 15px 40px rgba(16, 185, 129, 0.5);
+}
+
+.carousel-floating-btn .btn-icon {
+    font-size: 1.2rem;
+}
+
+/* ===== AGENTES NO HERO ===== */
+.agents-intro {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.agents-intro-text {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    text-align: center;
+    margin: 0;
+    opacity: 0.9;
+}
+
+.agents-link-btn {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.agents-link-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.25);
+}
+
+/* ===== BOTÃO MANIFESTO NO HEADER ===== */
+.nav-manifesto-btn {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 1rem;
+}
+
+.nav-manifesto-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
 }
 
 /* ===== SCROLLBAR CUSTOMIZADA ===== */
@@ -997,6 +1300,15 @@ body::before {
 .mb-3 { margin-bottom: 0.75rem; }
 .mb-4 { margin-bottom: 1rem; }
 .mb-6 { margin-bottom: 1.5rem; }
+
+/* ===== DEBUG: DETECTAR ELEMENTOS VERDES - REMOVIDO ===== */
+
+/* DEBUG: Elementos suspeitos no bottom - REMOVIDO */
+
+/* DEBUG: Qualquer elemento verde quando hover */
+*:hover {
+    /* Comentado para não atrapalhar */
+}
 .mb-8 { margin-bottom: 2rem; }
 
 .mt-3 { margin-top: 0.75rem; }

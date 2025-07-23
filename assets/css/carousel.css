@@ -1,0 +1,254 @@
+/* ===================================
+   CIDADÃO.AI - CARROSSEL DE AGENTES
+   =================================== */
+
+/* ===== WRAPPER E CONTEXTO ===== */
+.agents-carousel-wrapper {
+    position: relative;
+    margin-bottom: 40px;
+    padding-top: 1.5rem;
+}
+
+.carousel-context {
+    text-align: center;
+    margin-bottom: 0.8rem;
+}
+
+.carousel-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    background: var(--brazil-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.carousel-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ===== CONTAINER PRINCIPAL ===== */
+.agents-carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 100vw;
+    height: 140px;
+    overflow-x: hidden;
+    overflow-y: visible;
+    margin: 0 auto;
+    left: 0;
+    padding: 20px 0;
+}
+
+/* Gradientes nas bordas */
+.agents-carousel-container::before,
+.agents-carousel-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.agents-carousel-container::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-primary), transparent);
+}
+
+.agents-carousel-container::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-primary), transparent);
+}
+
+/* ===== TRACK DO CARROSSEL ===== */
+.agents-carousel-track {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    animation: scroll-infinite 60s linear infinite;
+    width: calc(15 * 60px * 6);
+    transform: translateX(0);
+    height: 100px;
+    margin-top: 20px;
+}
+
+@keyframes scroll-infinite {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-15 * 60px));
+    }
+}
+
+/* Pausar no hover */
+.agents-carousel-container:hover .agents-carousel-track {
+    animation-play-state: paused;
+}
+
+/* ===== AGENTES INDIVIDUAIS ===== */
+.carousel-agent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.carousel-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 0;
+    object-fit: cover;
+    filter: none;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.carousel-agent:hover .carousel-avatar {
+    transform: scale(1.4);
+    z-index: 100;
+    position: relative;
+}
+
+/* ===== TOOLTIP GLOBAL ===== */
+.global-tooltip {
+    position: fixed;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    color: white;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    z-index: 9999;
+    min-width: 140px;
+    line-height: 1.4;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    white-space: pre-line;
+    transform: translateX(-50%);
+}
+
+.global-tooltip.show {
+    opacity: 0 !important;
+    display: none !important;
+    visibility: hidden !important;
+}
+
+.global-tooltip::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid var(--gradient-start);
+}
+
+/* ===== BOTÃO FLUTUANTE ===== */
+.carousel-floating-btn {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    color: white;
+    border: none;
+    padding: 0.9rem 2.5rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { 
+        transform: translateX(-50%) scale(1);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    50% { 
+        transform: translateX(-50%) scale(1.05);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+}
+
+.carousel-floating-btn:hover {
+    animation-play-state: paused;
+    transform: translateX(-50%) scale(1.08);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-floating-btn .btn-icon {
+    font-size: 1.2rem;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    .carousel-title {
+        font-size: 1.75rem;
+    }
+    
+    .carousel-subtitle {
+        font-size: 1rem;
+    }
+    
+    .carousel-floating-btn {
+        padding: 0.75rem 2rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-title {
+        font-size: 1.5rem;
+    }
+    
+    .carousel-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .agents-carousel-container {
+        height: 100px;
+    }
+    
+    .carousel-avatar {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .agents-carousel-track {
+        width: calc(15 * 50px * 6);
+    }
+    
+    @keyframes scroll-infinite {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-15 * 50px)); }
+    }
+}

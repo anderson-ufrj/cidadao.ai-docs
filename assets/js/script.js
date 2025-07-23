@@ -8,13 +8,19 @@ const translations = {
         'nav.theme.dark': '🌙 Escuro',
         'nav.lang.pt': '🇧🇷 PT',
         'nav.lang.en': '🇺🇸 EN',
+        'nav.manifesto': '📜 Manifesto',
         
         'hero.badge': '🇧🇷 Transparência Pública com IA',
         'hero.title': 'Cidadão.AI',
         'hero.subtitle': 'Hub Oficial de Documentação',
-        'hero.description': 'Democratizando o acesso aos dados públicos brasileiros através da inteligência artificial, fortalecendo a transparência e empoderando cada cidadão.',
+        'hero.description': 'O Cidadão.AI reúne múltiplas inteligências artificiais brasileiras trabalhando em rede para democratizar o acesso aos dados públicos, fortalecer a transparência e empoderar cada cidadão com informação clara, acessível e auditável.',
+        'hero.mission': 'Este é o ponto de encontro entre tecnologia, cidadania e responsabilidade pública.',
         'hero.btn.manifesto': '📜 Manifesto',
         'hero.btn.system': '🤖 Entenda o Sistema',
+        
+        'carousel.title': 'Conheça Nossas IAs Brasileiras',
+        'carousel.subtitle': 'Cada agente é uma inteligência artificial especializada, trabalhando 24/7 pela transparência pública',
+        'carousel.button': 'Entenda nossos agentes de IA',
         
         'section.about.title': 'Sobre o Projeto',
         'section.about.description': 'O Cidadão.AI é um sistema multi-agente que utiliza inteligência artificial para democratizar o acesso aos dados públicos brasileiros.',
@@ -80,6 +86,18 @@ const translations = {
         'agent.bonifacio.role': 'Políticas Públicas',
         'agent.bonifacio.desc': 'Analisa eficácia de políticas públicas e reformas.',
         
+        'agent.deodoro.name': 'Deodoro da Fonseca',
+        'agent.deodoro.role': 'Agente Base',
+        'agent.deodoro.desc': 'Define contratos e interfaces base para todos os agentes do sistema.',
+        
+        'agent.drummond.name': 'Drummond',
+        'agent.drummond.role': 'Agente de Comunicação',
+        'agent.drummond.desc': 'Gera comunicações automáticas e alertas multi-canal para cidadãos.',
+        
+        'agent.quiteria.name': 'Maria Quitéria',
+        'agent.quiteria.role': 'Agente de Segurança',
+        'agent.quiteria.desc': 'Realiza auditoria de segurança e proteção da integridade do sistema.',
+        
         'agents.power.title': '🚀 Arquitetura de Alta Performance',
         'agents.power.description': 'Cada agente opera com inteligência artificial avançada, processamento paralelo e capacidade de análise em tempo real. Juntos, formam um ecossistema robusto capaz de processar terabytes de dados públicos, detectar padrões complexos e gerar insights actionáveis para fortalecer a transparência governamental e empoderar a cidadania brasileira.',
     },
@@ -90,13 +108,19 @@ const translations = {
         'nav.theme.dark': '🌙 Dark',
         'nav.lang.pt': '🇧🇷 PT',
         'nav.lang.en': '🇺🇸 EN',
+        'nav.manifesto': '📜 Manifesto',
         
         'hero.badge': '🇧🇷 Public Transparency with AI',
         'hero.title': 'Cidadão.AI',
         'hero.subtitle': 'Official Documentation Hub',
-        'hero.description': 'Democratizing access to Brazilian public data through artificial intelligence, strengthening transparency and empowering every citizen.',
+        'hero.description': 'Cidadão.AI brings together multiple Brazilian artificial intelligences working in a network to democratize access to public data, strengthen transparency and empower every citizen with clear, accessible and auditable information.',
+        'hero.mission': 'This is the meeting point between technology, citizenship and public responsibility.',
         'hero.btn.manifesto': '📜 Manifesto',
         'hero.btn.system': '🤖 Understand the System',
+        
+        'carousel.title': 'Meet Our Brazilian AIs',
+        'carousel.subtitle': 'Each agent is a specialized artificial intelligence, working 24/7 for public transparency',
+        'carousel.button': 'Understand our AI agents',
         
         'section.about.title': 'About the Project',
         'section.about.description': 'Cidadão.AI is a multi-agent system that uses artificial intelligence to democratize access to Brazilian public data.',
@@ -162,6 +186,18 @@ const translations = {
         'agent.bonifacio.role': 'Public Policy',
         'agent.bonifacio.desc': 'Analyzes effectiveness of public policies and reforms.',
         
+        'agent.deodoro.name': 'Deodoro da Fonseca',
+        'agent.deodoro.role': 'Base Agent',
+        'agent.deodoro.desc': 'Defines contracts and base interfaces for all system agents.',
+        
+        'agent.drummond.name': 'Drummond',
+        'agent.drummond.role': 'Communication Agent',
+        'agent.drummond.desc': 'Generates automatic communications and multi-channel alerts for citizens.',
+        
+        'agent.quiteria.name': 'Maria Quitéria',
+        'agent.quiteria.role': 'Security Agent',
+        'agent.quiteria.desc': 'Performs security auditing and system integrity protection.',
+        
         'agents.power.title': '🚀 High-Performance Architecture',
         'agents.power.description': 'Each agent operates with advanced artificial intelligence, parallel processing and real-time analysis capabilities. Together, they form a robust ecosystem capable of processing terabytes of public data, detecting complex patterns and generating actionable insights to strengthen government transparency and empower Brazilian citizenship.',
     }
@@ -170,6 +206,8 @@ const translations = {
 // ===== ESTADO GLOBAL =====
 let currentLanguage = 'pt-BR';
 let currentTheme = 'light';
+
+// Carrossel movido para carousel.js
 
 // ===== INICIALIZAÇÃO =====
 document.addEventListener('DOMContentLoaded', function() {
@@ -340,7 +378,8 @@ function handleModalKeydown(event) {
 function updateAgentsContent() {
     const agents = [
         'abaporu', 'anita', 'zumbi', 'tiradentes', 'obaluaie', 'niemeyer',
-        'nana', 'lampiao', 'ceuci', 'dandara', 'machado', 'bonifacio'
+        'nana', 'lampiao', 'ceuci', 'dandara', 'machado', 'bonifacio',
+        'deodoro', 'drummond', 'quiteria'
     ];
     
     agents.forEach(agentId => {
@@ -414,15 +453,75 @@ function initializeEventListeners() {
         });
     });
     
-    // Botão flutuante
-    const floatingBtn = document.querySelector('.floating-button');
-    if (floatingBtn) {
-        floatingBtn.addEventListener('click', () => {
-            openModal('aboutModal');
-        });
-    }
+    // Botão flutuante - recriar para garantir funcionamento
+    recreateFloatingButton();
+    
+    // EXTERMINADOR NUCLEAR DE ELEMENTOS VERDES
+    setTimeout(() => {
+        cleanupGreenElements();
+        destroyAllGreenElements();
+    }, 1000);
+    
+    // Executar limpeza a cada 3 segundos (modo agressivo)
+    setInterval(() => {
+        destroyAllGreenElements();
+    }, 3000);
     
     console.log('🎯 Event listeners inicializados');
+}
+
+// ===== LIMPEZA DE ELEMENTOS VERDES FANTASMAS =====
+function cleanupGreenElements() {
+    // Remover qualquer elemento com background verde suspeito
+    const suspiciousElements = document.querySelectorAll('*');
+    suspiciousElements.forEach(el => {
+        const styles = getComputedStyle(el);
+        if (styles.backgroundColor.includes('rgb(16, 185, 129)') || 
+            styles.backgroundColor.includes('#10b981') ||
+            styles.background.includes('10b981') ||
+            styles.background.includes('059669')) {
+            
+            // Se não for um elemento esperado, removê-lo
+            if (!el.classList.contains('floating-button-dynamic') && 
+                !el.classList.contains('agent-card') &&
+                !el.classList.contains('carousel-agent') &&
+                !el.classList.contains('dynamic-tooltip') &&
+                !el.id.includes('carousel') &&
+                el.tagName !== 'BUTTON') {
+                console.log('🚨 Removendo elemento verde suspeito:', el);
+                el.remove();
+            }
+        }
+    });
+}
+
+// ===== BOTÃO FLUTUANTE MODULAR =====
+// Função que usa o módulo FloatingButton
+function recreateFloatingButton() {
+    // Usar a função global do módulo floating-button.js
+    if (typeof window.FloatingButton !== 'undefined') {
+        console.log('✅ Criando botão com módulo FloatingButton');
+        
+        // Remover botões antigos
+        const oldButtons = document.querySelectorAll('.floating-button, .floating-button-dynamic, .floating-button-module');
+        oldButtons.forEach(btn => btn.remove());
+        
+        // Criar novo botão usando o módulo
+        const button = new FloatingButton({
+            icon: 'ℹ️',
+            onClick: () => {
+                console.log('🚀 Botão flutuante clicado!');
+                openModal('aboutModal');
+            },
+            ariaLabel: 'Abrir informações sobre o projeto'
+        });
+        
+        button.render();
+        console.log('✅ Botão flutuante criado via módulo');
+        
+    } else {
+        console.error('❌ FloatingButton module não carregado!');
+    }
 }
 
 // ===== UTILIDADES =====
@@ -442,7 +541,8 @@ window.CidadaoAI = {
     closeModal,
     toggleTheme,
     toggleLanguage,
-    scrollToSection
+    scrollToSection,
+    cleanupGreenElements
 };
 
 console.log('📦 Script Cidadão.AI carregado!');
