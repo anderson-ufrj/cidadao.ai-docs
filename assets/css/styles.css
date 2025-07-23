@@ -19,6 +19,9 @@
     --card-border: rgba(16, 185, 129, 0.2);
     --card-hover-bg: rgba(16, 185, 129, 0.1);
     --card-hover-border: rgba(16, 185, 129, 0.5);
+    
+    /* Brazilian Gradient for Cidadão.AI logo */
+    --brazil-gradient: linear-gradient(135deg, #009739 0%, #10b981 30%, #fbbf24 40%, #3b82f6 70%, #002776 100%);
 }
 
 /* Dark Theme */
@@ -49,12 +52,69 @@ html {
 }
 
 body {
-    background-color: var(--bg-primary);
+    background: linear-gradient(135deg, 
+        rgba(16, 185, 129, 0.02) 0%,
+        rgba(59, 130, 246, 0.015) 25%,
+        rgba(251, 191, 36, 0.008) 50%,
+        rgba(239, 68, 68, 0.015) 75%,
+        rgba(139, 92, 246, 0.02) 100%
+    ),
+    radial-gradient(circle at 10% 20%, rgba(16, 185, 129, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(59, 130, 246, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(251, 191, 36, 0.02) 0%, transparent 50%),
+    var(--bg-primary);
+    background-attachment: fixed;
     color: var(--text-primary);
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    position: relative;
+    min-height: 100vh;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        linear-gradient(45deg, transparent 49%, rgba(16, 185, 129, 0.01) 49.5%, rgba(16, 185, 129, 0.01) 50.5%, transparent 51%),
+        linear-gradient(-45deg, transparent 49%, rgba(59, 130, 246, 0.008) 49.5%, rgba(59, 130, 246, 0.008) 50.5%, transparent 51%);
+    background-size: 80px 80px, 60px 60px;
+    animation: bodyPattern 25s linear infinite;
+    pointer-events: none;
+    z-index: -1;
+}
+
+@keyframes bodyPattern {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(80px, 80px); }
+}
+
+/* Body para tema escuro */
+[data-theme="dark"] body {
+    background: linear-gradient(135deg, 
+        rgba(16, 185, 129, 0.03) 0%,
+        rgba(59, 130, 246, 0.025) 25%,
+        rgba(251, 191, 36, 0.015) 50%,
+        rgba(239, 68, 68, 0.025) 75%,
+        rgba(139, 92, 246, 0.03) 100%
+    ),
+    radial-gradient(circle at 10% 20%, rgba(16, 185, 129, 0.07) 0%, transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(59, 130, 246, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(251, 191, 36, 0.03) 0%, transparent 50%),
+    var(--bg-primary);
+    background-attachment: fixed;
+}
+
+[data-theme="dark"] body::before {
+    background: 
+        linear-gradient(45deg, transparent 49%, rgba(16, 185, 129, 0.015) 49.5%, rgba(16, 185, 129, 0.015) 50.5%, transparent 51%),
+        linear-gradient(-45deg, transparent 49%, rgba(59, 130, 246, 0.012) 49.5%, rgba(59, 130, 246, 0.012) 50.5%, transparent 51%);
+    background-size: 80px 80px, 60px 60px;
 }
 
 /* ===== NAVEGAÇÃO ===== */
@@ -104,7 +164,7 @@ body {
 .logo-text {
     font-size: 1.5rem;
     font-weight: 700;
-    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    background: var(--brazil-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -143,13 +203,69 @@ body {
 /* ===== HERO SECTION ===== */
 .hero {
     text-align: center;
-    padding: 4rem 1.5rem;
-    background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary));
+    padding: 3rem 1.5rem;
+    background: linear-gradient(135deg, 
+        rgba(16, 185, 129, 0.03) 0%,
+        rgba(59, 130, 246, 0.02) 25%,
+        rgba(251, 191, 36, 0.01) 50%,
+        rgba(239, 68, 68, 0.02) 75%,
+        rgba(139, 92, 246, 0.03) 100%
+    ),
+    radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(251, 191, 36, 0.04) 0%, transparent 50%),
+    linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        linear-gradient(45deg, transparent 48%, rgba(16, 185, 129, 0.02) 49%, rgba(16, 185, 129, 0.02) 51%, transparent 52%),
+        linear-gradient(-45deg, transparent 48%, rgba(59, 130, 246, 0.015) 49%, rgba(59, 130, 246, 0.015) 51%, transparent 52%);
+    background-size: 60px 60px, 40px 40px;
+    animation: heroPattern 20s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes heroPattern {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(60px, 60px); }
+}
+
+/* Hero para tema escuro */
+[data-theme="dark"] .hero {
+    background: linear-gradient(135deg, 
+        rgba(16, 185, 129, 0.04) 0%,
+        rgba(59, 130, 246, 0.03) 25%,
+        rgba(251, 191, 36, 0.02) 50%,
+        rgba(239, 68, 68, 0.03) 75%,
+        rgba(139, 92, 246, 0.04) 100%
+    ),
+    radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(251, 191, 36, 0.06) 0%, transparent 50%),
+    linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+}
+
+[data-theme="dark"] .hero::before {
+    background: 
+        linear-gradient(45deg, transparent 48%, rgba(16, 185, 129, 0.03) 49%, rgba(16, 185, 129, 0.03) 51%, transparent 52%),
+        linear-gradient(-45deg, transparent 48%, rgba(59, 130, 246, 0.025) 49%, rgba(59, 130, 246, 0.025) 51%, transparent 52%);
+    background-size: 60px 60px, 40px 40px;
 }
 
 .hero-container {
     max-width: 1000px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-badge {
@@ -162,14 +278,14 @@ body {
     color: var(--text-accent);
     font-size: 0.875rem;
     font-weight: 600;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .hero-title {
     font-size: 3.5rem;
     font-weight: 800;
     margin-bottom: 1.5rem;
-    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    background: var(--brazil-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -178,7 +294,7 @@ body {
 .hero-description {
     font-size: 1.25rem;
     color: var(--text-secondary);
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -229,7 +345,7 @@ body {
 
 /* ===== SEÇÕES DE CONTEÚDO ===== */
 .section {
-    padding: 4rem 1.5rem;
+    padding: 2.5rem 1.5rem;
 }
 
 .section-container {
@@ -241,8 +357,11 @@ body {
     font-size: 2.5rem;
     font-weight: 700;
     text-align: center;
-    margin-bottom: 3rem;
-    color: var(--text-primary);
+    margin-bottom: 2rem;
+    background: var(--brazil-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .section-description {
@@ -250,51 +369,151 @@ body {
     color: var(--text-secondary);
     text-align: center;
     max-width: 800px;
-    margin: 0 auto 3rem;
+    margin: 0 auto 2rem;
 }
 
-/* ===== CARDS ===== */
-.cards-grid {
+
+/* ===== LINKS DO PROJETO - NOVO DESIGN ===== */
+.links-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
 }
 
-.card {
+.link-card {
     background: var(--bg-secondary);
     border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 2rem;
+    border-radius: 12px;
+    padding: 1.5rem;
     transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: inherit;
 }
 
-.card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+.link-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     border-color: var(--text-accent);
 }
 
-.card-icon {
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+.link-icon {
+    width: 48px;
+    height: 48px;
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
 }
 
-.card-title {
-    font-size: 1.25rem;
+.link-card:hover .link-icon {
+    transform: scale(1.1);
+}
+
+.web-icon {
+    background: linear-gradient(135deg, rgba(66, 133, 244, 0.1), rgba(66, 133, 244, 0.2));
+}
+
+.api-icon {
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(255, 107, 53, 0.2));
+}
+
+.docs-icon {
+    background: linear-gradient(135deg, rgba(156, 39, 176, 0.1), rgba(156, 39, 176, 0.2));
+}
+
+.research-icon {
+    background: linear-gradient(135deg, rgba(233, 30, 99, 0.1), rgba(233, 30, 99, 0.2));
+}
+
+/* Ícones dos repositórios */
+.backend-icon {
+    background: linear-gradient(135deg, rgba(243, 156, 18, 0.1), rgba(243, 156, 18, 0.2));
+}
+
+.frontend-icon {
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.1), rgba(52, 152, 219, 0.2));
+}
+
+.documentation-icon {
+    background: linear-gradient(135deg, rgba(39, 174, 96, 0.1), rgba(39, 174, 96, 0.2));
+}
+
+.models-icon {
+    background: linear-gradient(135deg, rgba(142, 68, 173, 0.1), rgba(142, 68, 173, 0.2));
+}
+
+.link-content {
+    flex: 1;
+}
+
+.link-title {
+    font-size: 1.125rem;
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin-bottom: 0.25rem;
     color: var(--text-primary);
 }
 
-.card-description {
+.link-description {
+    font-size: 0.875rem;
     color: var(--text-secondary);
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+
+/* Responsividade para links */
+@media (max-width: 768px) {
+    .links-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .link-card {
+        padding: 1.25rem;
+    }
+    
+    .link-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    /* API responsiva */
+    .api-container {
+        max-width: 95%;
+    }
+    
+    .api-iframe-container {
+        padding: 1rem;
+    }
+}
+
+/* ===== SEÇÃO API ===== */
+.api-section {
+    padding: 2rem 1.5rem;
+}
+
+.api-container {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.api-iframe-container {
+    background: var(--bg-secondary);
+    border: 2px solid var(--border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.api-iframe {
+    border-radius: 12px;
+    border: 1px solid var(--border-light);
+    background: white;
 }
 
 /* ===== MODAIS ===== */
@@ -350,7 +569,10 @@ body {
 .modal-title {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--text-primary);
+    background: var(--brazil-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .modal-close {
@@ -382,16 +604,21 @@ body {
 .agents-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
+    gap: 2rem;
     margin-top: 2rem;
 }
 
 .agent-card {
     border-radius: 16px;
-    padding: 1.5rem;
+    padding: 1.25rem;
     text-align: center;
     transition: all 0.3s ease;
     border: 2px solid transparent;
+    min-height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .agent-card:hover {
@@ -424,11 +651,11 @@ body {
 }
 
 .agent-avatar {
-    width: 120px;
-    height: 120px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     border: 4px solid rgba(255, 255, 255, 0.3);
     transition: all 0.3s ease;
 }
@@ -459,6 +686,44 @@ body {
     font-size: 0.875rem;
     color: rgba(255, 255, 255, 0.85);
     line-height: 1.4;
+}
+
+/* ===== SEÇÃO DE PODER DOS AGENTES ===== */
+.agents-footer {
+    border-top: 1px solid var(--border-light);
+    padding-top: 2rem;
+    margin-top: 2rem;
+}
+
+.agents-power-section {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, 
+        rgba(16, 185, 129, 0.05) 0%, 
+        rgba(59, 130, 246, 0.03) 50%, 
+        rgba(139, 92, 246, 0.05) 100%
+    );
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid rgba(16, 185, 129, 0.1);
+}
+
+.agents-power-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: var(--brazil-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.agents-power-description {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
 }
 
 /* ===== BOTÃO FLUTUANTE ===== */
@@ -518,7 +783,7 @@ body {
     }
     
     .section {
-        padding: 3rem 1rem;
+        padding: 2rem 1rem;
     }
     
     .section-title {
@@ -532,12 +797,12 @@ body {
     
     .agents-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
+        gap: 1.5rem;
     }
     
     .agent-avatar {
-        width: 100px;
-        height: 100px;
+        width: 150px;
+        height: 150px;
     }
     
     .modal-content {
@@ -557,7 +822,7 @@ body {
 
 @media (max-width: 480px) {
     .hero {
-        padding: 3rem 1rem;
+        padding: 2rem 1rem;
     }
     
     .hero-title {
@@ -565,7 +830,7 @@ body {
     }
     
     .section {
-        padding: 2rem 1rem;
+        padding: 1.5rem 1rem;
     }
     
     .section-title {
@@ -578,12 +843,12 @@ body {
     
     .agents-grid {
         grid-template-columns: 1fr;
-        gap: 1rem;
+        gap: 1.5rem;
     }
     
     .agent-avatar {
-        width: 80px;
-        height: 80px;
+        width: 120px;
+        height: 120px;
     }
 }
 
@@ -605,6 +870,123 @@ body {
     background: var(--gradient-end);
 }
 
+/* ===== MODAL SOBRE - ESTILOS ESPECÍFICOS ===== */
+.about-intro p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.author-profile {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.author-avatar {
+    flex-shrink: 0;
+}
+
+.author-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--text-accent);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+}
+
+.author-info {
+    flex: 1;
+}
+
+.author-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.author-links a {
+    color: var(--text-accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.author-links a:hover {
+    color: var(--gradient-end);
+}
+
+.tech-grid {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.tech-item {
+    padding: 0.75rem;
+    background: var(--bg-tertiary);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    border-left: 3px solid var(--text-accent);
+}
+
+.license-list, .institutional-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.license-list li, .institutional-list li {
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.license-list li:last-child, .institutional-list li:last-child {
+    border-bottom: none;
+}
+
+.research-card {
+    background: var(--bg-tertiary);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--text-accent);
+}
+
+.official-link-card {
+    display: flex;
+    gap: 1rem;
+    background: var(--bg-tertiary);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--text-accent);
+}
+
+.link-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.link-content {
+    flex: 1;
+}
+
+/* Responsividade para o modal sobre */
+@media (max-width: 768px) {
+    .author-profile {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .author-links {
+        justify-content: center;
+    }
+    
+    .official-link-card {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
 /* ===== UTILIDADES ===== */
 .text-center { text-align: center; }
 .text-left { text-align: left; }
@@ -617,6 +999,7 @@ body {
 .mb-6 { margin-bottom: 1.5rem; }
 .mb-8 { margin-bottom: 2rem; }
 
+.mt-3 { margin-top: 0.75rem; }
 .mt-4 { margin-top: 1rem; }
 .mt-6 { margin-top: 1.5rem; }
 .mt-8 { margin-top: 2rem; }

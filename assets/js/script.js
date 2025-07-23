@@ -20,7 +20,7 @@ const translations = {
         'section.about.description': 'O Cidadão.AI é um sistema multi-agente que utiliza inteligência artificial para democratizar o acesso aos dados públicos brasileiros.',
         
         'section.repositories.title': 'Repositórios',
-        'section.links.title': 'Links Importantes',
+        'section.links.title': 'Links do Projeto',
         'section.api.title': 'Documentação da API',
         
         'modal.about.title': 'Sobre o Cidadão.AI',
@@ -30,7 +30,7 @@ const translations = {
         'modal.manifesto.content': 'Por uma Inteligência Artificial que Serve ao Povo e Ilumina o Estado. O Cidadão.AI nasce da vontade de tornar os dados públicos verdadeiramente públicos.',
         
         'modal.system.title': 'Sistema Multi-Agente',
-        'modal.system.content': 'Conheça nossos 12 agentes especializados, cada um inspirado em figuras históricas e culturais brasileiras.',
+        'modal.system.content': 'O Cidadão.AI opera através de uma arquitetura distribuída com múltiplos agentes especializados, cada um responsável por funções específicas no processamento e análise de dados públicos brasileiros.',
         
         'agent.abaporu.name': 'Abaporu',
         'agent.abaporu.role': 'Núcleo Central da IA',
@@ -79,6 +79,9 @@ const translations = {
         'agent.bonifacio.name': 'José Bonifácio',
         'agent.bonifacio.role': 'Políticas Públicas',
         'agent.bonifacio.desc': 'Analisa eficácia de políticas públicas e reformas.',
+        
+        'agents.power.title': '🚀 Arquitetura de Alta Performance',
+        'agents.power.description': 'Cada agente opera com inteligência artificial avançada, processamento paralelo e capacidade de análise em tempo real. Juntos, formam um ecossistema robusto capaz de processar terabytes de dados públicos, detectar padrões complexos e gerar insights actionáveis para fortalecer a transparência governamental e empoderar a cidadania brasileira.',
     },
     
     'en-US': {
@@ -99,7 +102,7 @@ const translations = {
         'section.about.description': 'Cidadão.AI is a multi-agent system that uses artificial intelligence to democratize access to Brazilian public data.',
         
         'section.repositories.title': 'Repositories',
-        'section.links.title': 'Important Links',
+        'section.links.title': 'Project Links',
         'section.api.title': 'API Documentation',
         
         'modal.about.title': 'About Cidadão.AI',
@@ -109,7 +112,7 @@ const translations = {
         'modal.manifesto.content': 'For an Artificial Intelligence that Serves the People and Illuminates the State. Cidadão.AI is born from the desire to make public data truly public.',
         
         'modal.system.title': 'Multi-Agent System',
-        'modal.system.content': 'Meet our 12 specialized agents, each inspired by Brazilian historical and cultural figures.',
+        'modal.system.content': 'Cidadão.AI operates through a distributed architecture with multiple specialized agents, each responsible for specific functions in processing and analyzing Brazilian public data.',
         
         'agent.abaporu.name': 'Abaporu',
         'agent.abaporu.role': 'AI Central Core',
@@ -158,6 +161,9 @@ const translations = {
         'agent.bonifacio.name': 'José Bonifácio',
         'agent.bonifacio.role': 'Public Policy',
         'agent.bonifacio.desc': 'Analyzes effectiveness of public policies and reforms.',
+        
+        'agents.power.title': '🚀 High-Performance Architecture',
+        'agents.power.description': 'Each agent operates with advanced artificial intelligence, parallel processing and real-time analysis capabilities. Together, they form a robust ecosystem capable of processing terabytes of public data, detecting complex patterns and generating actionable insights to strengthen government transparency and empower Brazilian citizenship.',
     }
 };
 

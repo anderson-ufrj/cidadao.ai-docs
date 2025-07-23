@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Styles -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
     <!-- Navegação Principal -->
@@ -85,17 +85,6 @@
             </div>
         </section>
 
-        <!-- Sobre o Projeto -->
-        <section id="about" class="section" aria-labelledby="about-title">
-            <div class="section-container">
-                <h2 id="about-title" class="section-title" data-i18n="section.about.title">
-                    Sobre o Projeto
-                </h2>
-                <p class="section-description" data-i18n="section.about.description">
-                    O Cidadão.AI é um sistema multi-agente que utiliza inteligência artificial para democratizar o acesso aos dados públicos brasileiros.
-                </p>
-            </div>
-        </section>
 
         <!-- Repositórios -->
         <section id="repositories" class="section" aria-labelledby="repositories-title">
@@ -104,42 +93,54 @@
                     Repositórios
                 </h2>
                 
-                <div class="cards-grid">
-                    <div class="card">
-                        <div class="card-icon">⚡</div>
-                        <h3 class="card-title">Backend (FastAPI)</h3>
-                        <p class="card-description">API e sistema multi-agente</p>
-                        <a href="https://github.com/anderson-ufrj/cidadao.ai-backend" target="_blank" rel="noopener" class="btn btn-primary mt-4">
-                            🔗 Ver Repositório
-                        </a>
-                    </div>
+                <div class="links-grid">
+                    <a href="https://github.com/anderson-ufrj/cidadao.ai-backend" target="_blank" rel="noopener" class="link-card">
+                        <div class="link-icon backend-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM7.5 18c-.83 0-1.5-.67-1.5-1.5S6.67 15 7.5 15s1.5.67 1.5 1.5S8.33 18 7.5 18zm0-9C6.67 9 6 8.33 6 7.5S6.67 6 7.5 6 9 6.67 9 7.5 8.33 9 7.5 9zm4.09 4.5l2.91-3 2.91 3H11.59z" fill="#f39c12"/>
+                            </svg>
+                        </div>
+                        <div class="link-content">
+                            <h3 class="link-title">Backend (FastAPI)</h3>
+                            <p class="link-description">API e sistema multi-agente</p>
+                        </div>
+                    </a>
                     
-                    <div class="card">
-                        <div class="card-icon">🎨</div>
-                        <h3 class="card-title">Frontend (Next.js)</h3>
-                        <p class="card-description">Interface web moderna</p>
-                        <a href="https://github.com/anderson-ufrj/cidadao.ai-frontend" target="_blank" rel="noopener" class="btn btn-primary mt-4">
-                            🔗 Ver Repositório
-                        </a>
-                    </div>
+                    <a href="https://github.com/anderson-ufrj/cidadao.ai-frontend" target="_blank" rel="noopener" class="link-card">
+                        <div class="link-icon frontend-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#3498db"/>
+                            </svg>
+                        </div>
+                        <div class="link-content">
+                            <h3 class="link-title">Frontend (Next.js)</h3>
+                            <p class="link-description">Interface web moderna</p>
+                        </div>
+                    </a>
                     
-                    <div class="card">
-                        <div class="card-icon">📚</div>
-                        <h3 class="card-title">Documentação</h3>
-                        <p class="card-description">Hub central de docs</p>
-                        <a href="https://github.com/anderson-ufrj/cidadao.ai-docs" target="_blank" rel="noopener" class="btn btn-primary mt-4">
-                            🔗 Ver Repositório
-                        </a>
-                    </div>
+                    <a href="https://github.com/anderson-ufrj/cidadao.ai-docs" target="_blank" rel="noopener" class="link-card">
+                        <div class="link-icon documentation-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" fill="#27ae60"/>
+                            </svg>
+                        </div>
+                        <div class="link-content">
+                            <h3 class="link-title">Documentação</h3>
+                            <p class="link-description">Hub central de docs</p>
+                        </div>
+                    </a>
                     
-                    <div class="card">
-                        <div class="card-icon">🤖</div>
-                        <h3 class="card-title">Modelos IA</h3>
-                        <p class="card-description">Scripts ML e modelos</p>
-                        <a href="https://github.com/anderson-ufrj/cidadao.ai-models" target="_blank" rel="noopener" class="btn btn-primary mt-4">
-                            🔗 Ver Repositório
-                        </a>
-                    </div>
+                    <a href="https://github.com/anderson-ufrj/cidadao.ai-models" target="_blank" rel="noopener" class="link-card">
+                        <div class="link-icon models-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" fill="#8e44ad"/>
+                            </svg>
+                        </div>
+                        <div class="link-content">
+                            <h3 class="link-title">Modelos IA</h3>
+                            <p class="link-description">Scripts ML e modelos</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
@@ -148,65 +149,76 @@
         <section id="links" class="section" aria-labelledby="links-title">
             <div class="section-container">
                 <h2 id="links-title" class="section-title" data-i18n="section.links.title">
-                    Links Importantes
+                    Links do Projeto
                 </h2>
                 
-                <div class="cards-grid">
-                    <div class="card">
-                        <div class="card-icon">🌐</div>
-                        <h3 class="card-title">Aplicação Web</h3>
-                        <p class="card-description">Plataforma Cidadão.AI em produção</p>
-                        <a href="https://cidadao-ai-frontend.vercel.app" target="_blank" rel="noopener" class="btn btn-primary mt-4">
-                            🔗 Acessar App
-                        </a>
-                    </div>
+                <div class="links-grid">
+                    <a href="https://cidadao-ai-frontend.vercel.app" target="_blank" rel="noopener" class="link-card">
+                        <div class="link-icon web-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM11 19.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" fill="#4285f4"/>
+                            </svg>
+                        </div>
+                        <div class="link-content">
+                            <h3 class="link-title">Aplicação Web</h3>
+                            <p class="link-description">Plataforma Cidadão.AI em produção</p>
+                        </div>
+                    </a>
                     
-                    <div class="card">
-                        <div class="card-icon">🚀</div>
-                        <h3 class="card-title">API Backend</h3>
-                        <p class="card-description">Hospedado no Hugging Face Spaces</p>
-                        <a href="https://neural-thinker-cidadao-ai-backend.hf.space" target="_blank" rel="noopener" class="btn btn-primary mt-4">
-                            🔗 Ver API
-                        </a>
-                    </div>
+                    <a href="https://neural-thinker-cidadao-ai-backend.hf.space" target="_blank" rel="noopener" class="link-card">
+                        <div class="link-icon api-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" fill="#ff6b35"/>
+                            </svg>
+                        </div>
+                        <div class="link-content">
+                            <h3 class="link-title">API Backend</h3>
+                            <p class="link-description">Hospedado no Hugging Face Spaces</p>
+                        </div>
+                    </a>
                     
-                    <div class="card">
-                        <div class="card-icon">📖</div>
-                        <h3 class="card-title">Docs Técnicas</h3>
-                        <p class="card-description">Documentação completa do backend</p>
-                        <a href="https://neural-thinker-cidadao-ai-backend.hf.space/docs" target="_blank" rel="noopener" class="btn btn-primary mt-4">
-                            🔗 Ver Docs
-                        </a>
-                    </div>
+                    <a href="https://anderson-ufrj.github.io/cidadao.ai-backend" target="_blank" rel="noopener" class="link-card">
+                        <div class="link-icon docs-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" fill="#9c27b0"/>
+                            </svg>
+                        </div>
+                        <div class="link-content">
+                            <h3 class="link-title">Docs Técnicas</h3>
+                            <p class="link-description">Documentação completa do backend</p>
+                        </div>
+                    </a>
                     
-                    <div class="card">
-                        <div class="card-icon">📄</div>
-                        <h3 class="card-title">Notas de Pesquisa</h3>
-                        <p class="card-description">PDF com insights do projeto</p>
-                        <a href="https://neural-thinker-cidadao-ai-backend.hf.space/research-notes" target="_blank" rel="noopener" class="btn btn-primary mt-4">
-                            🔗 Ver PDF
-                        </a>
-                    </div>
+                    <a href="https://cidadao-ai-frontend.vercel.app/Notas-de-Pesquisa.pdf" target="_blank" rel="noopener" class="link-card">
+                        <div class="link-icon research-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8.5 7.5c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5.67-1.5 1.5-1.5 1.5.67 1.5 1.5zm5 2c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5.67-1.5 1.5-1.5 1.5.67 1.5 1.5zM19 14H9v-.25c0-.8.6-1.5 1.5-1.5h6c.9 0 1.5.7 1.5 1.5V14zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6z" fill="#e91e63"/>
+                            </svg>
+                        </div>
+                        <div class="link-content">
+                            <h3 class="link-title">Notas de Pesquisa</h3>
+                            <p class="link-description">PDF com insights do projeto</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
 
         <!-- API Documentation -->
-        <section id="api" class="section" aria-labelledby="api-title">
-            <div class="section-container">
+        <section id="api" class="section api-section" aria-labelledby="api-title">
+            <div class="api-container">
                 <h2 id="api-title" class="section-title" data-i18n="section.api.title">
                     Documentação da API
                 </h2>
-                <div class="card" style="padding: 2rem;">
-                    <div id="swagger-ui" style="min-height: 500px;">
-                        <iframe 
-                            src="https://neural-thinker-cidadao-ai-backend.hf.space/docs" 
-                            width="100%" 
-                            height="500" 
-                            frameborder="0"
-                            title="Documentação da API Cidadão.AI">
-                        </iframe>
-                    </div>
+                <div class="api-iframe-container">
+                    <iframe 
+                        src="https://neural-thinker-cidadao-ai-backend.hf.space/docs" 
+                        width="100%" 
+                        height="600" 
+                        frameborder="0"
+                        title="Documentação da API Cidadão.AI"
+                        class="api-iframe">
+                    </iframe>
                 </div>
             </div>
         </section>
@@ -214,7 +226,7 @@
 
     <!-- Modal: Sobre -->
     <div id="aboutModal" class="modal" role="dialog" aria-labelledby="about-modal-title" aria-hidden="true">
-        <div class="modal-content">
+        <div class="modal-content" style="max-width: 900px; width: 90vw;">
             <div class="modal-header">
                 <h2 id="about-modal-title" class="modal-title" data-i18n="modal.about.title">
                     Sobre o Cidadão.AI
@@ -224,34 +236,105 @@
                 </button>
             </div>
             <div class="modal-body">
-                <p data-i18n="modal.about.content">
-                    O Cidadão.AI é um projeto de pesquisa, software livre e engajamento cívico, idealizado e desenvolvido por Anderson Henrique da Silva como Trabalho de Conclusão de Curso (TCC), sob orientação da Profa. Dra. Aracele Garcia de Oliveira Fassbinder.
-                </p>
+                <div class="about-intro mb-6">
+                    <p><strong>Cidadão.AI</strong> é um projeto de pesquisa, software livre e engajamento cívico, idealizado e desenvolvido por Anderson Henrique da Silva, como Trabalho de Conclusão de Curso (TCC), sob a orientação da Profa. Dra. Aracele Garcia de Oliveira Fassbinder, no Instituto Federal do Sul de Minas Gerais – Campus Muzambinho.</p>
+                    <p class="mt-4">Este sistema multi-agente foi concebido com o propósito de democratizar o acesso aos dados públicos brasileiros, unindo ética, tecnologia e cidadania.</p>
+                </div>
                 
-                <div class="mt-6">
-                    <h3 class="mb-3">👨‍💻 Autor</h3>
-                    <p><strong>Anderson Henrique da Silva</strong></p>
-                    <p class="text-secondary">Bacharelando em Ciência da Computação | Engenheiro de Sistemas de IA</p>
-                    <div class="mt-4">
-                        <a href="https://github.com/anderson-ufrj" target="_blank" rel="noopener">🔗 GitHub</a> •
-                        <a href="https://huggingface.co/neural-thinker" target="_blank" rel="noopener">🔗 Hugging Face</a> •
-                        <a href="https://linkedin.com/in/anderson-henrique" target="_blank" rel="noopener">🔗 LinkedIn</a>
+                <div class="author-section mb-6">
+                    <h3 class="mb-4">👨‍💻 Autor</h3>
+                    <div class="author-profile">
+                        <div class="author-avatar">
+                            <img src="assets/img/author.jpeg" alt="Anderson Henrique da Silva" class="author-photo">
+                        </div>
+                        <div class="author-info">
+                            <p><strong>Anderson Henrique da Silva</strong></p>
+                            <p class="text-secondary">Bacharelando em Ciência da Computação | Engenheiro de Sistemas de IA</p>
+                            <div class="author-links mt-3">
+                                <a href="https://github.com/anderson-ufrj" target="_blank" rel="noopener">🔗 GitHub</a>
+                                <a href="https://huggingface.co/neural-thinker" target="_blank" rel="noopener">🔗 Hugging Face</a>
+                                <a href="https://www.linkedin.com/in/anderson-h-silva95/" target="_blank" rel="noopener">🔗 LinkedIn</a>
+                                <a href="mailto:andersonhs27@gmail.com">📧 andersonhs27@gmail.com</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="mt-6">
+                <div class="supervision-section mb-6">
                     <h3 class="mb-3">🧠 Orientação Acadêmica</h3>
                     <p><strong>Profa. Dra. Aracele Garcia de Oliveira Fassbinder</strong></p>
-                    <p class="text-secondary">Instituto Federal do Sul de Minas Gerais – Campus Muzambinho</p>
+                    <p class="text-secondary">📍 Instituto Federal do Sul de Minas Gerais – Campus Muzambinho</p>
+                    <div class="mt-3">
+                        <a href="http://lattes.cnpq.br/5403169829790610" target="_blank" rel="noopener">🔗 Currículo Lattes</a>
+                    </div>
                 </div>
                 
-                <div class="mt-6">
-                    <h3 class="mb-3">🛠️ Tecnologias</h3>
-                    <ul>
-                        <li><strong>Backend:</strong> Python, FastAPI, LangChain, ChromaDB</li>
-                        <li><strong>Frontend:</strong> Next.js 15, React, TypeScript, Tailwind</li>
-                        <li><strong>Deploy:</strong> Vercel, Hugging Face Spaces</li>
+                <div class="tech-section mb-6">
+                    <h3 class="mb-3">🧰 Tecnologias Utilizadas</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <strong>Backend API:</strong> Python, FastAPI, LangChain, ChromaDB, FAISS, BERTimbau
+                        </div>
+                        <div class="tech-item">
+                            <strong>Banco de Dados:</strong> MongoDB
+                        </div>
+                        <div class="tech-item">
+                            <strong>Frontend:</strong> Next.js 15, React 18, TypeScript, Tailwind CSS, Zustand
+                        </div>
+                        <div class="tech-item">
+                            <strong>API Documentation:</strong> Swagger UI, ReDoc (automático)
+                        </div>
+                        <div class="tech-item">
+                            <strong>Deploy:</strong> Vercel (Frontend), Hugging Face Spaces (Backend API)
+                        </div>
+                        <div class="tech-item">
+                            <strong>Internacionalização:</strong> next-intl (Português/Inglês)
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="licenses-section mb-6">
+                    <h3 class="mb-3">🔐 Licenças e Direitos</h3>
+                    <ul class="license-list">
+                        <li>• Código-fonte licenciado sob Apache License 2.0.</li>
+                        <li>• Todos os modelos e bibliotecas de terceiros respeitam suas respectivas licenças.</li>
+                        <li>• Os dados públicos utilizados seguem a Lei de Acesso à Informação (Lei nº 12.527/2011).</li>
                     </ul>
+                </div>
+                
+                <div class="institutional-section mb-6">
+                    <h3 class="mb-3">🏛️ Apoio Institucional</h3>
+                    <ul class="institutional-list">
+                        <li>• Instituto Federal de Educação, Ciência e Tecnologia do Sul de Minas Gerais</li>
+                        <li>• Curso de Bacharelado em Ciência da Computação</li>
+                        <li>• Projeto vinculado à Agenda 2030 – ODS 16: Paz, Justiça e Instituições Eficazes</li>
+                        <li>• Alinhado às diretrizes da Parceria para Governo Aberto (Open Government Partnership – OGP)</li>
+                    </ul>
+                </div>
+                
+                <div class="research-section mb-6">
+                    <h3 class="mb-3">📚 Notas de Pesquisa do Autor</h3>
+                    <div class="research-card">
+                        <p><strong>Anderson Henrique da Silva - Notas de Pesquisa Completas</strong></p>
+                        <p class="text-secondary">Documentação detalhada do processo de pesquisa, metodologia e descobertas durante o desenvolvimento do projeto.</p>
+                        <div class="mt-3">
+                            <a href="https://cidadao-ai-frontend.vercel.app/Notas-de-Pesquisa.pdf" target="_blank" rel="noopener" class="btn btn-primary">
+                                📄 Visualizar PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="official-links-section">
+                    <h3 class="mb-3">🌐 Links Oficiais</h3>
+                    <div class="official-link-card">
+                        <div class="link-icon">📚</div>
+                        <div class="link-content">
+                            <p><strong>Hub de Documentação Oficial</strong></p>
+                            <p class="text-secondary">anderson-ufrj.github.io/cidadao.ai-docs/</p>
+                            <p class="text-secondary">Documentação completa do projeto, guias de uso, arquitetura e API.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -292,7 +375,7 @@
 
     <!-- Modal: Sistema -->
     <div id="systemModal" class="modal" role="dialog" aria-labelledby="system-modal-title" aria-hidden="true">
-        <div class="modal-content" style="max-width: 1000px;">
+        <div class="modal-content" style="max-width: 1400px; width: 95vw;">
             <div class="modal-header">
                 <h2 id="system-modal-title" class="modal-title" data-i18n="modal.system.title">
                     Sistema Multi-Agente
@@ -303,7 +386,7 @@
             </div>
             <div class="modal-body">
                 <p class="mb-6" data-i18n="modal.system.content">
-                    Conheça nossos 12 agentes especializados, cada um inspirado em figuras históricas e culturais brasileiras.
+                    O Cidadão.AI opera através de uma arquitetura distribuída com múltiplos agentes especializados, cada um responsável por funções específicas no processamento e análise de dados públicos brasileiros.
                 </p>
                 
                 <!-- Grid de Agentes -->
@@ -428,6 +511,17 @@
                         <p class="agent-description">Analisa eficácia de políticas públicas e reformas.</p>
                     </div>
                 </div>
+                
+                <div class="agents-footer mt-8">
+                    <div class="agents-power-section">
+                        <h3 class="agents-power-title" data-i18n="agents.power.title">🚀 Arquitetura de Alta Performance</h3>
+                        <p class="agents-power-description" data-i18n="agents.power.description">
+                            Cada agente opera com inteligência artificial avançada, processamento paralelo e capacidade de análise em tempo real. 
+                            Juntos, formam um ecossistema robusto capaz de processar terabytes de dados públicos, detectar padrões complexos 
+                            e gerar insights actionáveis para fortalecer a transparência governamental e empoderar a cidadania brasileira.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -438,6 +532,6 @@
     </button>
 
     <!-- Scripts -->
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
