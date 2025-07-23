@@ -97,36 +97,115 @@
             </div>
         </section>
 
-        <!-- Funcionalidades -->
-        <section id="features" class="section" aria-labelledby="features-title">
+        <!-- Repositórios -->
+        <section id="repositories" class="section" aria-labelledby="repositories-title">
             <div class="section-container">
-                <h2 id="features-title" class="section-title" data-i18n="section.features.title">
-                    Funcionalidades
+                <h2 id="repositories-title" class="section-title" data-i18n="section.repositories.title">
+                    Repositórios
                 </h2>
                 
                 <div class="cards-grid">
                     <div class="card">
-                        <div class="card-icon">🔍</div>
-                        <h3 class="card-title" data-i18n="feature.analysis.title">Análise Inteligente</h3>
-                        <p class="card-description" data-i18n="feature.analysis.desc">
-                            Detecta anomalias em contratos e despesas públicas usando IA avançada.
-                        </p>
+                        <div class="card-icon">⚡</div>
+                        <h3 class="card-title">Backend (FastAPI)</h3>
+                        <p class="card-description">API e sistema multi-agente</p>
+                        <a href="https://github.com/anderson-ufrj/cidadao.ai-backend" target="_blank" rel="noopener" class="btn btn-primary mt-4">
+                            🔗 Ver Repositório
+                        </a>
                     </div>
                     
                     <div class="card">
-                        <div class="card-icon">📊</div>
-                        <h3 class="card-title" data-i18n="feature.reports.title">Relatórios Visuais</h3>
-                        <p class="card-description" data-i18n="feature.reports.desc">
-                            Gráficos e dashboards interativos para visualizar dados públicos.
-                        </p>
+                        <div class="card-icon">🎨</div>
+                        <h3 class="card-title">Frontend (Next.js)</h3>
+                        <p class="card-description">Interface web moderna</p>
+                        <a href="https://github.com/anderson-ufrj/cidadao.ai-frontend" target="_blank" rel="noopener" class="btn btn-primary mt-4">
+                            🔗 Ver Repositório
+                        </a>
                     </div>
                     
                     <div class="card">
-                        <div class="card-icon">🏛️</div>
-                        <h3 class="card-title" data-i18n="feature.transparency.title">Transparência Total</h3>
-                        <p class="card-description" data-i18n="feature.transparency.desc">
-                            Acesso simplificado aos dados governamentais brasileiros.
-                        </p>
+                        <div class="card-icon">📚</div>
+                        <h3 class="card-title">Documentação</h3>
+                        <p class="card-description">Hub central de docs</p>
+                        <a href="https://github.com/anderson-ufrj/cidadao.ai-docs" target="_blank" rel="noopener" class="btn btn-primary mt-4">
+                            🔗 Ver Repositório
+                        </a>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-icon">🤖</div>
+                        <h3 class="card-title">Modelos IA</h3>
+                        <p class="card-description">Scripts ML e modelos</p>
+                        <a href="https://github.com/anderson-ufrj/cidadao.ai-models" target="_blank" rel="noopener" class="btn btn-primary mt-4">
+                            🔗 Ver Repositório
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Links Importantes -->
+        <section id="links" class="section" aria-labelledby="links-title">
+            <div class="section-container">
+                <h2 id="links-title" class="section-title" data-i18n="section.links.title">
+                    Links Importantes
+                </h2>
+                
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card-icon">🌐</div>
+                        <h3 class="card-title">Aplicação Web</h3>
+                        <p class="card-description">Plataforma Cidadão.AI em produção</p>
+                        <a href="https://cidadao-ai-frontend.vercel.app" target="_blank" rel="noopener" class="btn btn-primary mt-4">
+                            🔗 Acessar App
+                        </a>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-icon">🚀</div>
+                        <h3 class="card-title">API Backend</h3>
+                        <p class="card-description">Hospedado no Hugging Face Spaces</p>
+                        <a href="https://neural-thinker-cidadao-ai-backend.hf.space" target="_blank" rel="noopener" class="btn btn-primary mt-4">
+                            🔗 Ver API
+                        </a>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-icon">📖</div>
+                        <h3 class="card-title">Docs Técnicas</h3>
+                        <p class="card-description">Documentação completa do backend</p>
+                        <a href="https://neural-thinker-cidadao-ai-backend.hf.space/docs" target="_blank" rel="noopener" class="btn btn-primary mt-4">
+                            🔗 Ver Docs
+                        </a>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-icon">📄</div>
+                        <h3 class="card-title">Notas de Pesquisa</h3>
+                        <p class="card-description">PDF com insights do projeto</p>
+                        <a href="https://neural-thinker-cidadao-ai-backend.hf.space/research-notes" target="_blank" rel="noopener" class="btn btn-primary mt-4">
+                            🔗 Ver PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- API Documentation -->
+        <section id="api" class="section" aria-labelledby="api-title">
+            <div class="section-container">
+                <h2 id="api-title" class="section-title" data-i18n="section.api.title">
+                    Documentação da API
+                </h2>
+                <div class="card" style="padding: 2rem;">
+                    <div id="swagger-ui" style="min-height: 500px;">
+                        <iframe 
+                            src="https://neural-thinker-cidadao-ai-backend.hf.space/docs" 
+                            width="100%" 
+                            height="500" 
+                            frameborder="0"
+                            title="Documentação da API Cidadão.AI">
+                        </iframe>
                     </div>
                 </div>
             </div>
@@ -231,7 +310,9 @@
                 <div class="agents-grid">
                     <!-- Abaporu -->
                     <div class="agent-card" data-agent="abaporu">
-                        <img src="assets/agents/abaporu.png" alt="Abaporu" class="agent-avatar">
+                        <a href="https://en.wikipedia.org/wiki/Abaporu" target="_blank" rel="noopener" class="agent-avatar-link">
+                            <img src="assets/agents/abaporu.png" alt="Abaporu" class="agent-avatar">
+                        </a>
                         <h3 class="agent-name">Abaporu</h3>
                         <p class="agent-role">Núcleo Central da IA</p>
                         <p class="agent-description">Coordena operações entre agentes e processa linguagem natural.</p>
@@ -239,7 +320,9 @@
                     
                     <!-- Anita Garibaldi -->
                     <div class="agent-card" data-agent="anita">
-                        <img src="assets/agents/anita.png" alt="Anita Garibaldi" class="agent-avatar">
+                        <a href="https://en.wikipedia.org/wiki/Anita_Garibaldi" target="_blank" rel="noopener" class="agent-avatar-link">
+                            <img src="assets/agents/anita.png" alt="Anita Garibaldi" class="agent-avatar">
+                        </a>
                         <h3 class="agent-name">Anita Garibaldi</h3>
                         <p class="agent-role">Roteadora Semântica</p>
                         <p class="agent-description">Gerencia roteamento inteligente de consultas.</p>
@@ -247,7 +330,9 @@
                     
                     <!-- Zumbi -->
                     <div class="agent-card" data-agent="zumbi">
-                        <img src="assets/agents/zumbi.jpeg" alt="Zumbi" class="agent-avatar">
+                        <a href="https://en.wikipedia.org/wiki/Zumbi" target="_blank" rel="noopener" class="agent-avatar-link">
+                            <img src="assets/agents/zumbi.jpeg" alt="Zumbi" class="agent-avatar">
+                        </a>
                         <h3 class="agent-name">Zumbi</h3>
                         <p class="agent-role">Investigador de Padrões</p>
                         <p class="agent-description">Especialista em detecção de padrões ocultos.</p>
@@ -255,7 +340,9 @@
                     
                     <!-- Tiradentes -->
                     <div class="agent-card" data-agent="tiradentes">
-                        <img src="assets/agents/tiradentes.png" alt="Tiradentes" class="agent-avatar">
+                        <a href="https://en.wikipedia.org/wiki/Tiradentes" target="_blank" rel="noopener" class="agent-avatar-link">
+                            <img src="assets/agents/tiradentes.png" alt="Tiradentes" class="agent-avatar">
+                        </a>
                         <h3 class="agent-name">Tiradentes</h3>
                         <p class="agent-role">Avaliador de Riscos</p>
                         <p class="agent-description">Avalia riscos operacionais e violações de compliance.</p>
@@ -263,7 +350,9 @@
                     
                     <!-- Obaluaiê -->
                     <div class="agent-card" data-agent="obaluaie">
-                        <img src="assets/agents/obaluaie.png" alt="Obaluaiê" class="agent-avatar">
+                        <a href="https://en.wikipedia.org/wiki/Babal%C3%BA-Ay%C3%A9" target="_blank" rel="noopener" class="agent-avatar-link">
+                            <img src="assets/agents/obaluaie.png" alt="Obaluaiê" class="agent-avatar">
+                        </a>
                         <h3 class="agent-name">Obaluaiê</h3>
                         <p class="agent-role">Detector de Corrupção</p>
                         <p class="agent-description">Detecta anomalias sistêmicas indicativas de corrupção.</p>
@@ -271,7 +360,9 @@
                     
                     <!-- Niemeyer -->
                     <div class="agent-card" data-agent="niemeyer">
-                        <img src="assets/agents/niemeyer.png" alt="Niemeyer" class="agent-avatar">
+                        <a href="https://en.wikipedia.org/wiki/Oscar_Niemeyer" target="_blank" rel="noopener" class="agent-avatar-link">
+                            <img src="assets/agents/niemeyer.png" alt="Niemeyer" class="agent-avatar">
+                        </a>
                         <h3 class="agent-name">Niemeyer</h3>
                         <p class="agent-role">Visualização Gráfica</p>
                         <p class="agent-description">Cria visualizações interativas e relatórios gráficos.</p>
@@ -279,7 +370,9 @@
                     
                     <!-- Nanã -->
                     <div class="agent-card" data-agent="nana">
-                        <img src="assets/agents/nana.png" alt="Nanã" class="agent-avatar">
+                        <a href="https://pt.wikipedia.org/wiki/Nan%C3%A3" target="_blank" rel="noopener" class="agent-avatar-link">
+                            <img src="assets/agents/nana.png" alt="Nanã" class="agent-avatar">
+                        </a>
                         <h3 class="agent-name">Nanã</h3>
                         <p class="agent-role">Agente Temporal</p>
                         <p class="agent-description">Processa séries temporais e identifica padrões históricos.</p>
@@ -287,7 +380,9 @@
                     
                     <!-- Lampião -->
                     <div class="agent-card" data-agent="lampiao">
-                        <img src="assets/agents/lampiao.png" alt="Lampião" class="agent-avatar">
+                        <a href="https://en.wikipedia.org/wiki/Lampi%C3%A3o" target="_blank" rel="noopener" class="agent-avatar-link">
+                            <img src="assets/agents/lampiao.png" alt="Lampião" class="agent-avatar">
+                        </a>
                         <h3 class="agent-name">Lampião</h3>
                         <p class="agent-role">Executor Técnico</p>
                         <p class="agent-description">Executa processos ETL e automação de coleta de dados.</p>
@@ -295,7 +390,9 @@
                     
                     <!-- Ceuci -->
                     <div class="agent-card" data-agent="ceuci">
-                        <img src="assets/agents/ceuci.png" alt="Ceuci" class="agent-avatar">
+                        <a href="https://mythus.fandom.com/wiki/Ceuci" target="_blank" rel="noopener" class="agent-avatar-link">
+                            <img src="assets/agents/ceuci.png" alt="Ceuci" class="agent-avatar">
+                        </a>
                         <h3 class="agent-name">Ceuci</h3>
                         <p class="agent-role">Agente Preditivo</p>
                         <p class="agent-description">Realiza análise preditiva e modelagem de tendências.</p>
@@ -303,7 +400,9 @@
                     
                     <!-- Dandara -->
                     <div class="agent-card" data-agent="dandara">
-                        <img src="assets/agents/dandara.png" alt="Dandara" class="agent-avatar">
+                        <a href="https://en.wikipedia.org/wiki/Dandara" target="_blank" rel="noopener" class="agent-avatar-link">
+                            <img src="assets/agents/dandara.png" alt="Dandara" class="agent-avatar">
+                        </a>
                         <h3 class="agent-name">Dandara</h3>
                         <p class="agent-role">Justiça Social</p>
                         <p class="agent-description">Monitora políticas de inclusão e equidade social.</p>
@@ -311,7 +410,9 @@
                     
                     <!-- Machado de Assis -->
                     <div class="agent-card" data-agent="machado">
-                        <img src="assets/agents/machado.png" alt="Machado de Assis" class="agent-avatar">
+                        <a href="https://en.wikipedia.org/wiki/Machado_de_Assis" target="_blank" rel="noopener" class="agent-avatar-link">
+                            <img src="assets/agents/machado.png" alt="Machado de Assis" class="agent-avatar">
+                        </a>
                         <h3 class="agent-name">Machado de Assis</h3>
                         <p class="agent-role">Análise Textual</p>
                         <p class="agent-description">Processa documentos governamentais com análise semântica.</p>
@@ -319,7 +420,9 @@
                     
                     <!-- José Bonifácio -->
                     <div class="agent-card" data-agent="bonifacio">
-                        <img src="assets/agents/bonifacio.png" alt="José Bonifácio" class="agent-avatar">
+                        <a href="https://en.wikipedia.org/wiki/Jos%C3%A9_Bonif%C3%A1cio_de_Andrada" target="_blank" rel="noopener" class="agent-avatar-link">
+                            <img src="assets/agents/bonifacio.png" alt="José Bonifácio" class="agent-avatar">
+                        </a>
                         <h3 class="agent-name">José Bonifácio</h3>
                         <p class="agent-role">Políticas Públicas</p>
                         <p class="agent-description">Analisa eficácia de políticas públicas e reformas.</p>

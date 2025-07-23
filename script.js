@@ -19,13 +19,9 @@ const translations = {
         'section.about.title': 'Sobre o Projeto',
         'section.about.description': 'O Cidadão.AI é um sistema multi-agente que utiliza inteligência artificial para democratizar o acesso aos dados públicos brasileiros.',
         
-        'section.features.title': 'Funcionalidades',
-        'feature.analysis.title': 'Análise Inteligente',
-        'feature.analysis.desc': 'Detecta anomalias em contratos e despesas públicas usando IA avançada.',
-        'feature.reports.title': 'Relatórios Visuais',
-        'feature.reports.desc': 'Gráficos e dashboards interativos para visualizar dados públicos.',
-        'feature.transparency.title': 'Transparência Total',
-        'feature.transparency.desc': 'Acesso simplificado aos dados governamentais brasileiros.',
+        'section.repositories.title': 'Repositórios',
+        'section.links.title': 'Links Importantes',
+        'section.api.title': 'Documentação da API',
         
         'modal.about.title': 'Sobre o Cidadão.AI',
         'modal.about.content': 'O Cidadão.AI é um projeto de pesquisa, software livre e engajamento cívico, idealizado e desenvolvido por Anderson Henrique da Silva como Trabalho de Conclusão de Curso (TCC), sob orientação da Profa. Dra. Aracele Garcia de Oliveira Fassbinder.',
@@ -102,13 +98,9 @@ const translations = {
         'section.about.title': 'About the Project',
         'section.about.description': 'Cidadão.AI is a multi-agent system that uses artificial intelligence to democratize access to Brazilian public data.',
         
-        'section.features.title': 'Features',
-        'feature.analysis.title': 'Smart Analysis',
-        'feature.analysis.desc': 'Detects anomalies in contracts and public spending using advanced AI.',
-        'feature.reports.title': 'Visual Reports',
-        'feature.reports.desc': 'Interactive charts and dashboards to visualize public data.',
-        'feature.transparency.title': 'Total Transparency',
-        'feature.transparency.desc': 'Simplified access to Brazilian government data.',
+        'section.repositories.title': 'Repositories',
+        'section.links.title': 'Important Links',
+        'section.api.title': 'API Documentation',
         
         'modal.about.title': 'About Cidadão.AI',
         'modal.about.content': 'Cidadão.AI is a research project, free software and civic engagement, conceived and developed by Anderson Henrique da Silva as an undergraduate thesis, supervised by Prof. Dr. Aracele Garcia de Oliveira Fassbinder.',

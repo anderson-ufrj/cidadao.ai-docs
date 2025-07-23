@@ -381,51 +381,84 @@ body {
 /* ===== AGENTES GRID ===== */
 .agents-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
     margin-top: 2rem;
 }
 
 .agent-card {
-    background: var(--bg-secondary);
-    border: 1px solid var(--border);
     border-radius: 16px;
     padding: 1.5rem;
     text-align: center;
     transition: all 0.3s ease;
+    border: 2px solid transparent;
 }
 
 .agent-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+    transform: translateY(-6px);
+    box-shadow: 0 16px 50px rgba(0, 0, 0, 0.15);
+    border-color: var(--text-accent);
+}
+
+/* Cores específicas para cada agente */
+.agent-card[data-agent="abaporu"] { background: linear-gradient(135deg, #f59e0b, #d97706); color: white; }
+.agent-card[data-agent="anita"] { background: linear-gradient(135deg, #dc2626, #991b1b); color: white; }
+.agent-card[data-agent="zumbi"] { background: linear-gradient(135deg, #7c2d12, #451a03); color: white; }
+.agent-card[data-agent="tiradentes"] { background: linear-gradient(135deg, #1e293b, #0f172a); color: white; }
+.agent-card[data-agent="obaluaie"] { background: linear-gradient(135deg, #7c3aed, #5b21b6); color: white; }
+.agent-card[data-agent="niemeyer"] { background: linear-gradient(135deg, #059669, #047857); color: white; }
+.agent-card[data-agent="nana"] { background: linear-gradient(135deg, #db2777, #be185d); color: white; }
+.agent-card[data-agent="lampiao"] { background: linear-gradient(135deg, #ea580c, #c2410c); color: white; }
+.agent-card[data-agent="ceuci"] { background: linear-gradient(135deg, #0891b2, #0e7490); color: white; }
+.agent-card[data-agent="dandara"] { background: linear-gradient(135deg, #be123c, #9f1239); color: white; }
+.agent-card[data-agent="machado"] { background: linear-gradient(135deg, #1f2937, #111827); color: white; }
+.agent-card[data-agent="bonifacio"] { background: linear-gradient(135deg, #365314, #1a2e05); color: white; }
+
+.agent-avatar-link {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.agent-avatar-link:hover {
+    transform: scale(1.1);
 }
 
 .agent-avatar {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1rem;
-    border: 3px solid var(--text-accent);
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.agent-avatar:hover {
+    border-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 .agent-name {
-    font-size: 1.125rem;
-    font-weight: 600;
+    font-size: 1.25rem;
+    font-weight: 700;
     margin-bottom: 0.5rem;
-    color: var(--text-primary);
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .agent-role {
-    font-size: 0.875rem;
-    color: var(--text-accent);
-    font-weight: 500;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
     margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .agent-description {
     font-size: 0.875rem;
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.4;
 }
 
 /* ===== BOTÃO FLUTUANTE ===== */
@@ -498,8 +531,13 @@ body {
     }
     
     .agents-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
+    }
+    
+    .agent-avatar {
+        width: 100px;
+        height: 100px;
     }
     
     .modal-content {
@@ -536,6 +574,16 @@ body {
     
     .modal-content {
         border-radius: 12px;
+    }
+    
+    .agents-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .agent-avatar {
+        width: 80px;
+        height: 80px;
     }
 }
 
