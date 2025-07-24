@@ -1,0 +1,34 @@
+# Backup files - Universal patterns
+*.backup
+*.backup.*
+*_backup
+*_backup.*
+backup_*
+backup-*
+*.bak
+*.bak.*
+*_bak
+*_bak.*
+bak_*
+bak-*
+
+# Documentation specific files
+.DS_Store
+Thumbs.db
+*.tmp
+*.temp
+~*
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-*
+
+# System files
+*.log
+.cache/
+
+# Claude-related files
+CLAUDE.md
+.claude/
+*.claude

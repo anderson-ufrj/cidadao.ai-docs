@@ -6,6 +6,7 @@
 const agentsList = [
     { name: 'Abaporu', role: 'Nosso agente central de IA', image: 'abaporu.png' },
     { name: 'Anita Garibaldi', role: 'Nossa agente de roteamento', image: 'anita.png' },
+    { name: 'Ayrton Senna', role: 'Nosso navegador das rotas perfeitas', image: 'senna.png' },
     { name: 'Zumbi', role: 'Nosso agente investigador', image: 'zumbi.jpeg' },
     { name: 'Tiradentes', role: 'Nosso agente de riscos', image: 'tiradentes.png' },
     { name: 'Obaluaiê', role: 'Nosso agente detector', image: 'obaluaie.png' },
@@ -31,7 +32,7 @@ function generateCarousel() {
         return;
     }
     
-    // Gerar 6 sequências (90 agentes total) para garantir loop infinito
+    // Gerar 6 sequências (96 agentes total - 16 agentes x 6) para garantir loop infinito
     let html = '';
     for (let sequence = 0; sequence < 6; sequence++) {
         agentsList.forEach(agent => {
