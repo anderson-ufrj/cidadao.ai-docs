@@ -97,6 +97,79 @@ function setupCarouselTooltips() {
                 tooltip.className = '';
             }
         });
+        
+        // Click para abrir modal (desktop)
+        agent.addEventListener('click', (e) => {
+            e.preventDefault();
+            console.log('🖱️ Clique no agente - abrindo modal do sistema');
+            
+            // Esconder tooltip se estiver visível
+            const tooltip = document.getElementById('global-tooltip');
+            if (tooltip) {
+                tooltip.style.display = 'none';
+                tooltip.className = '';
+            }
+            
+            // Abrir modal do sistema multi-agente
+            if (window.CidadaoAI && window.CidadaoAI.openModal) {
+                window.CidadaoAI.openModal('systemModal');
+            } else {
+                console.error('❌ Sistema de modais não disponível');
+            }
+        });
+        
+        // Touch events para mobile (melhor controle)
+        let touchStartTime = 0;
+        let hasShownTooltip = false;
+        
+        agent.addEventListener('touchstart', (e) => {
+            touchStartTime = Date.now();
+            hasShownTooltip = false;
+        });
+        
+        agent.addEventListener('touchend', (e) => {
+            e.preventDefault();
+            const touchDuration = Date.now() - touchStartTime;
+            const tooltip = document.getElementById('global-tooltip');
+            
+            // Se já mostrou tooltip, segundo toque abre modal
+            if (hasShownTooltip || tooltip && tooltip.style.display === 'block') {
+                console.log('📱 Segundo toque - abrindo modal');
+                if (tooltip) {
+                    tooltip.style.display = 'none';
+                    tooltip.className = '';
+                }
+                if (window.CidadaoAI && window.CidadaoAI.openModal) {
+                    window.CidadaoAI.openModal('systemModal');
+                }
+            } else {
+                // Primeiro toque mostra tooltip
+                console.log('📱 Primeiro toque - mostrando tooltip');
+                const name = agent.getAttribute('data-name');
+                const role = agent.getAttribute('data-role');
+                
+                if (name && role && tooltip) {
+                    tooltip.innerHTML = `${name}<br>${role}`;
+                    tooltip.className = 'carousel-tooltip';
+                    tooltip.style.display = 'block';
+                    
+                    const rect = agent.getBoundingClientRect();
+                    tooltip.style.left = `${rect.left + (rect.width / 2)}px`;
+                    tooltip.style.top = `${rect.bottom + 10}px`;
+                    
+                    hasShownTooltip = true;
+                    
+                    // Auto-hide tooltip após 3 segundos
+                    setTimeout(() => {
+                        if (tooltip && tooltip.style.display === 'block') {
+                            tooltip.style.display = 'none';
+                            tooltip.className = '';
+                            hasShownTooltip = false;
+                        }
+                    }, 3000);
+                }
+            }
+        });
     });
     
     console.log('✅ Tooltips configurados');
