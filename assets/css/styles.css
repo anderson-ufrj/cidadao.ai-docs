@@ -779,6 +779,22 @@ body::before {
         gap: 1rem;
     }
     
+    /* Reduzir espaçamento entre botões do header no mobile */
+    .nav-controls {
+        gap: 0.5rem;
+    }
+    
+    .control-button {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.8rem;
+    }
+    
+    .nav-manifesto-btn {
+        margin-right: 0.5rem;
+        padding: 0.4rem 0.6rem;
+        font-size: 0.8rem;
+    }
+    
     .hero-title {
         font-size: 2.5rem;
     }
