@@ -131,6 +131,72 @@ const translations = {
         'modal.about.supervision.title': '🧠 Orientação Acadêmica',
         'modal.about.supervision.institution': '📍 Instituto Federal do Sul de Minas Gerais – Campus Muzambinho',
         'modal.about.supervision.lattes': '🔗 Currículo Lattes',
+        
+        // Meta tags
+        'meta.description': 'Hub central de documentação do projeto Cidadão.AI - Sistema multi-agente de IA para transparência pública',
+        'meta.keywords': 'Cidadão.AI, transparência pública, IA ética, open government, ODS 16',
+        
+        // Navigation
+        'nav.aria.main': 'Navegação principal',
+        'nav.logo.aria': 'Cidadão.AI - Página inicial',
+        
+        // Repositories
+        'repositories.backend.title': 'Backend (FastAPI)',
+        'repositories.backend.description': 'API e sistema multi-agente',
+        'repositories.frontend.title': 'Frontend (Next.js)',
+        'repositories.frontend.description': 'Interface web moderna',
+        'repositories.docs.title': 'Documentação',
+        'repositories.docs.description': 'Hub central de docs',
+        'repositories.models.title': 'Modelos IA',
+        'repositories.models.description': 'Scripts ML e modelos',
+        
+        // Project Links
+        'links.webapp.title': 'Aplicação Web',
+        'links.webapp.description': 'Plataforma Cidadão.AI em produção',
+        'links.api.title': 'API Backend',
+        'links.api.description': 'Hospedado no Hugging Face Spaces',
+        'links.monitor.title': 'Monitor do Sistema',
+        'links.monitor.description': 'Monitoramento em tempo real do backend',
+        'links.technical.title': 'Docs Técnicas',
+        'links.technical.description': 'Documentação completa do backend',
+        'links.research.title': 'Notas de Pesquisa',
+        'links.research.description': 'PDF com insights do projeto',
+        
+        // API iframe
+        'api.iframe.title': 'Documentação da API Cidadão.AI',
+        
+        // Modal About - Technical sections
+        'modal.about.tech.title': '🧰 Tecnologias Utilizadas',
+        'modal.about.tech.frontend': '<strong>Frontend:</strong> Next.js 15, React 19, TypeScript 5, Tailwind CSS 4',
+        'modal.about.tech.backend': '<strong>Backend:</strong> FastAPI, Python 3.11+, PostgreSQL 16, Redis 7',
+        'modal.about.tech.ai': '<strong>IA/ML:</strong> LangChain, Transformers, OpenAI/Groq, ChromaDB, FAISS',
+        'modal.about.tech.deploy': '<strong>Deploy:</strong> Docker, Kubernetes, Vercel, HuggingFace Spaces',
+        'modal.about.tech.observability': '<strong>Observabilidade:</strong> Prometheus, Grafana, OpenTelemetry, Structured Logging',
+        'modal.about.licenses.title': '🔐 Licenças e Direitos',
+        'modal.about.licenses.project': '<strong>Projeto:</strong> Apache 2.0 (Software Livre)',
+        'modal.about.licenses.data': '<strong>Dados:</strong> Creative Commons BY 4.0',
+        'modal.about.licenses.docs': '<strong>Documentação:</strong> Creative Commons BY-SA 4.0',
+        'modal.about.institutional.title': '🏛️ Apoio Institucional',
+        'modal.about.institutional.ifsuldeminas': '<strong>Instituto Federal do Sul de Minas Gerais</strong> - Campus Muzambinho',
+        'modal.about.institutional.cnpq': '<strong>CNPq</strong> - Conselho Nacional de Desenvolvimento Científico e Tecnológico',
+        'modal.about.institutional.capes': '<strong>CAPES</strong> - Coordenação de Aperfeiçoamento de Pessoal de Nível Superior',
+        'modal.about.institutional.gov': '<strong>Portal da Transparência</strong> - Controladoria-Geral da União',
+        'modal.about.research.title': '📚 Notas de Pesquisa do Autor',
+        'modal.about.research.content': 'Acesse as <strong>notas técnicas completas</strong> do projeto, incluindo arquitetura, metodologia e resultados de pesquisa no documento oficial:',
+        'modal.about.research.link': '📄 Baixar PDF das Notas de Pesquisa',
+        'modal.about.official.title': '🌐 Links Oficiais',
+        
+        // Modal Manifesto
+        'modal.manifesto.heading': '🇧🇷 Por uma Inteligência Artificial que Serve ao Povo e Ilumina o Estado',
+        'modal.manifesto.intro.title': 'Introdução',
+        'modal.manifesto.intro.content': 'O Cidadão.AI nasce da vontade de tornar os dados públicos verdadeiramente públicos. Em tempos onde a informação é poder, democratizar o acesso aos dados governamentais é democratizar o próprio poder.',
+        'modal.manifesto.mission.title': 'Missão',
+        'modal.manifesto.mission.content': 'Nossa missão é criar uma inteligência artificial que trabalhe incansavelmente para fortalecer a transparência, combater a corrupção e empoderar cada cidadão com informação clara, precisa e auditável.',
+        'modal.manifesto.transparency.title': 'Transparência como prática radical',
+        'modal.manifesto.transparency.content': 'Acreditamos que transparência não é apenas mostrar números, mas torná-los compreensíveis, contextualizados e actionáveis. Nossa IA não apenas coleta dados - ela os interpreta, analisa padrões e identifica anomalias.',
+        'modal.manifesto.vision.title': 'Visão de futuro',
+        'modal.manifesto.vision.content': 'Sonhamos com um Brasil onde cada real público seja rastreável, onde cada decisão governamental seja explicável e onde cada cidadão tenha o poder de questionar, entender e fiscalizar.',
+        'modal.manifesto.quote': '"Transparência não é um favor. É fundamento de uma democracia viva."',
     },
     
     'en-US': {
@@ -262,6 +328,72 @@ const translations = {
         'modal.about.supervision.title': '🧠 Academic Supervision',
         'modal.about.supervision.institution': '📍 Federal Institute of Southern Minas Gerais – Muzambinho Campus',
         'modal.about.supervision.lattes': '🔗 Lattes CV',
+        
+        // Meta tags
+        'meta.description': 'Central documentation hub for Cidadão.AI project - Multi-agent AI system for public transparency',
+        'meta.keywords': 'Cidadão.AI, public transparency, ethical AI, open government, SDG 16',
+        
+        // Navigation
+        'nav.aria.main': 'Main navigation',
+        'nav.logo.aria': 'Cidadão.AI - Home',
+        
+        // Repositories
+        'repositories.backend.title': 'Backend (FastAPI)',
+        'repositories.backend.description': 'API and multi-agent system',
+        'repositories.frontend.title': 'Frontend (Next.js)',
+        'repositories.frontend.description': 'Modern web interface',
+        'repositories.docs.title': 'Documentation',
+        'repositories.docs.description': 'Central docs hub',
+        'repositories.models.title': 'AI Models',
+        'repositories.models.description': 'ML scripts and models',
+        
+        // Project Links
+        'links.webapp.title': 'Web Application',
+        'links.webapp.description': 'Cidadão.AI platform in production',
+        'links.api.title': 'Backend API',
+        'links.api.description': 'Hosted on Hugging Face Spaces',
+        'links.monitor.title': 'System Monitor',
+        'links.monitor.description': 'Real-time backend monitoring',
+        'links.technical.title': 'Technical Docs',
+        'links.technical.description': 'Complete backend documentation',
+        'links.research.title': 'Research Notes',
+        'links.research.description': 'PDF with project insights',
+        
+        // API iframe
+        'api.iframe.title': 'Cidadão.AI API Documentation',
+        
+        // Modal About - Technical sections
+        'modal.about.tech.title': '🧰 Technologies Used',
+        'modal.about.tech.frontend': '<strong>Frontend:</strong> Next.js 15, React 19, TypeScript 5, Tailwind CSS 4',
+        'modal.about.tech.backend': '<strong>Backend:</strong> FastAPI, Python 3.11+, PostgreSQL 16, Redis 7',
+        'modal.about.tech.ai': '<strong>AI/ML:</strong> LangChain, Transformers, OpenAI/Groq, ChromaDB, FAISS',
+        'modal.about.tech.deploy': '<strong>Deploy:</strong> Docker, Kubernetes, Vercel, HuggingFace Spaces',
+        'modal.about.tech.observability': '<strong>Observability:</strong> Prometheus, Grafana, OpenTelemetry, Structured Logging',
+        'modal.about.licenses.title': '🔐 Licenses and Rights',
+        'modal.about.licenses.project': '<strong>Project:</strong> Apache 2.0 (Free Software)',
+        'modal.about.licenses.data': '<strong>Data:</strong> Creative Commons BY 4.0',
+        'modal.about.licenses.docs': '<strong>Documentation:</strong> Creative Commons BY-SA 4.0',
+        'modal.about.institutional.title': '🏛️ Institutional Support',
+        'modal.about.institutional.ifsuldeminas': '<strong>Federal Institute of Southern Minas Gerais</strong> - Muzambinho Campus',
+        'modal.about.institutional.cnpq': '<strong>CNPq</strong> - National Council for Scientific and Technological Development',
+        'modal.about.institutional.capes': '<strong>CAPES</strong> - Coordination for the Improvement of Higher Education Personnel',
+        'modal.about.institutional.gov': '<strong>Transparency Portal</strong> - Federal Comptroller General',
+        'modal.about.research.title': '📚 Author Research Notes',
+        'modal.about.research.content': 'Access the <strong>complete technical notes</strong> of the project, including architecture, methodology and research results in the official document:',
+        'modal.about.research.link': '📄 Download Research Notes PDF',
+        'modal.about.official.title': '🌐 Official Links',
+        
+        // Modal Manifesto
+        'modal.manifesto.heading': '🇧🇷 For an Artificial Intelligence that Serves the People and Illuminates the State',
+        'modal.manifesto.intro.title': 'Introduction',
+        'modal.manifesto.intro.content': 'Cidadão.AI is born from the desire to make public data truly public. In times where information is power, democratizing access to government data is democratizing power itself.',
+        'modal.manifesto.mission.title': 'Mission',
+        'modal.manifesto.mission.content': 'Our mission is to create an artificial intelligence that works tirelessly to strengthen transparency, fight corruption and empower every citizen with clear, accurate and auditable information.',
+        'modal.manifesto.transparency.title': 'Transparency as radical practice',
+        'modal.manifesto.transparency.content': 'We believe that transparency is not just showing numbers, but making them understandable, contextualized and actionable. Our AI does not just collect data - it interprets it, analyzes patterns and identifies anomalies.',
+        'modal.manifesto.vision.title': 'Vision for the future',
+        'modal.manifesto.vision.content': 'We dream of a Brazil where every public real is traceable, where every government decision is explainable and where every citizen has the power to question, understand and oversee.',
+        'modal.manifesto.quote': '"Transparency is not a favor. It is the foundation of a living democracy."',
     }
 };
 
@@ -380,6 +512,15 @@ function updateLanguage(lang) {
         const key = element.getAttribute('data-i18n-aria');
         if (translations[lang][key]) {
             element.setAttribute('aria-label', translations[lang][key]);
+        }
+    });
+    
+    // Atualizar elementos com data-i18n-title (title attribute)
+    const titleElements = document.querySelectorAll('[data-i18n-title]');
+    titleElements.forEach(element => {
+        const key = element.getAttribute('data-i18n-title');
+        if (translations[lang][key]) {
+            element.setAttribute('title', translations[lang][key]);
         }
     });
     

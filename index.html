@@ -125,8 +125,8 @@
                             </svg>
                         </div>
                         <div class="link-content">
-                            <h3 class="link-title">Backend (FastAPI)</h3>
-                            <p class="link-description">API e sistema multi-agente</p>
+                            <h3 class="link-title" data-i18n="repositories.backend.title">Backend (FastAPI)</h3>
+                            <p class="link-description" data-i18n="repositories.backend.description">API e sistema multi-agente</p>
                         </div>
                     </a>
                     
@@ -137,8 +137,8 @@
                             </svg>
                         </div>
                         <div class="link-content">
-                            <h3 class="link-title">Frontend (Next.js)</h3>
-                            <p class="link-description">Interface web moderna</p>
+                            <h3 class="link-title" data-i18n="repositories.frontend.title">Frontend (Next.js)</h3>
+                            <p class="link-description" data-i18n="repositories.frontend.description">Interface web moderna</p>
                         </div>
                     </a>
                     
@@ -149,8 +149,8 @@
                             </svg>
                         </div>
                         <div class="link-content">
-                            <h3 class="link-title">Documentação</h3>
-                            <p class="link-description">Hub central de docs</p>
+                            <h3 class="link-title" data-i18n="repositories.docs.title">Documentação</h3>
+                            <p class="link-description" data-i18n="repositories.docs.description">Hub central de docs</p>
                         </div>
                     </a>
                     
@@ -161,8 +161,8 @@
                             </svg>
                         </div>
                         <div class="link-content">
-                            <h3 class="link-title">Modelos IA</h3>
-                            <p class="link-description">Scripts ML e modelos</p>
+                            <h3 class="link-title" data-i18n="repositories.models.title">Modelos IA</h3>
+                            <p class="link-description" data-i18n="repositories.models.description">Scripts ML e modelos</p>
                         </div>
                     </a>
                 </div>
@@ -184,8 +184,8 @@
                             </svg>
                         </div>
                         <div class="link-content">
-                            <h3 class="link-title">Aplicação Web</h3>
-                            <p class="link-description">Plataforma Cidadão.AI em produção</p>
+                            <h3 class="link-title" data-i18n="links.webapp.title">Aplicação Web</h3>
+                            <p class="link-description" data-i18n="links.webapp.description">Plataforma Cidadão.AI em produção</p>
                         </div>
                     </a>
                     
@@ -196,8 +196,8 @@
                             </svg>
                         </div>
                         <div class="link-content">
-                            <h3 class="link-title">API Backend</h3>
-                            <p class="link-description">Hospedado no Hugging Face Spaces</p>
+                            <h3 class="link-title" data-i18n="links.api.title">API Backend</h3>
+                            <p class="link-description" data-i18n="links.api.description">Hospedado no Hugging Face Spaces</p>
                         </div>
                     </a>
                     
@@ -208,8 +208,8 @@
                             </svg>
                         </div>
                         <div class="link-content">
-                            <h3 class="link-title">Monitor do Sistema</h3>
-                            <p class="link-description">Monitoramento em tempo real do backend</p>
+                            <h3 class="link-title" data-i18n="links.monitor.title">Monitor do Sistema</h3>
+                            <p class="link-description" data-i18n="links.monitor.description">Monitoramento em tempo real do backend</p>
                         </div>
                     </a>
                     
@@ -220,8 +220,8 @@
                             </svg>
                         </div>
                         <div class="link-content">
-                            <h3 class="link-title">Docs Técnicas</h3>
-                            <p class="link-description">Documentação completa do backend</p>
+                            <h3 class="link-title" data-i18n="links.technical.title">Docs Técnicas</h3>
+                            <p class="link-description" data-i18n="links.technical.description">Documentação completa do backend</p>
                         </div>
                     </a>
                     
@@ -232,8 +232,8 @@
                             </svg>
                         </div>
                         <div class="link-content">
-                            <h3 class="link-title">Notas de Pesquisa</h3>
-                            <p class="link-description">PDF com insights do projeto</p>
+                            <h3 class="link-title" data-i18n="links.research.title">Notas de Pesquisa</h3>
+                            <p class="link-description" data-i18n="links.research.description">PDF com insights do projeto</p>
                         </div>
                     </a>
                 </div>
@@ -252,6 +252,7 @@
                         width="100%" 
                         height="600" 
                         frameborder="0"
+                        data-i18n-title="api.iframe.title"
                         title="Documentação da API Cidadão.AI"
                         class="api-iframe">
                     </iframe>
@@ -311,31 +312,28 @@
                 </div>
                 
                 <div class="tech-section mb-6">
-                    <h3 class="mb-3">🧰 Tecnologias Utilizadas</h3>
+                    <h3 class="mb-3" data-i18n="modal.about.tech.title">🧰 Tecnologias Utilizadas</h3>
                     <div class="tech-grid">
-                        <div class="tech-item">
-                            <strong>Backend API:</strong> Python, FastAPI, LangChain, ChromaDB, FAISS, BERTimbau
+                        <div class="tech-item" data-i18n="modal.about.tech.frontend">
+                            <strong>Frontend:</strong> Next.js 15, React 19, TypeScript 5, Tailwind CSS 4
                         </div>
-                        <div class="tech-item">
-                            <strong>Banco de Dados:</strong> MongoDB
+                        <div class="tech-item" data-i18n="modal.about.tech.backend">
+                            <strong>Backend:</strong> FastAPI, Python 3.11+, PostgreSQL 16, Redis 7
                         </div>
-                        <div class="tech-item">
-                            <strong>Frontend:</strong> Next.js 15, React 18, TypeScript, Tailwind CSS, Zustand
+                        <div class="tech-item" data-i18n="modal.about.tech.ai">
+                            <strong>IA/ML:</strong> LangChain, Transformers, OpenAI/Groq, ChromaDB, FAISS
                         </div>
-                        <div class="tech-item">
-                            <strong>API Documentation:</strong> Swagger UI, ReDoc (automático)
+                        <div class="tech-item" data-i18n="modal.about.tech.deploy">
+                            <strong>Deploy:</strong> Docker, Kubernetes, Vercel, HuggingFace Spaces
                         </div>
-                        <div class="tech-item">
-                            <strong>Deploy:</strong> Vercel (Frontend), Hugging Face Spaces (Backend API)
-                        </div>
-                        <div class="tech-item">
-                            <strong>Internacionalização:</strong> next-intl (Português/Inglês)
+                        <div class="tech-item" data-i18n="modal.about.tech.observability">
+                            <strong>Observabilidade:</strong> Prometheus, Grafana, OpenTelemetry, Structured Logging
                         </div>
                     </div>
                 </div>
                 
                 <div class="licenses-section mb-6">
-                    <h3 class="mb-3">🔐 Licenças e Direitos</h3>
+                    <h3 class="mb-3" data-i18n="modal.about.licenses.title">🔐 Licenças e Direitos</h3>
                     <ul class="license-list">
                         <li>• Código-fonte licenciado sob Apache License 2.0.</li>
                         <li>• Todos os modelos e bibliotecas de terceiros respeitam suas respectivas licenças.</li>
@@ -388,27 +386,27 @@
                 <h2 id="manifesto-modal-title" class="modal-title" data-i18n="modal.manifesto.title">
                     Manifesto Cidadão.AI
                 </h2>
-                <button class="modal-close" data-modal-close="manifestoModal" aria-label="Fechar modal">
+                <button class="modal-close" data-modal-close="manifestoModal" data-i18n-aria="modal.close.aria">
                     ×
                 </button>
             </div>
             <div class="modal-body">
-                <h3 class="mb-4">🇧🇷 Por uma Inteligência Artificial que Serve ao Povo e Ilumina o Estado</h3>
+                <h3 class="mb-4" data-i18n="modal.manifesto.heading">🇧🇷 Por uma Inteligência Artificial que Serve ao Povo e Ilumina o Estado</h3>
                 
-                <h4 class="mt-6 mb-3">Introdução</h4>
-                <p>O Cidadão.AI nasce da vontade de tornar os dados públicos verdadeiramente públicos. É tecnologia aplicada à cidadania, um instrumento para que cada brasileiro possa enxergar, compreender e transformar as decisões que moldam sua vida.</p>
+                <h4 class="mt-6 mb-3" data-i18n="modal.manifesto.intro.title">Introdução</h4>
+                <p data-i18n="modal.manifesto.intro.content">O Cidadão.AI nasce da vontade de tornar os dados públicos verdadeiramente públicos. Em tempos onde a informação é poder, democratizar o acesso aos dados governamentais é democratizar o próprio poder.</p>
                 
-                <h4 class="mt-6 mb-3">Missão</h4>
-                <p>Nossa missão é democratizar o acesso à informação pública no Brasil por meio de inteligência artificial. Trabalhamos para transformar a complexidade dos dados em compreensão acessível, fomentando a participação cidadã, a prestação de contas e a governança orientada por evidências.</p>
+                <h4 class="mt-6 mb-3" data-i18n="modal.manifesto.mission.title">Missão</h4>
+                <p data-i18n="modal.manifesto.mission.content">Nossa missão é criar uma inteligência artificial que trabalhe incansavelmente para fortalecer a transparência, combater a corrupção e empoderar cada cidadão com informação clara, precisa e auditável.</p>
                 
-                <h4 class="mt-6 mb-3">Transparência como prática radical</h4>
-                <p>Acreditamos que dado público só é verdadeiramente público quando pode ser compreendido por todos. Por isso, nossa tecnologia transforma arquivos desorganizados em painéis legíveis, revela padrões invisíveis e traduz o que antes era indecifrável.</p>
+                <h4 class="mt-6 mb-3" data-i18n="modal.manifesto.transparency.title">Transparência como prática radical</h4>
+                <p data-i18n="modal.manifesto.transparency.content">Acreditamos que transparência não é apenas mostrar números, mas torná-los compreensíveis, contextualizados e actionaveis. Nossa IA não apenas coleta dados - ela os interpreta, analisa padrões e identifica anomalias.</p>
                 
-                <h4 class="mt-6 mb-3">Visão de futuro</h4>
-                <p>Imaginamos um Brasil onde todo cidadão tenha as ferramentas necessárias para compreender as engrenagens do poder público. Onde a análise de políticas não seja privilégio de especialistas, mas um direito de todos.</p>
+                <h4 class="mt-6 mb-3" data-i18n="modal.manifesto.vision.title">Visão de futuro</h4>
+                <p data-i18n="modal.manifesto.vision.content">Sonhamos com um Brasil onde cada real público seja rastreável, onde cada decisão governamental seja explicável e onde cada cidadão tenha o poder de questionar, entender e fiscalizar.</p>
                 
                 <div class="mt-8 p-4" style="background: var(--card-bg); border-left: 4px solid var(--text-accent); border-radius: 8px;">
-                    <p><strong>"Transparência não é um favor. É fundamento de uma democracia viva."</strong></p>
+                    <p data-i18n="modal.manifesto.quote"><strong>"Transparência não é um favor. É fundamento de uma democracia viva."</strong></p>
                 </div>
             </div>
         </div>
