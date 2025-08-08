@@ -573,6 +573,7 @@ function cleanupGreenElements() {
             // Se não for um elemento esperado, removê-lo
             if (!el.classList.contains('floating-button-dynamic') && 
                 !el.classList.contains('floating-button') &&
+                !el.classList.contains('floating-button-info') &&
                 !el.classList.contains('agent-card') &&
                 !el.classList.contains('carousel-agent') &&
                 !el.classList.contains('dynamic-tooltip') &&
@@ -618,7 +619,7 @@ function recreateFloatingButton() {
         width: 60px !important;
         height: 60px !important;
         border-radius: 50% !important;
-        background: linear-gradient(135deg, #3b82f6, #1d4ed8) !important;
+        background: linear-gradient(135deg, #10b981, #059669) !important;
         color: white !important;
         border: none !important;
         cursor: pointer !important;
@@ -626,7 +627,7 @@ function recreateFloatingButton() {
         align-items: center !important;
         justify-content: center !important;
         font-size: 1.5rem !important;
-        box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3) !important;
+        box-shadow: 0 4px 20px rgba(16, 185, 129, 0.3) !important;
         transition: all 0.3s ease !important;
         z-index: 99999 !important;
         user-select: none !important;
@@ -645,12 +646,12 @@ function recreateFloatingButton() {
     
     button.addEventListener('mouseenter', () => {
         button.style.transform = 'scale(1.1)';
-        button.style.boxShadow = '0 6px 25px rgba(59, 130, 246, 0.4)';
+        button.style.boxShadow = '0 6px 25px rgba(16, 185, 129, 0.4)';
     });
     
     button.addEventListener('mouseleave', () => {
         button.style.transform = 'scale(1)';
-        button.style.boxShadow = '0 4px 20px rgba(59, 130, 246, 0.3)';
+        button.style.boxShadow = '0 4px 20px rgba(16, 185, 129, 0.3)';
     });
     
     // Adicionar ao DOM
