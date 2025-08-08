@@ -37,22 +37,26 @@
                 </button>
                 
                 <!-- Tema -->
-                <div class="control-group" role="group" aria-label="Seletor de tema">
-                    <button class="control-button" data-theme-btn="light" data-i18n="nav.theme.light" aria-label="Tema claro">
-                        ☀️ Claro
+                <div class="control-group theme-group" role="group" aria-label="Seletor de tema">
+                    <button class="control-button theme-btn" data-theme-btn="light" data-i18n="nav.theme.light" aria-label="Tema claro">
+                        <span class="btn-icon">☀️</span>
+                        <span class="btn-text" data-i18n="nav.theme.light.short">Claro</span>
                     </button>
-                    <button class="control-button" data-theme-btn="dark" data-i18n="nav.theme.dark" aria-label="Tema escuro">
-                        🌙 Escuro
+                    <button class="control-button theme-btn" data-theme-btn="dark" data-i18n="nav.theme.dark" aria-label="Tema escuro">
+                        <span class="btn-icon">🌙</span>
+                        <span class="btn-text" data-i18n="nav.theme.dark.short">Escuro</span>
                     </button>
                 </div>
                 
                 <!-- Idioma -->
-                <div class="control-group" role="group" aria-label="Seletor de idioma">
-                    <button class="control-button" data-lang-btn="pt-BR" data-i18n="nav.lang.pt" aria-label="Português">
-                        🇧🇷 PT
+                <div class="control-group lang-group" role="group" aria-label="Seletor de idioma">
+                    <button class="control-button lang-btn" data-lang-btn="pt-BR" data-i18n="nav.lang.pt" aria-label="Português">
+                        <span class="btn-flag">🇧🇷</span>
+                        <span class="btn-text" data-i18n="nav.lang.pt.short">PT</span>
                     </button>
-                    <button class="control-button" data-lang-btn="en-US" data-i18n="nav.lang.en" aria-label="English">
-                        🇺🇸 EN
+                    <button class="control-button lang-btn" data-lang-btn="en-US" data-i18n="nav.lang.en" aria-label="English">
+                        <span class="btn-flag">🇺🇸</span>
+                        <span class="btn-text" data-i18n="nav.lang.en.short">EN</span>
                     </button>
                 </div>
             </div>
@@ -264,25 +268,29 @@
                 <h2 id="about-modal-title" class="modal-title" data-i18n="modal.about.title">
                     Sobre o Cidadão.AI
                 </h2>
-                <button class="modal-close" data-modal-close="aboutModal" aria-label="Fechar modal">
+                <button class="modal-close" data-modal-close="aboutModal" data-i18n-aria="modal.close.aria">
                     ×
                 </button>
             </div>
             <div class="modal-body">
                 <div class="about-intro mb-6">
-                    <p><strong>Cidadão.AI</strong> é um projeto de pesquisa, software livre e engajamento cívico, idealizado e desenvolvido por Anderson Henrique da Silva, como Trabalho de Conclusão de Curso (TCC), sob a orientação da Profa. Dra. Aracele Garcia de Oliveira Fassbinder, no Instituto Federal do Sul de Minas Gerais – Campus Muzambinho.</p>
-                    <p class="mt-4">Este sistema multi-agente foi concebido com o propósito de democratizar o acesso aos dados públicos brasileiros, unindo ética, tecnologia e cidadania.</p>
+                    <p data-i18n="modal.about.intro">
+                        <strong>Cidadão.AI</strong> é um projeto de pesquisa, software livre e engajamento cívico, idealizado e desenvolvido por Anderson Henrique da Silva, como Trabalho de Conclusão de Curso (TCC), sob a orientação da Profa. Dra. Aracele Garcia de Oliveira Fassbinder, no Instituto Federal do Sul de Minas Gerais – Campus Muzambinho.
+                    </p>
+                    <p class="mt-4" data-i18n="modal.about.purpose">
+                        Este sistema multi-agente foi concebido com o propósito de democratizar o acesso aos dados públicos brasileiros, unindo ética, tecnologia e cidadania.
+                    </p>
                 </div>
                 
                 <div class="author-section mb-6">
-                    <h3 class="mb-4">👨‍💻 Autor</h3>
+                    <h3 class="mb-4" data-i18n="modal.about.author.title">👨‍💻 Autor</h3>
                     <div class="author-profile">
                         <div class="author-avatar">
                             <img src="assets/img/author.jpeg" alt="Anderson Henrique da Silva" class="author-photo">
                         </div>
                         <div class="author-info">
                             <p><strong>Anderson Henrique da Silva</strong></p>
-                            <p class="text-secondary">Bacharelando em Ciência da Computação | Engenheiro de Sistemas de IA</p>
+                            <p class="text-secondary" data-i18n="modal.about.author.role">Bacharelando em Ciência da Computação | Engenheiro de Sistemas de IA</p>
                             <div class="author-links mt-3">
                                 <a href="https://github.com/anderson-ufrj" target="_blank" rel="noopener">🔗 GitHub</a>
                                 <a href="https://huggingface.co/neural-thinker" target="_blank" rel="noopener">🔗 Hugging Face</a>
@@ -294,11 +302,11 @@
                 </div>
                 
                 <div class="supervision-section mb-6">
-                    <h3 class="mb-3">🧠 Orientação Acadêmica</h3>
+                    <h3 class="mb-3" data-i18n="modal.about.supervision.title">🧠 Orientação Acadêmica</h3>
                     <p><strong>Profa. Dra. Aracele Garcia de Oliveira Fassbinder</strong></p>
-                    <p class="text-secondary">📍 Instituto Federal do Sul de Minas Gerais – Campus Muzambinho</p>
+                    <p class="text-secondary" data-i18n="modal.about.supervision.institution">📍 Instituto Federal do Sul de Minas Gerais – Campus Muzambinho</p>
                     <div class="mt-3">
-                        <a href="http://lattes.cnpq.br/5403169829790610" target="_blank" rel="noopener">🔗 Currículo Lattes</a>
+                        <a href="http://lattes.cnpq.br/5403169829790610" target="_blank" rel="noopener" data-i18n="modal.about.supervision.lattes">🔗 Currículo Lattes</a>
                     </div>
                 </div>
                 
@@ -408,7 +416,7 @@
 
     <!-- Modal: Sistema -->
     <div id="systemModal" class="modal" role="dialog" aria-labelledby="system-modal-title" aria-hidden="true">
-        <div class="modal-content" style="max-width: 1600px; width: 98vw;">
+        <div class="modal-content system-modal-content">
             <div class="modal-header">
                 <h2 id="system-modal-title" class="modal-title" data-i18n="modal.system.title">
                     Sistema Multi-Agente
@@ -606,9 +614,69 @@
     <script src="assets/js/script.js"></script>
     <script src="assets/js/carousel.js"></script>
 
-    <!-- Status indicator -->
-    <div style="position: fixed; bottom: 20px; right: 20px; background: #10b981; color: white; padding: 8px 12px; border-radius: 6px; font-size: 12px; z-index: 1000;">
-        ✅ Modular Working!
-    </div>
+    <!-- Rodapé -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title" data-i18n="footer.project.title">Cidadão.AI</h3>
+                    <p class="footer-description" data-i18n="footer.project.description">
+                        Sistema multi-agente para transparência pública brasileira
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle" data-i18n="footer.author.title">Desenvolvido por</h4>
+                    <div class="footer-author">
+                        <p class="author-name">
+                            <strong>Anderson Henrique da Silva</strong>
+                        </p>
+                        <p class="author-role" data-i18n="footer.author.role">
+                            Engenheiro de Sistemas de IA | Bacharelando em Ciência da Computação
+                        </p>
+                        <div class="author-links">
+                            <a href="https://github.com/anderson-ufrj" target="_blank" rel="noopener" data-i18n="footer.links.github">
+                                🔗 GitHub
+                            </a>
+                            <a href="https://www.linkedin.com/in/anderson-h-silva95/" target="_blank" rel="noopener" data-i18n="footer.links.linkedin">
+                                💼 LinkedIn
+                            </a>
+                            <a href="mailto:andersonhs27@gmail.com" data-i18n="footer.links.email">
+                                📧 E-mail
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle" data-i18n="footer.academic.title">Orientação Acadêmica</h4>
+                    <p class="supervisor-name">
+                        <strong>Profa. Dra. Aracele Garcia de Oliveira Fassbinder</strong>
+                    </p>
+                    <p class="institution" data-i18n="footer.academic.institution">
+                        Instituto Federal do Sul de Minas Gerais
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p data-i18n="footer.copyright">
+                        © 2025 Anderson Henrique da Silva. Projeto de pesquisa acadêmica sob licença Apache 2.0.
+                    </p>
+                </div>
+                
+                <div class="footer-badges">
+                    <span class="badge ods-badge" data-i18n="footer.badges.ods" title="Objetivos de Desenvolvimento Sustentável">
+                        🎯 ODS 16
+                    </span>
+                    <span class="badge open-gov-badge" data-i18n="footer.badges.openGov" title="Open Government Partnership">
+                        🏛️ Open Gov
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>

@@ -6,8 +6,12 @@ const translations = {
         'site.title': 'Cidadão.AI — Hub de Documentação',
         'nav.theme.light': '☀️ Claro',
         'nav.theme.dark': '🌙 Escuro',
+        'nav.theme.light.short': 'Claro',
+        'nav.theme.dark.short': 'Escuro',
         'nav.lang.pt': '🇧🇷 PT',
         'nav.lang.en': '🇺🇸 EN',
+        'nav.lang.pt.short': 'PT',
+        'nav.lang.en.short': 'EN',
         'nav.manifesto': '📜 Manifesto',
         
         'hero.badge': '🇧🇷 Transparência Pública com IA',
@@ -100,14 +104,45 @@ const translations = {
         
         'agents.power.title': '🚀 Arquitetura de Alta Performance',
         'agents.power.description': 'Cada agente opera com inteligência artificial avançada, processamento paralelo e capacidade de análise em tempo real. Juntos, formam um ecossistema robusto capaz de processar terabytes de dados públicos, detectar padrões complexos e gerar insights actionáveis para fortalecer a transparência governamental e empoderar a cidadania brasileira.',
+        
+        // Footer translations
+        'footer.project.title': 'Cidadão.AI',
+        'footer.project.description': 'Sistema multi-agente para transparência pública brasileira',
+        'footer.author.title': 'Desenvolvido por',
+        'footer.author.role': 'Engenheiro de Sistemas de IA | Bacharelando em Ciência da Computação',
+        'footer.links.github': '🔗 GitHub',
+        'footer.links.linkedin': '💼 LinkedIn',
+        'footer.links.email': '📧 E-mail',
+        'footer.academic.title': 'Orientação Acadêmica',
+        'footer.academic.institution': 'Instituto Federal do Sul de Minas Gerais',
+        'footer.copyright': '© 2025 Anderson Henrique da Silva. Projeto de pesquisa acadêmica sob licença Apache 2.0.',
+        'footer.badges.ods': '🎯 ODS 16',
+        'footer.badges.openGov': '🏛️ Open Gov',
+        
+        // Floating button
+        'floating.button.aria': 'Abrir informações sobre o projeto',
+        
+        // Modal About content
+        'modal.close.aria': 'Fechar modal',
+        'modal.about.intro': '<strong>Cidadão.AI</strong> é um projeto de pesquisa, software livre e engajamento cívico, idealizado e desenvolvido por Anderson Henrique da Silva, como Trabalho de Conclusão de Curso (TCC), sob a orientação da Profa. Dra. Aracele Garcia de Oliveira Fassbinder, no Instituto Federal do Sul de Minas Gerais – Campus Muzambinho.',
+        'modal.about.purpose': 'Este sistema multi-agente foi concebido com o propósito de democratizar o acesso aos dados públicos brasileiros, unindo ética, tecnologia e cidadania.',
+        'modal.about.author.title': '👨‍💻 Autor',
+        'modal.about.author.role': 'Bacharelando em Ciência da Computação | Engenheiro de Sistemas de IA',
+        'modal.about.supervision.title': '🧠 Orientação Acadêmica',
+        'modal.about.supervision.institution': '📍 Instituto Federal do Sul de Minas Gerais – Campus Muzambinho',
+        'modal.about.supervision.lattes': '🔗 Currículo Lattes',
     },
     
     'en-US': {
         'site.title': 'Cidadão.AI — Documentation Hub',
         'nav.theme.light': '☀️ Light',
         'nav.theme.dark': '🌙 Dark',
+        'nav.theme.light.short': 'Light',
+        'nav.theme.dark.short': 'Dark',
         'nav.lang.pt': '🇧🇷 PT',
         'nav.lang.en': '🇺🇸 EN',
+        'nav.lang.pt.short': 'PT',
+        'nav.lang.en.short': 'EN',
         'nav.manifesto': '📜 Manifesto',
         
         'hero.badge': '🇧🇷 Public Transparency with AI',
@@ -200,12 +235,46 @@ const translations = {
         
         'agents.power.title': '🚀 High-Performance Architecture',
         'agents.power.description': 'Each agent operates with advanced artificial intelligence, parallel processing and real-time analysis capabilities. Together, they form a robust ecosystem capable of processing terabytes of public data, detecting complex patterns and generating actionable insights to strengthen government transparency and empower Brazilian citizenship.',
+        
+        // Footer translations
+        'footer.project.title': 'Cidadão.AI',
+        'footer.project.description': 'Multi-agent system for Brazilian public transparency',
+        'footer.author.title': 'Developed by',
+        'footer.author.role': 'AI Systems Engineer | Computer Science Student',
+        'footer.links.github': '🔗 GitHub',
+        'footer.links.linkedin': '💼 LinkedIn',
+        'footer.links.email': '📧 E-mail',
+        'footer.academic.title': 'Academic Supervision',
+        'footer.academic.institution': 'Federal Institute of Southern Minas Gerais',
+        'footer.copyright': '© 2025 Anderson Henrique da Silva. Academic research project under Apache 2.0 license.',
+        'footer.badges.ods': '🎯 SDG 16',
+        'footer.badges.openGov': '🏛️ Open Gov',
+        
+        // Floating button
+        'floating.button.aria': 'Open project information',
+        
+        // Modal About content
+        'modal.close.aria': 'Close modal',
+        'modal.about.intro': '<strong>Cidadão.AI</strong> is a research project, free software and civic engagement, conceived and developed by Anderson Henrique da Silva as an undergraduate thesis (TCC), under the supervision of Prof. Dr. Aracele Garcia de Oliveira Fassbinder, at the Federal Institute of Southern Minas Gerais – Muzambinho Campus.',
+        'modal.about.purpose': 'This multi-agent system was conceived with the purpose of democratizing access to Brazilian public data, uniting ethics, technology and citizenship.',
+        'modal.about.author.title': '👨‍💻 Author',
+        'modal.about.author.role': 'Computer Science Student | AI Systems Engineer',
+        'modal.about.supervision.title': '🧠 Academic Supervision',
+        'modal.about.supervision.institution': '📍 Federal Institute of Southern Minas Gerais – Muzambinho Campus',
+        'modal.about.supervision.lattes': '🔗 Lattes CV',
     }
 };
 
 // ===== ESTADO GLOBAL =====
 let currentLanguage = 'pt-BR';
 let currentTheme = 'light';
+
+// ===== FUNÇÃO UTILITÁRIA =====
+function getTranslation(key) {
+    return translations[currentLanguage] && translations[currentLanguage][key] 
+        ? translations[currentLanguage][key] 
+        : key;
+}
 
 // Carrossel movido para carousel.js
 
@@ -225,6 +294,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Garantir que modais estejam ocultos
     hideAllModals();
+    
+    // Criar botão flutuante
+    recreateFloatingButton();
     
     console.log('✅ Cidadão.AI - Inicializado com sucesso!');
 });
@@ -292,9 +364,27 @@ function updateLanguage(lang) {
     elements.forEach(element => {
         const key = element.getAttribute('data-i18n');
         if (translations[lang][key]) {
-            element.textContent = translations[lang][key];
+            const content = translations[lang][key];
+            // Se contém HTML, usar innerHTML; senão, textContent
+            if (content.includes('<') || content.includes('&')) {
+                element.innerHTML = content;
+            } else {
+                element.textContent = content;
+            }
         }
     });
+    
+    // Atualizar elementos com data-i18n-aria (aria-label)
+    const ariaElements = document.querySelectorAll('[data-i18n-aria]');
+    ariaElements.forEach(element => {
+        const key = element.getAttribute('data-i18n-aria');
+        if (translations[lang][key]) {
+            element.setAttribute('aria-label', translations[lang][key]);
+        }
+    });
+    
+    // Recriar botão flutuante com nova tradução
+    recreateFloatingButton();
     
     // Atualizar botões de idioma
     const ptBtns = document.querySelectorAll('[data-lang-btn="pt-BR"]');
@@ -456,16 +546,15 @@ function initializeEventListeners() {
     // Botão flutuante - recriar para garantir funcionamento
     recreateFloatingButton();
     
-    // EXTERMINADOR NUCLEAR DE ELEMENTOS VERDES
-    setTimeout(() => {
-        cleanupGreenElements();
-        destroyAllGreenElements();
-    }, 1000);
+    // EXTERMINADOR NUCLEAR DE ELEMENTOS VERDES (DESABILITADO)
+    // setTimeout(() => {
+    //     cleanupGreenElements();
+    // }, 5000);
     
-    // Executar limpeza a cada 3 segundos (modo agressivo)
-    setInterval(() => {
-        destroyAllGreenElements();
-    }, 3000);
+    // Limpeza moderada apenas se necessário
+    // setInterval(() => {
+    //     cleanupGreenElements();
+    // }, 10000);
     
     console.log('🎯 Event listeners inicializados');
 }
@@ -483,6 +572,7 @@ function cleanupGreenElements() {
             
             // Se não for um elemento esperado, removê-lo
             if (!el.classList.contains('floating-button-dynamic') && 
+                !el.classList.contains('floating-button') &&
                 !el.classList.contains('agent-card') &&
                 !el.classList.contains('carousel-agent') &&
                 !el.classList.contains('dynamic-tooltip') &&
@@ -495,33 +585,88 @@ function cleanupGreenElements() {
     });
 }
 
-// ===== BOTÃO FLUTUANTE MODULAR =====
-// Função que usa o módulo FloatingButton
+function destroyAllGreenElements() {
+    // Função placeholder para evitar erros
+    // Desabilitada para não interferir com o botão flutuante
+    console.log('🚫 destroyAllGreenElements desabilitada');
+}
+
+// ===== BOTÃO FLUTUANTE SIMPLES =====
 function recreateFloatingButton() {
-    // Usar a função global do módulo floating-button.js
-    if (typeof window.FloatingButton !== 'undefined') {
-        console.log('✅ Criando botão com módulo FloatingButton');
-        
-        // Remover botões antigos
-        const oldButtons = document.querySelectorAll('.floating-button, .floating-button-dynamic, .floating-button-module');
-        oldButtons.forEach(btn => btn.remove());
-        
-        // Criar novo botão usando o módulo
-        const button = new FloatingButton({
-            icon: 'ℹ️',
-            onClick: () => {
-                console.log('🚀 Botão flutuante clicado!');
-                openModal('aboutModal');
-            },
-            ariaLabel: 'Abrir informações sobre o projeto'
-        });
-        
-        button.render();
-        console.log('✅ Botão flutuante criado via módulo');
-        
-    } else {
-        console.error('❌ FloatingButton module não carregado!');
+    console.log('🚀 Criando botão flutuante...');
+    
+    // Remover botões antigos EXCETO o que vamos criar
+    const oldButtons = document.querySelectorAll('.floating-button-old, .floating-button-dynamic, .floating-button-module');
+    oldButtons.forEach(btn => btn.remove());
+    
+    // Verificar se já existe
+    if (document.querySelector('.floating-button-info')) {
+        console.log('⚠️ Botão já existe, não criando duplicata');
+        return;
     }
+    
+    // Criar novo botão HTML simples
+    const button = document.createElement('button');
+    button.className = 'floating-button-info';
+    button.innerHTML = 'ℹ️';
+    button.setAttribute('aria-label', getTranslation('floating.button.aria'));
+    button.setAttribute('data-button-type', 'about-info');
+    button.style.cssText = `
+        position: fixed !important;
+        bottom: 2rem !important;
+        right: 2rem !important;
+        width: 60px !important;
+        height: 60px !important;
+        border-radius: 50% !important;
+        background: linear-gradient(135deg, #3b82f6, #1d4ed8) !important;
+        color: white !important;
+        border: none !important;
+        cursor: pointer !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 1.5rem !important;
+        box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3) !important;
+        transition: all 0.3s ease !important;
+        z-index: 99999 !important;
+        user-select: none !important;
+        outline: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    `;
+    
+    // Event listeners
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('🚀 Botão flutuante clicado!');
+        openModal('aboutModal');
+    });
+    
+    button.addEventListener('mouseenter', () => {
+        button.style.transform = 'scale(1.1)';
+        button.style.boxShadow = '0 6px 25px rgba(59, 130, 246, 0.4)';
+    });
+    
+    button.addEventListener('mouseleave', () => {
+        button.style.transform = 'scale(1)';
+        button.style.boxShadow = '0 4px 20px rgba(59, 130, 246, 0.3)';
+    });
+    
+    // Adicionar ao DOM
+    document.body.appendChild(button);
+    console.log('✅ Botão flutuante criado com classe:', button.className);
+    console.log('✅ Botão no DOM:', document.body.contains(button));
+    
+    // Verificação adicional
+    setTimeout(() => {
+        const verificacao = document.querySelector('.floating-button-info');
+        if (verificacao) {
+            console.log('✅ Botão ainda existe após 2s:', verificacao);
+        } else {
+            console.error('❌ Botão foi removido!');
+        }
+    }, 2000);
 }
 
 // ===== UTILIDADES =====
@@ -544,5 +689,17 @@ window.CidadaoAI = {
     scrollToSection,
     cleanupGreenElements
 };
+
+// ===== INICIALIZAÇÃO FINAL =====
+// Garantir criação do botão com múltiplas tentativas
+setTimeout(() => {
+    console.log('🔄 Tentativa adicional de criar botão...');
+    recreateFloatingButton();
+}, 2000);
+
+setTimeout(() => {
+    console.log('🔄 Última tentativa de criar botão...');
+    recreateFloatingButton();
+}, 4000);
 
 console.log('📦 Script Cidadão.AI carregado!');
