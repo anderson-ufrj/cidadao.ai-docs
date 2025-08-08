@@ -185,6 +185,8 @@ const translations = {
         'modal.about.research.content': 'Acesse as <strong>notas técnicas completas</strong> do projeto, incluindo arquitetura, metodologia e resultados de pesquisa no documento oficial:',
         'modal.about.research.link': '📄 Baixar PDF das Notas de Pesquisa',
         'modal.about.official.title': '🌐 Links Oficiais',
+        'modal.about.official.hub.title': 'Hub de Documentação Oficial',
+        'modal.about.official.hub.description': 'Documentação completa do projeto, guias de uso, arquitetura e API.',
         
         // Modal Manifesto
         'modal.manifesto.heading': '🇧🇷 Por uma Inteligência Artificial que Serve ao Povo e Ilumina o Estado',
@@ -382,6 +384,8 @@ const translations = {
         'modal.about.research.content': 'Access the <strong>complete technical notes</strong> of the project, including architecture, methodology and research results in the official document:',
         'modal.about.research.link': '📄 Download Research Notes PDF',
         'modal.about.official.title': '🌐 Official Links',
+        'modal.about.official.hub.title': 'Official Documentation Hub',
+        'modal.about.official.hub.description': 'Complete project documentation, usage guides, architecture and API.',
         
         // Modal Manifesto
         'modal.manifesto.heading': '🇧🇷 For an Artificial Intelligence that Serves the People and Illuminates the State',
