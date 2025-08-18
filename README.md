@@ -5,7 +5,7 @@
 
 [![SDG16](https://img.shields.io/badge/SDG-16-orange.svg)](https://sdgs.un.org/goals/goal16)
 [![Open Gov](https://img.shields.io/badge/Open-Government-blue.svg)](https://www.opengovpartnership.org/)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://anderson-ufrj.github.io/cidadao.ai-docs/)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
@@ -122,7 +122,7 @@ cidadao.ai-docs/
 ├── openapi.json            # API specification (auto-updated)
 ├── update-api-docs.sh      # Manual update script
 ├── README.md               # This file
-├── LICENSE                 # Apache 2.0 license
+├── LICENSE                 # MIT license
 ├── .github/
 │   └── workflows/
 │       └── update-api-docs.yml # Auto-update workflow
@@ -206,7 +206,7 @@ When reporting issues, please include:
 
 ## 📄 License
 
-This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 

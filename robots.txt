@@ -1,0 +1,24 @@
+# robots.txt para Cidadão.AI Documentation Hub
+# Controla indexação pelos motores de busca
+
+User-agent: *
+Allow: /
+
+# Permitir indexação de toda a documentação pública
+Allow: /assets/
+Allow: /index.html
+
+# URLs importantes para SEO
+Sitemap: https://anderson-ufrj.github.io/cidadao.ai-docs/sitemap.xml
+
+# Crawl delay para respeitar recursos do servidor
+Crawl-delay: 1
+
+# Bloquear arquivos sensíveis (se existirem)
+Disallow: /admin/
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /*.log$
+
+# Informações de contato
+# Contact: https://github.com/anderson-ufrj/cidadao.ai-docs/issues
