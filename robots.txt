@@ -1,24 +1,92 @@
-# robots.txt para Cidadão.AI Documentation Hub
-# Controla indexação pelos motores de busca
+# Robots.txt para Cidadão.AI Documentation Hub
+# https://anderson-ufrj.github.io/cidadao.ai-docs/
 
+# Global rules for all robots
 User-agent: *
+
+# Allow all content (transparency project - all info should be public)
 Allow: /
 
-# Permitir indexação de toda a documentação pública
-Allow: /assets/
+# Specific paths to allow (for clarity)
 Allow: /index.html
+Allow: /assets/
+Allow: /openapi.json
+Allow: /sitemap.xml
 
-# URLs importantes para SEO
-Sitemap: https://anderson-ufrj.github.io/cidadao.ai-docs/sitemap.xml
+# Disallow common irrelevant paths (if they exist)
+Disallow: *.log$
+Disallow: /tmp/
+Disallow: /.git/
+Disallow: /.github/
+Disallow: /build/
+Disallow: /tools/
 
-# Crawl delay para respeitar recursos do servidor
+# Special rules for different bots
+
+# Google
+User-agent: Googlebot
+Allow: /
 Crawl-delay: 1
 
-# Bloquear arquivos sensíveis (se existirem)
-Disallow: /admin/
-Disallow: /.git/
-Disallow: /node_modules/
-Disallow: /*.log$
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
 
-# Informações de contato
-# Contact: https://github.com/anderson-ufrj/cidadao.ai-docs/issues
+# Yandex
+User-agent: Yandex
+Allow: /
+Crawl-delay: 2
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+
+# Facebook (Meta)
+User-agent: facebookexternalhit/1.1
+Allow: /
+
+# Twitter
+User-agent: Twitterbot
+Allow: /
+
+# LinkedIn
+User-agent: LinkedInBot
+Allow: /
+
+# WhatsApp
+User-agent: WhatsApp
+Allow: /
+
+# Archive.org Wayback Machine
+User-agent: ia_archiver
+Allow: /
+
+# Academic and research bots
+User-agent: Applebot
+Allow: /
+
+# Brazilian government and academic bots (if any)
+User-agent: *gov.br*
+Allow: /
+
+# Sitemaps location
+Sitemap: https://anderson-ufrj.github.io/cidadao.ai-docs/sitemap.xml
+
+# Additional sitemap for API documentation (if needed in the future)
+# Sitemap: https://anderson-ufrj.github.io/cidadao.ai-docs/api-sitemap.xml
+
+# Host preference (canonical domain)
+Host: anderson-ufrj.github.io
+
+# Cache-Control suggestion for bots (some respect this)
+# This is a transparency/government project, so we want fresh content
+# But not too aggressive crawling to preserve bandwidth
+Request-rate: 1/1s
+
+# Notes:
+# - This is a transparency project, so all content should be public
+# - We want good indexing for government transparency search
+# - OpenAPI spec should be crawlable for API discovery
+# - Assets should be accessible for proper page rendering in previews
+# - No sensitive information should be blocked as this is public service
