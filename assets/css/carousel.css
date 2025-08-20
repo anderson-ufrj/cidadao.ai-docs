@@ -212,43 +212,138 @@
 /* ===== RESPONSIVIDADE ===== */
 @media (max-width: 768px) {
     .carousel-title {
-        font-size: 1.75rem;
+        font-size: clamp(1.5rem, 5vw, 1.75rem);
     }
     
     .carousel-subtitle {
-        font-size: 1rem;
+        font-size: clamp(0.9rem, 3vw, 1rem);
+        padding: 0 1rem;
     }
     
     .carousel-floating-btn {
-        padding: 0.75rem 2rem;
-        font-size: 0.9rem;
+        padding: 0.75rem 1.5rem;
+        font-size: 0.85rem;
+        bottom: -30px;
+    }
+    
+    /* Reduce animation complexity on mobile */
+    .agents-carousel-track {
+        animation-duration: 40s;
+        will-change: transform;
+    }
+    
+    /* Optimize container for mobile */
+    .agents-carousel-container {
+        height: 100px;
+        margin: 0;
+        overflow: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Better touch targets */
+    .carousel-agent {
+        min-width: 55px;
+        padding: 2px;
+    }
+    
+    /* Disable tooltip on mobile */
+    .global-tooltip {
+        display: none !important;
     }
 }
 
 @media (max-width: 480px) {
     .carousel-title {
-        font-size: 1.5rem;
+        font-size: clamp(1.25rem, 6vw, 1.5rem);
+        margin-bottom: 0.25rem;
     }
     
     .carousel-subtitle {
-        font-size: 0.9rem;
+        font-size: clamp(0.8rem, 3.5vw, 0.9rem);
+        line-height: 1.4;
     }
     
     .agents-carousel-container {
-        height: 100px;
+        height: 80px;
+        padding: 15px 0;
     }
     
     .carousel-avatar {
-        width: 50px;
+        width: 45px;
+        height: 45px;
+    }
+    
+    .carousel-agent {
+        min-width: 50px;
         height: 50px;
     }
     
     .agents-carousel-track {
         width: calc(15 * 50px * 6);
+        height: 50px;
     }
     
+    .carousel-floating-btn {
+        padding: 0.6rem 1.25rem;
+        font-size: 0.8rem;
+        bottom: -25px;
+    }
+    
+    /* Simplified animation for performance */
     @keyframes scroll-infinite {
         0% { transform: translateX(0); }
         100% { transform: translateX(calc(-15 * 50px)); }
+    }
+    
+    /* Pause animation on touch */
+    .agents-carousel-container:active .agents-carousel-track {
+        animation-play-state: paused;
+    }
+}
+
+/* ===== MOBILE PERFORMANCE OPTIMIZATIONS ===== */
+@media (max-width: 768px) {
+    /* Use transform3d for hardware acceleration */
+    .agents-carousel-track {
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+        perspective: 1000px;
+    }
+    
+    .carousel-avatar {
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+    }
+    
+    /* Reduce repaints */
+    .carousel-agent:hover .carousel-avatar {
+        transform: scale3d(1.2, 1.2, 1);
+    }
+    
+    /* Optimize for touch devices */
+    @media (hover: none) and (pointer: coarse) {
+        .carousel-agent:hover .carousel-avatar {
+            transform: none;
+        }
+        
+        .carousel-agent:active .carousel-avatar {
+            transform: scale3d(1.1, 1.1, 1);
+        }
+    }
+}
+
+/* ===== REDUCED MOTION SUPPORT ===== */
+@media (prefers-reduced-motion: reduce) {
+    .agents-carousel-track {
+        animation: none;
+    }
+    
+    .carousel-floating-btn {
+        animation: none;
+    }
+    
+    .carousel-agent:hover .carousel-avatar,
+    .carousel-agent:active .carousel-avatar {
+        transform: none;
     }
 }
