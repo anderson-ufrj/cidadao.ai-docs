@@ -337,23 +337,28 @@ body::before {
     box-shadow: 0 2px 8px rgba(16, 185, 129, 0.2);
 }
 
-/* Dynamic Control Buttons */
+/* Dynamic Control Buttons - Extended nav-action-btn base */
 .dynamic-control-btn {
-    padding: 0.5rem 0.75rem;
-    border: 1px solid var(--border);
-    background: var(--bg-tertiary);
-    color: var(--text-primary);
+    /* Base nav-action-btn styles */
+    padding: 0.5rem 1rem;
     border-radius: 8px;
-    cursor: pointer;
-    font-size: 0.875rem;
     font-weight: 500;
+    font-size: 0.875rem;
     transition: all 0.3s ease;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+    text-decoration: none;
     min-height: 36px;
     box-sizing: border-box;
-    min-width: 80px;
+    
+    /* Secondary button variant */
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+    min-width: 85px;
     justify-content: center;
 }
 
@@ -386,9 +391,10 @@ body::before {
     box-shadow: 0 2px 8px rgba(16, 185, 129, 0.2);
 }
 
-/* Mobile Responsiveness for Nav Action Buttons */
+/* Mobile Responsiveness for All Header Buttons */
 @media (max-width: 768px) {
-    .nav-action-btn {
+    .nav-action-btn,
+    .dynamic-control-btn {
         padding: 0.4rem 0.75rem;
         font-size: 0.8rem;
         gap: 0.25rem;
@@ -396,11 +402,7 @@ body::before {
     }
     
     .dynamic-control-btn {
-        padding: 0.4rem 0.6rem;
-        font-size: 0.8rem;
-        min-height: 32px;
-        min-width: 70px;
-        gap: 0.25rem;
+        min-width: 75px;
     }
     
     .nav-controls {
