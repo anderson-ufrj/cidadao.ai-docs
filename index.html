@@ -13,26 +13,34 @@
     <link rel="manifest" href="manifest.json">
     <title data-i18n="site.title">Cidadão.AI — Hub de Documentação</title>
     
-    <!-- Meta Tags -->
-    <meta name="description" content="Hub central de documentação do projeto Cidadão.AI - Sistema multi-agente de IA para transparência pública brasileira. Tecnologia, cidadania e responsabilidade pública.">
-    <meta name="keywords" content="Cidadão.AI, transparência pública, IA ética, open government, ODS 16, inteligência artificial, Brasil, dados públicos, governo aberto">
-    <meta name="author" content="Anderson Henrique">
+    <!-- Enhanced Meta Tags -->
+    <meta name="description" content="Sistema multi-agente de inteligência artificial para democratizar o acesso aos dados públicos e fortalecer a transparência governamental brasileira.">
+    <meta name="keywords" content="Cidadão.AI, transparência pública, IA ética, open government, ODS 16, inteligência artificial, Brasil, dados públicos, governo aberto, multi-agente, FastAPI">
+    <meta name="author" content="Anderson Henrique da Silva">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://anderson-ufrj.github.io/cidadao.ai-docs/">
-    <meta property="og:title" content="Cidadão.AI — Sistema de Transparência Pública com IA">
-    <meta property="og:description" content="Hub oficial do projeto Cidadão.AI. Sistema multi-agente de inteligência artificial para democratizar o acesso aos dados públicos e fortalecer a transparência governamental.">
+    <meta property="og:title" content="Cidadão.AI — Sistema Multi-Agente de IA para Transparência Pública">
+    <meta property="og:description" content="17 agentes de IA brasileiros trabalhando 24/7 para democratizar o acesso aos dados públicos e fortalecer a transparência governamental.">
     <meta property="og:image" content="https://anderson-ufrj.github.io/cidadao.ai-docs/assets/img/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Cidadão.AI - Sistema Multi-Agente de IA para Transparência Pública Brasileira">
     <meta property="og:locale" content="pt_BR">
     <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:site_name" content="Cidadão.AI">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@cidadao_ai">
+    <meta name="twitter:creator" content="@anderson_ufrj">
     <meta name="twitter:url" content="https://anderson-ufrj.github.io/cidadao.ai-docs/">
-    <meta name="twitter:title" content="Cidadão.AI — Sistema de Transparência Pública com IA">
-    <meta name="twitter:description" content="Hub oficial do projeto Cidadão.AI. Sistema multi-agente de inteligência artificial para transparência pública brasileira.">
+    <meta name="twitter:title" content="Cidadão.AI — IA para Transparência Pública">
+    <meta name="twitter:description" content="Sistema multi-agente de IA brasileiro para democratizar dados públicos. 17 agentes especializados trabalhando pela transparência governamental.">
     <meta name="twitter:image" content="https://anderson-ufrj.github.io/cidadao.ai-docs/assets/img/twitter-card.png">
+    <meta name="twitter:image:alt" content="Cidadão.AI - Transparência Pública com Inteligência Artificial">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://anderson-ufrj.github.io/cidadao.ai-docs/">
@@ -43,15 +51,35 @@
     <meta name="google" content="notranslate">
     <meta name="format-detection" content="telephone=no">
     
-    <!-- Fonts -->
+    <!-- PWA Icons -->
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+    
+    <!-- Critical Resource Preloads -->
+    <link rel="preload" href="assets/css/styles.css" as="style">
+    <link rel="preload" href="assets/css/carousel.css" as="style">
+    <link rel="preload" href="assets/css/mobile-optimizations.css" as="style">
+    
+    <!-- Font Preloads with display swap -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
+    
+    <!-- Critical Images Preload -->
+    <link rel="preload" href="assets/agents-optimized/abaporu.webp" as="image" type="image/webp">
+    <link rel="preload" href="assets/agents-optimized/zumbi.webp" as="image" type="image/webp">
+    <link rel="preload" href="assets/agents-optimized/anita.webp" as="image" type="image/webp">
     
     <!-- Styles - Preserving original CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/carousel.css">
     <link rel="stylesheet" href="assets/css/mobile-optimizations.css">
+    <link rel="stylesheet" href="assets/css/skeleton-loading.css">
+    <link rel="stylesheet" href="assets/css/schedule-links.css">
     
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
@@ -226,6 +254,11 @@
             
             <!-- Controles -->
             <div class="nav-controls">
+                <!-- Vamos Conversar -->
+                <a href="https://andersonhenrique.youcanbook.me/" target="_blank" rel="noopener" class="nav-schedule-btn" aria-label="Agendar reunião com Anderson">
+                    📅 Vamos Conversar
+                </a>
+                
                 <!-- Manifesto -->
                 <button class="nav-manifesto-btn" data-modal-open="manifestoModal" data-i18n="nav.manifesto" aria-label="Manifesto Cidadão.AI">
                     📜 Manifesto
@@ -282,6 +315,7 @@
                 <p class="hero-description" data-i18n="hero.description">
                     O Cidadão.AI reúne múltiplas inteligências artificiais brasileiras trabalhando em rede para democratizar o acesso aos dados públicos, fortalecer a transparência e empoderar cada cidadão com informação clara, acessível e auditável.
                 </p>
+                
                 
                 <div class="agents-intro">
                 </div>
@@ -405,6 +439,45 @@
                         <div class="link-content">
                             <h3 class="link-title" data-i18n="links.api.title">API Backend<span class="sr-only"> (abre em nova aba)</span></h3>
                             <p class="link-description" data-i18n="links.api.description">Hospedado no Hugging Face Spaces</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato & Agendamento -->
+        <section id="contact" class="section" aria-labelledby="contact-title">
+            <div class="section-container">
+                <h2 id="contact-title" class="section-title">
+                    <span data-i18n="links.category.contact">Contato & Colaboração</span>
+                </h2>
+                
+                <div class="links-grid narrow-grid">
+                    <a href="https://andersonhenrique.youcanbook.me/" target="_blank" rel="noopener" class="link-card featured-card">
+                        <div class="link-icon calendar-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z" fill="#10b981"/>
+                            </svg>
+                        </div>
+                        <div class="link-content">
+                            <h3 class="link-title">
+                                📅 Agendar Reunião
+                                <span class="sr-only"> (abre em nova aba)</span>
+                                <span class="featured-badge">Recomendado</span>
+                            </h3>
+                            <p class="link-description">Converse diretamente com Anderson sobre o projeto, colaborações ou consultoria em IA</p>
+                        </div>
+                    </a>
+                    
+                    <a href="mailto:andersonhs27@gmail.com" class="link-card">
+                        <div class="link-icon email-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="#ea4335"/>
+                            </svg>
+                        </div>
+                        <div class="link-content">
+                            <h3 class="link-title">✉️ Email Direto</h3>
+                            <p class="link-description">andersonhs27@gmail.com</p>
                         </div>
                     </a>
                 </div>
@@ -896,6 +969,8 @@
 
     <!-- Scripts originais -->
     <script src="assets/js/performance-optimizer.js"></script>
+    <script src="assets/js/smart-image-loader.js"></script>
+    <script src="assets/js/skeleton-manager.js"></script>
     <script src="assets/js/mobile-menu.js"></script>
     <script src="assets/js/floating-button.js"></script>
     <script src="assets/js/script.js"></script>
@@ -938,6 +1013,9 @@
                             Engenheiro de Sistemas de IA | Bacharelando em Ciência da Computação
                         </p>
                         <div class="author-links">
+                            <a href="https://andersonhenrique.youcanbook.me/" target="_blank" rel="noopener" class="schedule-link" data-i18n="footer.links.schedule">
+                                📅 Agendar Reunião<span class="sr-only"> (abre em nova aba)</span>
+                            </a>
                             <a href="https://github.com/anderson-ufrj" target="_blank" rel="noopener" data-i18n="footer.links.github">
                                 🔗 GitHub<span class="sr-only"> (abre em nova aba)</span>
                             </a>
