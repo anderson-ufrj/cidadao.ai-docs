@@ -7,6 +7,9 @@
     position: relative;
     margin-bottom: 40px;
     padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .carousel-context {
@@ -75,17 +78,19 @@
     gap: 0;
     animation: scroll-infinite 60s linear infinite;
     width: calc(15 * 60px * 6);
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
     height: 100px;
     margin-top: 20px;
+    will-change: transform;
+    backface-visibility: hidden;
 }
 
 @keyframes scroll-infinite {
     0% {
-        transform: translateX(0);
+        transform: translate3d(0, 0, 0);
     }
     100% {
-        transform: translateX(calc(-15 * 60px));
+        transform: translate3d(calc(-15 * 60px), 0, 0);
     }
 }
 
@@ -122,6 +127,7 @@
     transform: scale(1.4);
     z-index: 100;
     position: relative;
+    will-change: transform;
 }
 
 /* ===== TOOLTIP GLOBAL ===== */
@@ -167,10 +173,8 @@
 
 /* ===== BOTÃO FLUTUANTE ===== */
 .carousel-floating-btn {
-    position: absolute;
-    bottom: -40px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: static;
+    margin-top: 2rem;
     background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
     color: white;
     border: none;
@@ -185,24 +189,28 @@
     align-items: center;
     gap: 0.5rem;
     transition: all 0.3s ease;
-    animation: pulse 2s ease-in-out infinite;
+    animation: gentle-pulse 3s ease-in-out infinite;
+    width: fit-content;
+    will-change: transform, box-shadow;
+    transform-origin: center center;
+    backface-visibility: hidden;
 }
 
-@keyframes pulse {
+@keyframes gentle-pulse {
     0%, 100% { 
-        transform: translateX(-50%) scale(1);
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transform: scale(1);
+        box-shadow: 0 4px 15px rgba(16, 185, 129, 0.12);
     }
     50% { 
-        transform: translateX(-50%) scale(1.05);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        transform: scale(1.02);
+        box-shadow: 0 6px 20px rgba(16, 185, 129, 0.18);
     }
 }
 
 .carousel-floating-btn:hover {
     animation-play-state: paused;
-    transform: translateX(-50%) scale(1.08);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transform: scale(1.03);
+    box-shadow: 0 6px 22px rgba(16, 185, 129, 0.25);
 }
 
 .carousel-floating-btn .btn-icon {

@@ -229,16 +229,16 @@ button:active, a:active, .btn:active {
         height: 50px;
     }
     
-    /* Simpler animation for mobile */
+    /* Hardware-accelerated animation for mobile */
     @keyframes scroll-infinite {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(calc(-15 * 50px)); }
+        0% { transform: translate3d(0, 0, 0); }
+        100% { transform: translate3d(calc(-15 * 50px), 0, 0); }
     }
     
     .carousel-floating-btn {
         padding: 0.75rem 1.5rem;
         font-size: 0.875rem;
-        bottom: -35px;
+        margin-top: 1.5rem;
     }
 }
 
