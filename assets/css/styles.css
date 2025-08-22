@@ -270,48 +270,6 @@ body::before {
     gap: 1rem;
 }
 
-.control-group {
-    display: flex;
-    gap: 0.25rem;
-    border-radius: 8px;
-    background: var(--bg-tertiary);
-    padding: 0.125rem;
-    min-height: 36px;
-    align-items: center;
-}
-
-.control-button {
-    padding: 0.4rem 0.75rem;
-    border: 1px solid transparent;
-    background: transparent;
-    color: var(--text-secondary);
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 0.875rem;
-    font-weight: 500;
-    transition: all 0.2s ease;
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    min-width: 0;
-    height: 32px;
-    box-sizing: border-box;
-    flex: 1;
-}
-
-.control-button .btn-text {
-    white-space: nowrap;
-}
-
-.control-button:hover {
-    background: var(--bg-primary);
-    color: var(--text-primary);
-}
-
-.control-button.active {
-    background: var(--text-accent);
-    color: white;
-}
 
 /* Nav Action Buttons (Base Style) */
 .nav-action-btn {
@@ -379,6 +337,55 @@ body::before {
     box-shadow: 0 2px 8px rgba(16, 185, 129, 0.2);
 }
 
+/* Dynamic Control Buttons */
+.dynamic-control-btn {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--border);
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-height: 36px;
+    box-sizing: border-box;
+    min-width: 80px;
+    justify-content: center;
+}
+
+.dynamic-control-btn:hover {
+    background: var(--bg-hover);
+    border-color: var(--text-accent);
+    color: var(--text-accent);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dynamic-control-btn:active {
+    transform: translateY(0);
+}
+
+.dynamic-control-btn:focus {
+    outline: 2px solid var(--text-accent);
+    outline-offset: 2px;
+}
+
+/* Dark Theme Support for Dynamic Buttons */
+[data-theme="dark"] .dynamic-control-btn {
+    background: var(--bg-secondary);
+    border-color: var(--border-light);
+}
+
+[data-theme="dark"] .dynamic-control-btn:hover {
+    background: var(--bg-hover);
+    border-color: var(--text-accent);
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.2);
+}
+
 /* Mobile Responsiveness for Nav Action Buttons */
 @media (max-width: 768px) {
     .nav-action-btn {
@@ -388,14 +395,12 @@ body::before {
         min-height: 32px;
     }
     
-    .control-group {
-        min-height: 32px;
-    }
-    
-    .control-button {
-        height: 28px;
-        padding: 0.3rem 0.6rem;
+    .dynamic-control-btn {
+        padding: 0.4rem 0.6rem;
         font-size: 0.8rem;
+        min-height: 32px;
+        min-width: 70px;
+        gap: 0.25rem;
     }
     
     .nav-controls {
@@ -403,7 +408,7 @@ body::before {
         flex-wrap: wrap;
     }
     
-    .control-group {
+    .dynamic-control-btn {
         order: 3;
     }
     

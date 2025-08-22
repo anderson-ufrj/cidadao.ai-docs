@@ -265,28 +265,16 @@
                 </button>
                 
                 <!-- Tema -->
-                <div class="control-group theme-group" role="group" aria-label="Seletor de tema">
-                    <button class="control-button theme-btn" data-theme-btn="light" data-i18n="nav.theme.light" aria-label="Ativar tema claro">
-                        <span class="btn-icon">☀️</span>
-                        <span class="btn-text" data-i18n="nav.theme.light.short">Claro</span>
-                    </button>
-                    <button class="control-button theme-btn" data-theme-btn="dark" data-i18n="nav.theme.dark" aria-label="Ativar tema escuro">
-                        <span class="btn-icon">🌙</span>
-                        <span class="btn-text" data-i18n="nav.theme.dark.short">Escuro</span>
-                    </button>
-                </div>
+                <button class="dynamic-control-btn theme-toggle-btn" id="themeToggle" aria-label="Alternar tema">
+                    <span class="btn-icon">🌙</span>
+                    <span class="btn-text">Escuro</span>
+                </button>
                 
                 <!-- Idioma -->
-                <div class="control-group lang-group" role="group" aria-label="Seletor de idioma">
-                    <button class="control-button lang-btn" data-lang-btn="pt-BR" data-i18n="nav.lang.pt" aria-label="Mudar idioma para Português">
-                        <span class="btn-flag">🇧🇷</span>
-                        <span class="btn-text" data-i18n="nav.lang.pt.short">PT</span>
-                    </button>
-                    <button class="control-button lang-btn" data-lang-btn="en-US" data-i18n="nav.lang.en" aria-label="Switch language to English">
-                        <span class="btn-flag">🇺🇸</span>
-                        <span class="btn-text" data-i18n="nav.lang.en.short">EN</span>
-                    </button>
-                </div>
+                <button class="dynamic-control-btn lang-toggle-btn" id="langToggle" aria-label="Alternar idioma">
+                    <span class="btn-flag">🇺🇸</span>
+                    <span class="btn-text">EN</span>
+                </button>
             </div>
         </div>
     </nav>
@@ -933,6 +921,7 @@
     <script src="assets/js/performance-optimizer.js"></script>
     <script src="assets/js/smart-image-loader.js"></script>
     <script src="assets/js/skeleton-manager.js"></script>
+    <script src="assets/js/dynamic-controls.js"></script>
     <script src="assets/js/mobile-menu.js"></script>
     <script src="assets/js/floating-button.js"></script>
     <script src="assets/js/script.js"></script>
