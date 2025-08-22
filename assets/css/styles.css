@@ -273,9 +273,11 @@ body::before {
 .control-group {
     display: flex;
     gap: 0.25rem;
-    border-radius: 10px;
+    border-radius: 8px;
     background: var(--bg-tertiary);
     padding: 0.125rem;
+    min-height: 36px;
+    align-items: center;
 }
 
 .control-button {
@@ -285,13 +287,16 @@ body::before {
     color: var(--text-secondary);
     border-radius: 6px;
     cursor: pointer;
-    font-size: 0.8rem;
+    font-size: 0.875rem;
     font-weight: 500;
     transition: all 0.2s ease;
     display: flex;
     align-items: center;
     gap: 0.25rem;
     min-width: 0;
+    height: 32px;
+    box-sizing: border-box;
+    flex: 1;
 }
 
 .control-button .btn-text {
@@ -381,6 +386,16 @@ body::before {
         font-size: 0.8rem;
         gap: 0.25rem;
         min-height: 32px;
+    }
+    
+    .control-group {
+        min-height: 32px;
+    }
+    
+    .control-button {
+        height: 28px;
+        padding: 0.3rem 0.6rem;
+        font-size: 0.8rem;
     }
     
     .nav-controls {
